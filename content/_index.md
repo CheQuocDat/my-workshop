@@ -9,19 +9,19 @@ chapter: false
 # Internship Report
 
 ### Student Information:
-&emsp; **Full Name:** Ta Minh Thai
+&emsp; **Full Name:** Che Quoc Dat
 
-&emsp; **Phone Number:** 0965164044
+&emsp; **Phone Number:** 0985266194
 
-&emsp; **Email:** Taminthai210203@gmail.com
+&emsp; **Email:** quodac.contact@gmail.com
 
 &emsp; **University:** Ho Chi Minh City University of Technology (HUTECH)
 
 &emsp; **Major:** Information Technology
 
-&emsp; **Specialization:** Computer Networking
+&emsp; **Specialization:** Software Engineering
 
-&emsp; **Student ID:** 2280602903
+&emsp; **Student ID:** 2280600566
 
 &emsp; **Class:** AWS082025
 
@@ -31,7 +31,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From April 17, 2026 to July 10, 2026
 
-![Your profile picture](/images/avatar.jpg?width=350px)
+![Your profile picture](/images/avatar.png?width=350px)
 
 ### Report Content
 

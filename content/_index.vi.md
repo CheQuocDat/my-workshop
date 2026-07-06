@@ -1,25 +1,25 @@
 ---
 title: "Báo cáo thực tập"
-date: 2024-01-01
+date: 2026-07-06
 weight: 1
 chapter: false
 ---
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Tạ Minh Thái
+&emsp; **Họ và tên:** Chế Quốc Đạt
 
-&emsp; **Số điện thoại:** 0965164044
+&emsp; **Số điện thoại:** 0985266194
 
-&emsp; **Email:** Taminthai210203@gmail.com
+&emsp; **Email:** quodac.contact@gmail.com
 
 &emsp; **Trường:** Đại Học Công Nghệ TP.HCM
 
 &emsp; **Ngành:** Công nghệ thông tin
 
-&emsp; **Chuyên ngành:** Mạng máy tính
+&emsp; **Chuyên ngành:** Công Nghệ Phần Mềm
 
-&emsp; **MSSV:** 2280602903
+&emsp; **MSSV:** 2280600566
 
 &emsp; **Lớp:** AWS082025
 
@@ -29,7 +29,7 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ ngày 17/04/2026 đến ngày 10/07/2026
 
-![Ảnh đại diện của bạn](/images/avatar.jpg?width=350px)
+![Ảnh đại diện của bạn](/images/avatar.png?width=350px)
 
 
 
