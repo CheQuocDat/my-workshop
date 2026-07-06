@@ -5,53 +5,54 @@ weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-
 ### Week 2 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Start with Amazon VPC and AWS VPN Site-to-Site.
+* Learn and practice creating VPC, Security Groups, VPN Connection.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| Mon | - Learn VPC (Virtual Private Cloud) basics<br>- Understand CIDR blocks, Subnets (Public/Private)<br>- Learn about Internet Gateway and NAT Gateway<br>- Create VPC with multi-AZ architecture | 04/28/2026 | 04/28/2026 | <https://000003.awsstudygroup.com/> |
+| Tue | - Learn Security Groups and Network ACLs<br>- Differentiate Stateful vs Stateless firewall<br>- Configure inbound/outbound rules<br>- Practice creating Security Groups for EC2 | 04/29/2026 | 04/29/2026 | <https://000003.awsstudygroup.com/> |
+| Wed | - Learn Route Tables and routing<br>- Configure VPC Flow Logs<br>- Setup CloudWatch monitoring for VPC<br>- Use VPC Resource Map for visualization | 04/30/2026 | 04/30/2026 | <https://000003.awsstudygroup.com/> |
+| Thu | - Learn AWS Site-to-Site VPN<br>- Create Virtual Private Gateway and Customer Gateway<br>- Configure VPN Connection<br>- Test VPN connectivity | 05/01/2026 | 05/01/2026 | <https://000003.awsstudygroup.com/> |
+| Fri | - Learn AWS Transit Gateway<br>- Connect multiple VPCs via Transit Gateway<br>- Configure VPN with strongSwan<br>- Route traffic through Transit Gateway | 05/02/2026 | 05/02/2026 | <https://000003.awsstudygroup.com/> |
 
 ### Week 2 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Understood Amazon VPC (Virtual Private Cloud) architecture and network resource isolation on AWS:
+  * CIDR notation and IP address planning
+  * Multi-AZ deployment for high availability
+  * Public Subnets with Internet Gateway (IGW) for Internet access
+  * Private Subnets with NAT Gateway for outbound traffic
+  * Route Tables and routing priority (longest prefix matching)
+  * VPC peering and VPC endpoints
 
-* Successfully created and configured an AWS Free Tier account.
+* Mastered Network Security with Security Groups and Network ACLs:
+  * Security Groups - stateful firewall at EC2 instance level
+  * Network ACLs - stateless firewall at subnet level
+  * Configured inbound rules (SSH, HTTP, HTTPS) and outbound rules
+  * Rule numbering and evaluation order
+  * Security group chaining and references
+  * Deny rules to blacklist IPs
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Deployed VPC Monitoring and Troubleshooting:
+  * VPC Flow Logs to capture IP traffic information
+  * Published logs to CloudWatch Logs or S3
+  * Created CloudWatch dashboards to visualize VPC resources
+  * Set up alarms for traffic anomalies
+  * Analyzed traffic patterns and troubleshot connectivity
+  * Identified security threats and unusual traffic
+  * Used VPC Resource Map for visualization
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Connected on-premises with AWS via VPN Solutions:
+  * Site-to-Site VPN with Virtual Private Gateway (VGW) and Customer Gateway (CGW)
+  * Established IPsec VPN tunnel between on-premises and AWS VPC
+  * Static routing vs Dynamic routing (BGP)
+  * AWS Transit Gateway - hub-and-spoke architecture for multi-VPC connectivity
+  * Transit Gateway attachments (VPC, VPN, Direct Connect)
+  * Transit Gateway route tables
+  * Configured strongSwan VPN (open-source IPsec) on Linux EC2 instance
+  * VPN monitoring and troubleshooting
+  * VPN high availability patterns

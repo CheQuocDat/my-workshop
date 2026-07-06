@@ -5,53 +5,70 @@ weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-
 ### Week 3 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Introduction to Amazon EC2 and its fundamental concepts.
+* Learn about instance types, AMI, EBS volumes, and Elastic IP.
+* Practice launching, connecting to, and managing EC2 instances.
+* Learn and practice deploying Node.js applications on EC2.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| Mon | - Learn Amazon EC2 fundamentals<br>- Instance Types (T2, T3, M5, C5...)<br>- AMI (Amazon Machine Images)<br>- EBS volumes and storage options | 05/05/2026 | 05/05/2026 | <https://000004.awsstudygroup.com/> |
+| Tue | - Create Linux EC2 instance (Amazon Linux 2023)<br>- SSH connection with key pair<br>- Configure Security Groups<br>- Install and configure Node.js on Linux | 05/06/2026 | 05/06/2026 | <https://000004.awsstudygroup.com/> |
+| Wed | - Deploy Node.js application on Linux<br>- Install MySQL database<br>- Setup PM2 for process management<br>- Configure Nginx as reverse proxy | 05/07/2026 | 05/07/2026 | <https://000004.awsstudygroup.com/> |
+| Thu | - Create Windows Server 2025 EC2 instance<br>- RDP connection (Remote Desktop)<br>- Install Git, VS Code, Node.js on Windows<br>- Configure Windows Firewall | 05/08/2026 | 05/08/2026 | <https://000004.awsstudygroup.com/> |
+| Fri | - Deploy Node.js application on Windows<br>- Install MySQL on Windows Server<br>- Test CRUD operations<br>- Compare Linux vs Windows deployment | 05/09/2026 | 05/09/2026 | <https://000004.awsstudygroup.com/> |
 
 ### Week 3 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Understood Amazon EC2 fundamentals and instance types:
+  * General Purpose (T2, T3, M5) - balanced compute, memory, networking
+  * Compute Optimized (C5, C6) - high-performance processors
+  * Memory Optimized (R5, X1) - fast performance for large datasets
+  * Storage Optimized (I3, D2) - high sequential I/O
 
-* Successfully created and configured an AWS Free Tier account.
+* Mastered EC2 Pricing Models for cost optimization:
+  * On-Demand - pay per hour/second, no commitment
+  * Reserved Instances - 1 or 3 year commitment, up to 75% discount
+  * Spot Instances - up to 90% discount, can be interrupted
+  * Savings Plans - flexible pricing model
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Proficient with AMI (Amazon Machine Images):
+  * Pre-configured instance templates
+  * Custom AMI creation for reusability
+  * AMI sharing and marketplace
+  * AMI lifecycle management
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Successfully deployed Node.js application on Linux EC2:
+  * Launched Amazon Linux 2023 instance
+  * Configured Security Groups (SSH port 22, HTTP port 80, custom app port)
+  * Connected via SSH using PEM key pair
+  * Set up Elastic IP for static public IP
+  * Installed Node.js, npm, and Git
+  * Cloned AWS FCJ User Management application (Node.js + Express)
+  * Configured MySQL database connection
+  * Set up Express-Handlebars for templating
+  * Implemented CRUD operations (Create, Read, Update, Delete users)
+  * Installed PM2 for process management and auto-restart
+  * Configured PM2 startup script for system boot
+  * Set up Nginx as reverse proxy
+  * Implemented logging and monitoring
 
-* Used AWS CLI to perform basic operations such as:
+* Successfully deployed Node.js application on Windows EC2:
+  * Launched Windows Server 2025 instance
+  * Connected via RDP (Remote Desktop Protocol)
+  * Configured Windows Firewall rules and Security Groups for RDP port 3389
+  * Installed Git for Windows, Visual Studio Code, Node.js runtime
+  * Configured PATH environment variables
+  * Cloned application repository and installed npm packages
+  * Configured MySQL database on Windows
+  * Deployed Node.js application with PM2-Windows or node-windows
+  * Tested application functionality
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Compared Linux vs Windows deployment:
+  * Linux: Lightweight, better performance, lower cost, suitable for production workloads
+  * Windows: Familiar GUI, .NET integration, enterprise tools
+  * Both: Full Node.js support, production-ready
+  * Best practices: Choose based on team expertise and workload requirements

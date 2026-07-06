@@ -1,126 +1,184 @@
 ---
-title: "Event 1"
+title: "Event 1 - FCAJ Community Day"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
-
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Summary Report: "FCAJ Community Day"
 
 ### Event Objectives
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+FCAJ Community Day is an AWS First Cloud AI Journey community event focusing on advanced technology topics, especially AI, Cloud Infrastructure, and Enterprise Solutions. The event provided opportunities to learn from experts, share practical experiences, and connect with the technology community.
 
-### Speakers
+### Event Information
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+- **Date**: Saturday, May 23, 2026
+- **Time**: 09:00 AM - 12:00 PM
+- **Location**: 26th Floor, Bitexco Financial Tower, Ho Chi Minh City
+- **Role**: Attendee
 
-### Key Highlights
+### Detailed Schedule
 
-#### Identifying the drawbacks of legacy application architecture
+#### 8:30 - 9:00 AM: Check-in and Networking
+Check-in time and meet community members at floor 26.
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+#### 09:00 - 09:30 AM: Context Is Everything - Making AI Actually Work for You
+**Speaker:** Tinh Truong
 
-#### Transitioning to modern application architecture – Microservices
+Key topics:
+- Why AI fails without context & what "context" really means
+- From prompts to memory: how AI is evolving (Second AI Brain concept)
+- How better context leads to better results (practical mindset & tips)
+- Career insights & how students can start building with AI
+- Q&A session
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+#### 09:30 - 09:45 AM: Friendly AI Assistant with Amazon Q
+**Speaker:** Anh Pham
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+Amazon Q features introduction:
+- **Quick Chat Agent**: AI assistants for exploring data, analyzing insights
+- **Quick Flows**: Create intelligent workflows with natural language — no coding required
+- **Quick Spaces**: Shared collaborative spaces that turn individual insights into team knowledge
+- **Quick Sight**: Build dashboards and reports from raw data using natural language
 
-#### Domain-Driven Design (DDD)
+#### 09:45 - 10:25 AM: From Edge To Origin - CloudFront as Your Foundation
+**Speaker:** Thinh Nguyen
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+Session content:
+- Amazon CloudFront for every workload
+- Cost optimization with Amazon CloudFront
+- Security capabilities
+- Enhanced reliability with Amazon CloudFront
+- Enhanced performance with Amazon CloudFront
 
-#### Event-Driven Architecture
+#### 10:25 - 10:55 AM: 36 hrs with LotusHacks - Building UTMorpho from Idea to Reality
+**Speaker:** Team VIB
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+Sharing the hackathon product development journey:
+- Why We Joined LotusHacks
+- From Zero to Idea – The Brainstorming Journey
+- Defining the Problem & Shaping UTMorpho
+- Building Under Pressure – 36-Hour Development Sprint
+- Challenges, Failures & Turning Points
+- UTMorpho – Product Overview & Demo
+- Key Learnings & What's Next
 
-#### Compute Evolution
+#### 10:55 - 11:00 AM: Coffee Break ☕
+Break and networking time.
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+#### 11:00 - 11:30 AM: Non-Determinism of "Deterministic" LLM Settings
+**Speaker:** Duc Dao
 
-#### Amazon Q Developer
+Technical analysis of LLMs:
+- How LLMs choose the next token
+- Assumption: Temperature=0 guarantees determinism
+- Reality: Inference optimizations say otherwise
+- Practical impacts
+- Mitigation strategies
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+#### 11:30 - 12:00 PM: Enterprise-Grade Multi-Agent System
+**Speaker:** Vy Lam
+
+The Case of Startup Credit Scoring:
+- The structural mismatch between banking systems and startup data
+- Single Agent: When to and When Not To
+- The Multi-Agent Paradigm
+- Blueprint of a Virtual Credit Committee
+- Guardrails & Compliance
+- Operational ROI & Implementation Roadmap
+- What's Next
+- Thank you & Q&A
 
 ### Key Takeaways
 
-#### Design Mindset
+#### About AI and Context
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+Tinh Truong's presentation expanded thinking about the importance of context in AI. Not all AI works well - it needs sufficient context to provide accurate answers. The "Second AI Brain" concept is fascinating - building an AI system capable of remembering and learning from previous interactions like a second brain.
 
-#### Technical Architecture
+#### Amazon Q - No-Code AI Solutions
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+The Amazon Q session introduced a powerful suite of AWS AI tools:
+- **Quick Chat Agent** helps explore and analyze data intuitively
+- **Quick Flows** allows creating intelligent workflows using only natural language, no coding required
+- **Quick Spaces** creates shared workspaces for sharing insights
+- **Quick Sight** builds dashboards from raw data using natural language
 
-#### Modernization Strategy
+This democratizes AI - not just developers but business users can leverage AI power.
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+#### CloudFront - More Than Just CDN
+
+Previously, I only thought of CloudFront as a simple CDN, but through Thinh Nguyen's session, I realized it's also:
+- **Foundation layer** for every workload on AWS
+- **Security shield** with many integrated security features
+- **Cost optimizer** reducing bandwidth costs
+- **Performance booster** improving global user experience
+- **Reliability enhancer** increasing system reliability
+
+#### Hackathon Experience
+
+Team VIB shared their intense 36-hour journey at LotusHacks. Lessons from them:
+- **Time pressure** can be good motivation to innovate quickly
+- **Pivot** when necessary - don't be rigid with initial ideas
+- **Team collaboration** is more important than individual skills
+- **MVP mindset** - focus on core features first
+
+#### LLM Technical Deep Dive
+
+Duc Dao's session on non-determinism in LLMs was the most technical. Although temperature=0 is usually considered "deterministic," in reality, optimizations during inference can lead to different outputs. This is crucial when building production systems with LLMs - need appropriate mitigation strategies.
+
+#### Multi-Agent Systems
+
+Vy Lam presented a real case study on credit scoring for startups. Instead of using a single agent, they built a multi-agent system like a "Virtual Credit Committee" with:
+- Multiple specialized agents for each evaluation aspect
+- Guardrails and compliance checks
+- Clear ROI and implementation roadmap
+
+This is a very practical approach for enterprise AI applications.
+
+### Personal Experience
+
+#### Networking and Community
+
+The event created an excellent opportunity to connect with the AWS community in Vietnam. Met professionals, students, and AI enthusiasts with a shared passion for technology. The atmosphere was very friendly and open - everyone willing to share experiences and insights.
+
+#### Practical Knowledge
+
+Unlike purely theoretical events, FCAJ Community Day focused on practical applications:
+- Real-world case studies (UTMorpho, Startup Credit Scoring)
+- Hands-on tools (Amazon Q suite)
+- Technical deep dives (LLM non-determinism)
+- Architecture patterns (Multi-agent systems)
+
+Each session had concrete takeaways applicable to work immediately.
+
+#### Career Insights
+
+Tinh Truong's session on AI careers was very inspiring. Key points:
+- Start building with AI early - no need to wait until "good enough"
+- Focus on understanding context and problem-solving rather than memorizing algorithms
+- Contribute to community - share what you learn
+- AI is a tool - business understanding remains the foundation
 
 ### Applying to Work
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+- **Explore Amazon Q** for team use cases - especially Quick Flows to automate workflows
+- **Apply context-aware prompting** when working with AI models - provide better context for better results
+- **Consider CloudFront** not just for caching but also for security and cost optimization
+- **Research multi-agent patterns** for complex business problems instead of forcing single LLM
+- **Document non-deterministic behaviors** when testing LLM applications - have mitigation plan
 
-### Event Experience
+### Some Event Photos
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+![FCAJ Community Day Event 1](/images/event11.jpg)
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+![FCAJ Community Day Event 2](/images/event12.jpg)
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+![FCAJ Community Day Event 3](/images/event13.jpg)
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
+![FCAJ Community Day Event 4](/images/event14.jpg)
 
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
+![FCAJ Community Day Event 5](/images/event15.jpg)
 
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
-
-#### Some event photos
-*Add your event photos here*  
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+> Overall, FCAJ Community Day was a high-quality event with practical content, experienced speakers, and an enthusiastic community. The event not only provided technical knowledge but also expanded networks and career opportunities in AI and Cloud fields.

@@ -1,59 +1,55 @@
 ---
-title: "Worklog Tuần 1"
+title: "Nhật ký công việc Tuần 1"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 1:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Quản lý kiểm soát truy cập với AWS IAM (Identity and Access Management).
+* Tìm hiểu và thực hành tạo Users, Groups, Roles và chuyển đổi Role.
+* Áp dụng nguyên tắc đặc quyền tối thiểu trong mô hình bảo mật IAM.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Làm quen với các thành viên FCAJ<br>- Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập<br>- Tìm hiểu AWS và các loại dịch vụ (Compute, Storage, Networking, Database) | 20/04/2026 | 20/04/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 3 | - Tạo tài khoản AWS Free Tier<br>- Hoàn thành 5 nhiệm vụ để nhận 100$ AWS Credit<br>- Thiết lập MFA (Multi-Factor Authentication)<br>- Tìm hiểu AWS Budgets để quản lý chi phí | 21/04/2026 | 21/04/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| 4 | - Tìm hiểu IAM Users và Groups<br>- Tạo IAM Admin User và Admin Group<br>- Gắn policy AdministratorAccess cho Admin Group<br>- Đăng nhập bằng IAM Admin User | 22/04/2026 | 22/04/2026 | <https://000002.awsstudygroup.com/> |
+| 5 | - Tìm hiểu IAM Roles và cách sử dụng<br>- Tạo IAM Role (AdminRole, S3Role)<br>- Tạo Operator User và gắn policy cho phép chuyển đổi role | 23/04/2026 | 23/04/2026 | <https://000002.awsstudygroup.com/> |
+| 6 | - Thực hành chuyển đổi Role từ Operator User sang Admin Role<br>- Kiểm tra quyền truy cập S3 với S3Role<br>- Áp dụng nguyên tắc đặc quyền tối thiểu | 24/04/2026 | 24/04/2026 | <https://000002.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 1:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hòa nhập thành công với nhóm First Cloud AI Journey và nắm rõ nội quy, quy định tại đơn vị thực tập.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản:
+  * Compute (EC2, Lambda, ECS, EKS)
+  * Storage (S3, EBS, EFS, Glacier)
+  * Networking (VPC, Route53, CloudFront, Direct Connect)
+  * Database (RDS, DynamoDB, Aurora, Redshift)
+  * Security & Identity (IAM, KMS, WAF, Shield)
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Đã tạo và cấu hình tài khoản AWS Free Tier thành công:
+  * Hoàn thành 5 nhiệm vụ để nhận 100$ AWS Credit
+  * Thiết lập MFA (Multi-Factor Authentication) cho root account
+  * Cấu hình AWS Budgets với ngưỡng cảnh báo chi phí
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Nắm vững quản lý truy cập với AWS IAM (Identity and Access Management):
+  * Hiểu sự khác biệt giữa IAM Users (thông tin xác thực dài hạn) và IAM Roles (quyền tạm thời)
+  * Tạo Admin Group với policy AdministratorAccess
+  * Tạo IAM Admin User và thêm vào Admin Group
+  * Tạo AdminRole với quyền quản trị đầy đủ và S3Role với quyền Read/Write S3
+  * Tạo Operator User và cấu hình policy cho phép chuyển đổi role
+  * Thực hành chuyển đổi Role thành công từ Operator User sang Admin Role
+  * Đăng nhập AWS Console bằng IAM User thay vì root account
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Áp dụng các thực tiễn tốt nhất của IAM:
+  * Nguyên tắc đặc quyền tối thiểu
+  * Sử dụng Roles cho quyền truy cập tạm thời thay vì chia sẻ thông tin xác thực
+  * Bật MFA cho các IAM Users quan trọng
+  * Giám sát hoạt động truy cập qua AWS CloudTrail
+  * Không sử dụng root account cho các tác vụ hàng ngày
 
 

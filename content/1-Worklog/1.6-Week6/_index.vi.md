@@ -1,58 +1,92 @@
 ---
-title: "Worklog Tuần 6"
+title: "Nhật ký công việc Tuần 6"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 6:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Học tập và triển khai ứng dụng trên các Docker containers với AWS.
+* Nghiên cứu và làm việc với Amazon Elastic Container Service (ECS).
+* Cấu hình các ECS clusters, task definitions, services và load balancing.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Học tập các khái niệm cơ bản Docker<br>- Tìm hiểu Docker images, containers, Dockerfile<br>- Chuẩn bị VPC, Security Group, IAM truy cập ECR<br>- Đăng nhập vào Docker Hub | 25/05/2026 | 25/05/2026 | <https://000015.awsstudygroup.com/> |
+| 3 | - Tạo và khởi chạy EC2 instance<br>- Cài đặt Docker trên EC2<br>- Cấu hình EC2 trên instance<br>- Cài đặt các thư viện và dependencies | 26/05/2026 | 26/05/2026 | <https://000015.awsstudygroup.com/> |
+| 4 | - Tạo và khởi chạy RDS database instance<br>- Triển khai Docker Image, Docker Compose<br>- Đẩy Image sử dụng Docker Hub và Amazon ECR<br>- Dọn dẹp tài nguyên | 27/05/2026 | 27/05/2026 | <https://000015.awsstudygroup.com/> |
+| 5 | - Nghiên cứu Amazon Elastic Container Service (ECS)<br>- Tìm hiểu các khái niệm ECS: Clusters, Tasks, Services<br>- Chuẩn bị cấu hình hạ tầng<br>- Role CodeDeploy, NAT gateway, Route Table, Security Group | 28/05/2026 | 28/05/2026 | <https://000016.awsstudygroup.com/> |
+| 6 | - Thêm Subnet, chuẩn bị triển khai Docker image lên ECR và Dockerhub<br>- Đăng ký namespace trong Cloud Map<br>- Tạo ECS Cluster, Task Definition<br>- Cấu hình Application Load Balancer, Target Group<br>- Tạo ECS Service, triển khai Blue/Green, cập nhật Rolling | 29/05/2026 | 29/05/2026 | <https://000016.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hiểu Docker containerization và lợi ích so với VMs:
+  * Docker architecture: Docker Engine, Docker Client, Docker Daemon
+  * Images vs Containers
+  * Docker Hub registry
+  * Dockerfile syntax và best practices
+  * Cài đặt Docker trên Amazon Linux 2023
+  * Docker commands: pull, run, build, push, ps, stop, rm
+  * Docker networking modes
+  * Volume mounting cho persistent data
+  * Multi-stage builds cho optimization
+  * Environment variables trong Docker
+  * COPY vs ADD commands
+  * ENTRYPOINT vs CMD
+  * Docker layer caching
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Deploy multi-container application với Docker Compose:
+  * Tạo VPC với public/private subnets
+  * Cấu hình Security Groups cho Docker containers
+  * IAM roles cho ECR access
+  * EC2 instance với Docker installed
+  * docker-compose.yml configuration
+  * Multi-container applications
+  * Service dependencies
+  * Networks và volumes trong Compose
+  * Environment variables management
+  * Push/pull images từ Docker Hub (Public vs private repositories)
+  * Image tagging strategies
+  * Tạo ECR repositories
+  * ECR authentication với Docker
+  * Push images lên ECR
+  * Image scanning cho vulnerabilities
+  * Lifecycle policies
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Triển khai Amazon Elastic Container Service (ECS):
+  * ECS Clusters (EC2 vs Fargate launch types)
+  * Task Definitions (container specifications)
+  * ECS Tasks (running instances của Task Definitions)
+  * ECS Services (maintaining desired task count)
+  * Service Discovery với AWS Cloud Map
+  * Tạo ECS Cluster với EC2 launch type
+  * Container instances registration
+  * Capacity providers configuration
+  * Cluster auto-scaling
+  * Container definitions (image, CPU, memory)
+  * Port mappings
+  * Environment variables
+  * IAM task roles vs execution roles
+  * Task networking modes (bridge, awsvpc, host)
+  * Volume mounts (EFS, bind mounts)
+  * Service creation với desired count
+  * Load balancer integration (ALB/NLB)
+  * Target Group configuration
+  * Health check settings
+  * Service auto-scaling policies
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Nắm vững ECS Deployment Strategies:
+  * Rolling Update - Minimum healthy percent, Maximum percent, Deployment circuit breaker
+  * Blue/Green Deployment - AWS CodeDeploy integration
+  * Traffic shifting strategies (Linear, Canary, All-at-once)
+  * Automatic rollback capabilities
+  * CloudWatch alarms for deployment monitoring
+  * Service Discovery với Cloud Map
+  * ECS Exec cho container debugging
+  * Container Insights monitoring
+  * Task placement strategies
+  * Secrets management với AWS Secrets Manager
 
 

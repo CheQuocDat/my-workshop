@@ -1,126 +1,204 @@
 ---
-title: "Event 2"
+title: "Event 2 - FCAJ Community Day (June 27)"
 date: 2024-01-01
-weight: 1
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+# Learning Report "FCAJ Community Day - June 27"
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+### Event Purpose
 
-### Event Objectives
+The second FCAJ Community Day continued the AWS First Cloud AI Journey community event series, focusing on AI Operations, Voice AI, DevOps Automation, and Enterprise AI Applications. The event presented real-world case studies and live demonstrations from experts in the field.
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+### Event Information
 
-### Speakers
+- **Date**: Saturday, June 27, 2026
+- **Time**: 09:00 AM - 11:30 AM
+- **Location**: Floor 26, Bitexco Financial Tower, Ho Chi Minh City
+- **Role**: Attendee
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+### Detailed Schedule
 
-### Key Highlights
+#### 8:30 - 9:00 AM: Check-in
+Check-in time and preparation for the event.
 
-#### Identifying the drawbacks of legacy application architecture
+#### 09:00 - 09:25 AM: Deep Response Engine - From Detection to Autonomous Resolution
+**Main Topics:**
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+This session focused on transforming from traditional alert-driven systems to modern action-driven systems:
 
-#### Transitioning to modern application architecture – Microservices
+- **The complexity wall in modern cloud operations** - Challenges in large-scale cloud operations
+- **Shift from alert-driven to action-driven systems** - From manual alerts to automated responses
+- **Deep Response Engine architecture overview** - Overall architecture of autonomous response systems
+- **Live demo of autonomous incident response** - Live demonstration of automated incident handling
+- **Business impact** - Cost reduction and zero-downtime operations
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+#### 09:25 - 09:55 AM: Voice Agents - Building Human-Like AI Conversations at Scale
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+Session on AI Voice Agents and building natural conversations:
 
-#### Domain-Driven Design (DDD)
+- **Evolution from IVR and chatbots to AI voice agents** - Evolution from traditional IVR to AI voice agents
+- **Key challenges** - Latency, accuracy, and natural interaction
+- **Amazon Nova Sonic** - Speech-to-speech foundation model
+- **Architecture** - Telephony, streaming, Bedrock, MCP tools
+- **Enterprise use cases** - Best practices and live demo
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+#### 09:55 - 10:20 AM: AWS DevOps Agent - Your Always-Available Operations Teammate
 
-#### Event-Driven Architecture
+Introduction to AWS DevOps Agent - AI teammate for operations:
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+- **Overview of AWS DevOps Agent** - Service overview
+- **Reducing MTTD and MTTR** - Reducing detection and resolution time with AI-driven operations
+- **Supporting multi-cloud and hybrid environments** - Multi-cloud environment support
+- **Bedrock AgentCore** - Multi-agent reasoning approach
+- **Real-world use cases** - ECS demo walkthrough
 
-#### Compute Evolution
+#### 10:20 - 10:45 AM: AI-Powered Productivity - Workforce Planning For Enterprise
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+Session on AI applications in HR management:
 
-#### Amazon Q Developer
+- **HR transformation challenges** - Challenges in modern HR transformation
+- **Overview of Amazon Quick** - HR capabilities
+- **Accelerating HR operations with automation** - HR process automation
+- **Workforce analytics** - Data-driven insights
+- **Strategic workforce planning** - Enterprise decision-making
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+#### 10:45 - 11:30 AM: Building Secure Private MCP Connection with Amazon Quick
+
+Technical session on security and connectivity:
+
+- **Introduction to Amazon Quick** - AI assistant platform
+- **MCP (Model Context Protocol)** - Role in extensibility
+- **Security challenges** - MCP-based integrations
+- **Configuring Amazon Quick VPC private connectivity** - Secure connectivity
+- **Demo and real-world implementation insights**
 
 ### Key Takeaways
 
-#### Design Mindset
+#### Deep Response Engine - Autonomous Operations
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+This session was eye-opening about the potential for complete automation in cloud operations. Instead of just alerting when incidents occur, Deep Response Engine can:
+- **Automatically detect** anomalies and potential issues
+- **Automatically analyze** root cause
+- **Automatically execute** remediation actions
+- **Zero human intervention** for common incidents
 
-#### Technical Architecture
+This enables:
+- Significantly reduced **MTTR (Mean Time To Resolution)**
+- Achieved **zero-downtime** operations
+- **Cost reduction** through automation
+- Freed operations team to focus on strategic tasks
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+#### Voice AI - Natural Conversations
 
-#### Modernization Strategy
+The Voice Agents section was very impressive with **Amazon Nova Sonic**:
+- **Speech-to-speech model** - No intermediate text needed, reduced latency
+- **Natural interaction** - Human-like voice
+- **Streaming architecture** - Real-time response
+- **MCP tools integration** - Connection with backend systems
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+Key challenges solved:
+- **Latency**: Sub-second response time
+- **Accuracy**: High recognition rate with various accents
+- **Context awareness**: Understanding conversation context
 
-### Applying to Work
+Enterprise use cases:
+- Customer service automation
+- Internal helpdesk
+- Appointment scheduling
+- Technical support
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+#### AWS DevOps Agent - AI Teammate
 
-### Event Experience
+AWS DevOps Agent is a major step forward in AI-driven operations:
+- **Always-available** - 24/7 monitoring and support
+- **Multi-cloud support** - Not just AWS but also Azure, GCP
+- **Bedrock AgentCore** - Multi-agent reasoning to handle complex scenarios
+- **Proactive detection** - Detect issues before they impact users
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+Benefits:
+- Reduced **MTTD (Mean Time To Detect)** from hours to minutes
+- Reduced **MTTR** through automated troubleshooting
+- **Knowledge retention** - Learn from past incidents
+- **Scalable** - Handle multiple incidents simultaneously
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+The ECS demo was very practical - showing real troubleshooting scenarios.
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+#### AI in HR - Workforce Planning
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
+The session on Amazon Quick for HR opened up new possibilities:
+- **Automation** - Automate repetitive HR tasks (leave approvals, onboarding)
+- **Analytics** - Workforce insights from data
+- **Planning** - Strategic workforce planning with AI predictions
+- **Data-driven decisions** - Move from gut feeling to data-backed choices
 
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
+Challenges addressed:
+- Manual HR processes
+- Lack of real-time insights
+- Difficulty in workforce planning
+- Compliance tracking
 
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+#### MCP Security - Private Connectivity
 
-#### Some event photos
-*Add your event photos here*  
+Most technical session on secure MCP connections:
+- **Model Context Protocol** - Standard for AI extensibility
+- **Security challenges** - Data leakage, unauthorized access
+- **VPC private connectivity** - Keep data in private network
+- **Implementation** - Step-by-step configuration
 
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+Key takeaways:
+- MCP enables standardized AI capabilities extension
+- Private connectivity crucial for enterprise security
+- Amazon Quick can be deployed in private VPC
+- Best practices for secure MCP implementations
+
+### Personal Experience
+
+#### Operations Automation Mindset
+
+This event changed my perspective on operations. Instead of thinking "how to respond faster to incidents", the focus should be "how to prevent incidents and automate responses".
+
+Deep Response Engine and AWS DevOps Agent show the future of operations:
+- **Proactive rather than reactive**
+- **Automated rather than manual**
+- **AI-driven rather than rule-based**
+
+#### Voice AI Potential
+
+The Voice Agents demo was very impressive. Voice AI is no longer sci-fi but production-ready. Use cases for customer service and internal tools are very practical.
+
+Challenges regarding latency and accuracy have been well addressed with Amazon Nova Sonic. The key is the speech-to-speech model that dramatically reduces latency.
+
+#### AI as Operations Teammate
+
+The "AI teammate" concept in DevOps is very interesting. It's not about replacing humans but augmenting capabilities:
+- AI handles repetitive troubleshooting
+- Humans focus on complex problems and strategic planning
+- AI learns from humans' decisions
+- Continuous improvement cycle
+
+#### Enterprise AI Security
+
+The MCP security session reminded me of the importance of a security-first approach when implementing AI:
+- Not just about functionality
+- Data privacy and compliance
+- Network isolation
+- Access control
+
+Private connectivity in VPC is crucial for enterprise adoption.
+
+### Application to Work
+
+- **Explore Deep Response Engine patterns** - Research autonomous incident response for infrastructure
+- **Prototype voice agent** - Test Amazon Nova Sonic for internal helpdesk use case
+- **Evaluate AWS DevOps Agent** - Pilot for monitoring and troubleshooting multi-cloud environment
+- **Consider Amazon Quick for HR** - Propose automation for repetitive HR workflows
+- **Implement MCP security best practices** - When deploying AI assistants, prioritize private connectivity
+
+### Event Photos
+
+![FCAJ Community Day Event 2](/images/event21.jpg)
+
+> Overall, FCAJ Community Day #2 continued to maintain high quality with a focus on operational AI and enterprise applications. The sessions were very practical with many live demos and real-world use cases. The event was not just about technology but also about mindset shift in approaching operations and AI adoption.

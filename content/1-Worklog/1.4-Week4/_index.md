@@ -5,53 +5,93 @@ weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-
 ### Week 4 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn and build exercises for Amazon RDS managed database service.
+* Deploy Auto Scaling to automatically scale EC2 instances based on demand.
+* Monitor resources and set up CloudWatch alarms for performance metrics.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| Mon | - Learn Amazon RDS fundamentals<br>- RDS engine types (MySQL, PostgreSQL, Oracle...)<br>- Create RDS database instance<br>- Configure DB subnet groups and security groups | 05/11/2026 | 05/11/2026 | <https://000005.awsstudygroup.com/> |
+| Tue | - Connect EC2 with RDS database<br>- Deploy application with RDS backend<br>- Deploy application using RDS<br>- Backup and restore data | 05/12/2026 | 05/12/2026 | <https://000005.awsstudygroup.com/> |
+| Wed | - Learn Auto Scaling with Elastic Load Balancing<br>- Prepare multi-AZ environment setup<br>- Create Launch Template for EC2<br>- Set up Load Balancer and Target Groups | 05/13/2026 | 05/13/2026 | <https://000006.awsstudygroup.com/> |
+| Thu | - Create Auto Scaling Group<br>- Configure scaling policies<br>- Test Auto Scaling results<br>- Test health checks and failover | 05/14/2026 | 05/14/2026 | <https://000006.awsstudygroup.com/> |
+| Fri | - Research Amazon CloudWatch<br>- Learn CloudWatch Metrics, Logs, Alarms<br>- Create custom metrics and dashboards<br>- Setup monitoring for EC2 and RDS | 05/15/2026 | 05/15/2026 | <https://000008.awsstudygroup.com/> |
 
 ### Week 4 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Understood Amazon RDS (Relational Database Service) - managed database service:
+  * Engine types: MySQL, PostgreSQL, MariaDB, Oracle, SQL Server
+  * Multi-AZ deployments for high availability
+  * Read Replicas for read scaling
+  * Automated backups and retention periods
+  * Manual snapshots
+  * Point-in-time recovery
 
-* Successfully created and configured an AWS Free Tier account.
+* Successfully deployed RDS MySQL instance:
+  * Created VPC and subnets for RDS
+  * Configured DB subnet groups
+  * Created security groups for database access
+  * Launched RDS MySQL instance
+  * Configured parameter groups
+  * Connected EC2 instance with RDS
+  * Deployed AWS FCJ Management application with RDS backend
+  * Configured connection strings and environment variables
+  * Tested CRUD operations with database
+  * Restored database from snapshot
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+**Screenshots from Amazon RDS Workshop:**
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+![RDS Setup](/images/khong5.png)
 
-* Used AWS CLI to perform basic operations such as:
+![RDS Configuration](/images/khong51.png)
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+![RDS Database Instance](/images/khong52.png)
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+![RDS Application Integration](/images/khong53.png)
+
+* Deployed Auto Scaling and Elastic Load Balancing:
+  * Application Load Balancer (ALB) fundamentals
+  * Target Groups and health checks
+  * Listener rules and routing
+  * Cross-zone load balancing
+  * Created Launch Template with AMI, instance type, security groups
+  * User data scripts for bootstrapping
+  * Template versioning
+  * Created Auto Scaling Group with launch template
+  * Configured desired, minimum, maximum capacity
+  * Health check types (EC2, ELB)
+  * Instance warm-up time
+  * Target tracking scaling (CPU utilization)
+  * Step scaling policies and Simple scaling policies
+  * Scaling cooldowns
+
+**Screenshots from Auto Scaling & ELB Workshop:**
+
+![Auto Scaling Setup](/images/khongsau.png)
+
+![Load Balancer Configuration](/images/khongsau1.png)
+
+![Auto Scaling Group](/images/khongsau2.png)
+
+![Scaling Policy Testing](/images/khongsau3.png)
+
+* Mastered Amazon CloudWatch monitoring and alerting:
+  * Built-in metrics for EC2, RDS, ALB
+  * Custom metrics with PutMetricData
+  * Metric math and statistics
+  * Metric filters for logs
+  * Log groups and log streams
+  * CloudWatch Logs Agent installation
+  * Log retention policies
+  * Log insights queries
+  * Created alarms based on metrics
+  * Alarm states (OK, ALARM, INSUFFICIENT_DATA)
+  * SNS notifications
+  * Alarm actions (Auto Scaling, EC2, SNS)
+  * Created custom dashboards
+  * Widget types (line, stacked area, number)
+  * Cross-region dashboards
+  * Dashboard sharing

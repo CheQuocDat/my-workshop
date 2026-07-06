@@ -1,59 +1,76 @@
 ---
-title: "Worklog Tuần 3"
+title: "Nhật ký công việc Tuần 3"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Giới thiệu về Amazon EC2 và các khái niệm cơ bản.
+* Tìm hiểu về các loại instance, AMI, EBS volumes và Elastic IP.
+* Thực hành khởi chạy, kết nối và quản lý các EC2 instances.
+* Tìm hiểu và thực hành triển khai ứng dụng Node.js trên EC2.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Tìm hiểu các khái niệm cơ bản Amazon EC2<br>- Các loại Instance Types (T2, T3, M5, C5...)<br>- AMI (Amazon Machine Images)<br>- EBS volumes và các tùy chọn lưu trữ | 05/05/2026 | 05/05/2026 | <https://000004.awsstudygroup.com/> |
+| 3 | - Tạo Linux EC2 instance (Amazon Linux 2023)<br>- Kết nối SSH với key pair<br>- Cấu hình Security Groups<br>- Cài đặt và cấu hình Node.js trên Linux | 05/06/2026 | 05/06/2026 | <https://000004.awsstudygroup.com/> |
+| 4 | - Triển khai ứng dụng Node.js trên Linux<br>- Cài đặt cơ sở dữ liệu MySQL<br>- Thiết lập PM2 cho quản lý tiến trình<br>- Cấu hình Nginx làm reverse proxy | 05/07/2026 | 05/07/2026 | <https://000004.awsstudygroup.com/> |
+| 5 | - Tạo Windows Server 2025 EC2 instance<br>- Kết nối RDP (Remote Desktop)<br>- Cài đặt Git, VS Code, Node.js trên Windows<br>- Cấu hình Windows Firewall | 05/08/2026 | 05/08/2026 | <https://000004.awsstudygroup.com/> |
+| 6 | - Triển khai ứng dụng Node.js trên Windows<br>- Cài đặt MySQL trên Windows Server<br>- Kiểm tra các thao tác CRUD<br>- So sánh triển khai Linux vs Windows | 05/09/2026 | 05/09/2026 | <https://000004.awsstudygroup.com/> |
 
 ### Kết quả đạt được tuần 3:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hiểu các khái niệm cơ bản Amazon EC2 và các loại instance types:
+  * General Purpose (T2, T3, M5) - cân bằng tính toán, bộ nhớ, mạng
+  * Compute Optimized (C5, C6) - bộ xử lý hiệu suất cao
+  * Memory Optimized (R5, X1) - hiệu suất nhanh cho tập dữ liệu lớn
+  * Storage Optimized (I3, D2) - I/O tuần tự cao
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Nắm được các mô hình định giá EC2 để tối ưu chi phí:
+  * On-Demand - trả theo giờ/giây, không cam kết
+  * Reserved Instances - cam kết 1 hoặc 3 năm, giảm giá tới 75%
+  * Spot Instances - giảm giá tới 90%, có thể bị gián đoạn
+  * Savings Plans - mô hình định giá linh hoạt
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Thành thạo AMI (Amazon Machine Images):
+  * Mẫu instance được cấu hình sẵn
+  * Tạo AMI tùy chỉnh để tái sử dụng
+  * Chia sẻ AMI và marketplace
+  * Quản lý vòng đời AMI
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Triển khai thành công ứng dụng Node.js trên Linux EC2:
+  * Khởi chạy Amazon Linux 2023 instance
+  * Cấu hình Security Groups (cổng SSH 22, HTTP 80, cổng ứng dụng tùy chỉnh)
+  * Kết nối qua SSH sử dụng key pair PEM
+  * Thiết lập Elastic IP cho IP công khai tĩnh
+  * Cài đặt Node.js, npm, và Git
+  * Sao chép ứng dụng AWS FCJ User Management (Node.js + Express)
+  * Cấu hình kết nối cơ sở dữ liệu MySQL
+  * Thiết lập Express-Handlebars cho templating
+  * Thực hiện các thao tác CRUD (tạo, đọc, cập nhật, xóa người dùng)
+  * Cài đặt PM2 cho quản lý tiến trình và tự động khởi động lại
+  * Cấu hình PM2 startup script cho system boot
+  * Thiết lập Nginx làm reverse proxy
+  * Thực hiện logging và giám sát
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Triển khai thành công ứng dụng Node.js trên Windows EC2:
+  * Khởi chạy Windows Server 2025 instance
+  * Kết nối qua RDP (Remote Desktop Protocol)
+  * Cấu hình Windows Firewall rules và Security Groups cho cổng RDP 3389
+  * Cài đặt Git for Windows, Visual Studio Code, Node.js runtime
+  * Cấu hình biến môi trường PATH
+  * Sao chép kho lưu trữ ứng dụng và cài đặt các gói npm
+  * Cấu hình cơ sở dữ liệu MySQL trên Windows
+  * Triển khai ứng dụng Node.js với PM2-Windows hoặc node-windows
+  * Kiểm tra chức năng ứng dụng
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* So sánh triển khai Linux vs Windows:
+  * Linux: Nhẹ, hiệu suất tốt hơn, chi phí thấp hơn, phù hợp cho khối công việc sản xuất
+  * Windows: Giao diện quen thuộc, tích hợp .NET, công cụ doanh nghiệp
+  * Cả hai: Hỗ trợ Node.js đầy đủ, sẵn sàng cho sản xuất
+  * Thực tiễn tốt nhất: Chọn dựa trên chuyên môn nhóm và yêu cầu khối công việc
 
 
