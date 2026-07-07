@@ -17,7 +17,7 @@ Amazon API Gateway is a service to create, publish, maintain, monitor, and secur
 #### API Architecture
 
 ```
-ReactJS Frontend
+React + TypeScript Frontend
     ↓ HTTPS
 API Gateway (8 endpoints)
     ├──→ /auth (POST) → itcoach-auth-handler (no auth)

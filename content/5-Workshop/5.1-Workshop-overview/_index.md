@@ -15,6 +15,18 @@ ITCoach is an AI-powered intelligent IT interview practice platform that helps I
 - **High performance**: CloudFront global distribution
 - **Strong security**: Cognito and IAM access management
 
+#### Prerequisites
+
+To complete this workshop, you need:
+
+1. **AWS Account** with Administrator privileges or sufficient permissions to create the following services:
+   - IAM, S3, DynamoDB, Cognito, SQS, Lambda, API Gateway, CloudFront, Route 53, ACM, CloudWatch, SNS
+
+2. **OpenAI API Key**: Register at [platform.openai.com](https://platform.openai.com) to use Speech-to-Text and GPT evaluation (**Important**: must have at least **$5** credit)
+
+3. **Region**: This workshop uses **ap-southeast-1 (Singapore)** for most services
+   - **Important**: ACM SSL Certificate must be created in **us-east-1** for use with CloudFront
+
 #### Key Features
 
 **1. Diverse practice formats:**
@@ -41,7 +53,7 @@ ITCoach is an AI-powered intelligent IT interview practice platform that helps I
 
 In this workshop, you will build a system with the following components:
 
-- **Frontend**: ReactJS on S3 + CloudFront
+- **Frontend**: React + TypeScript on S3 + CloudFront
 - **Backend**: 8 Lambda functions
 - **Database**: 8 DynamoDB tables
 - **Authentication**: Amazon Cognito
@@ -58,7 +70,7 @@ User (Browser)
     ↓ HTTPS – itcoach24h.xyz
 Amazon Route 53 (DNS)
     ↓
-Amazon CloudFront (CDN) ←→ S3 Static (ReactJS)
+Amazon CloudFront (CDN) ←→ S3 Static (React + TypeScript)
     ↓
 Amazon API Gateway (8 endpoints, Throttling: 100 req/s)
     ↓ Cognito Authorizer

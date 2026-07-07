@@ -6,33 +6,31 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-During my internship at **Amazon Web Services Vietnam Co., Ltd.** in the position of **Workforce Bootcamp - First Cloud AI Journey** from **April 17, 2026** to **July 10, 2026**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
-I participated in **building workshops and deploying serverless applications on AWS platform**, through which I improved my skills in **team work management and task distribution, cloud infrastructure development**.  
+During my internship and participation in the **Workforce Bootcamp - First Cloud AI Journey** program at **Amazon Web Services Vietnam Co., Ltd.** from **April 17, 2026** to **July 10, 2026**, I had the invaluable opportunity to immerse myself in a professional workplace, applying core academic concepts to modern cloud infrastructure challenges.
 
-In terms of work ethic, I always strived to complete tasks well, complied with workplace regulations, and actively engaged with colleagues to improve work efficiency.
+Here, I directly participated in **technical documentation, architecture design, and serverless system deployments on AWS**. This hands-on journey has significantly bolstered my architectural thinking on the cloud, as well as my personal workflow management and team collaboration capabilities.
 
-To objectively reflect on my internship period, I would like to evaluate myself based on the following criteria:
+Below is a detailed self-assessment of my performance and growth throughout the bootcamp:
 
-| No. | Criteria                            | Description                                                                                      | Good | Fair | Average |
-| --- | ----------------------------------- | ------------------------------------------------------------------------------------------------ | ---- | ---- | ------- |
-| 1   | **Professional knowledge & skills** | Understanding of the field, applying knowledge in practice, proficiency with tools, work quality | ✅    | ☐    | ☐       |
-| 2   | **Ability to learn**                | Ability to absorb new knowledge and learn quickly                                                | ☐    | ✅    | ☐       |
-| 3   | **Proactiveness**                   | Taking initiative, seeking out tasks without waiting for instructions                            | ✅    | ☐    | ☐       |
-| 4   | **Sense of responsibility**         | Completing tasks on time and ensuring quality                                                    | ✅    | ☐    | ☐       |
-| 5   | **Discipline**                      | Adhering to schedules, rules, and work processes                                                 | ✅    | ☐    | ☐       |
-| 6   | **Progressive mindset**             | Willingness to receive feedback and improve oneself                                              | ✅    | ☐    | ☐       |
-| 7   | **Communication**                   | Presenting ideas and reporting work clearly                                                      | ☐    | ✅    | ☐       |
-| 8   | **Teamwork**                        | Working effectively with colleagues and participating in teams                                   | ✅    | ☐    | ☐       |
-| 9   | **Professional conduct**            | Respecting colleagues, partners, and the work environment                                        | ✅    | ☐    | ☐       |
-| 10  | **Problem-solving skills**          | Identifying problems, proposing solutions, and showing creativity                                | ☐    | ✅    | ☐       |
-| 11  | **Contribution to project/team**    | Work effectiveness, innovative ideas, recognition from the team                                  | ✅    | ☐    | ☐       |
-| 12  | **Overall**                         | General evaluation of the entire internship period                                               | ✅    | ☐    | ☐       |
+| No. | Assessment Criteria | Description | Good | Fair | Pass |
+| --- | --- | --- | --- | --- | --- |
+| 1 | **Technical Knowledge** | Understanding of AWS services, serverless system design, and quality of project deliverables | ✅ | ☐ | ☐ |
+| 2 | **Learning Agility** | Speed of grasping new technologies (AI integrations, advanced AWS features) and applying them | ☐ | ✅ | ☐ |
+| 3 | **Proactiveness** | Conducting independent research and troubleshooting system errors without waiting for prompts | ✅ | ☐ | ☐ |
+| 4 | **Responsibility** | Meeting project milestones on time and ensuring high-quality work submissions | ✅ | ☐ | ☐ |
+| 5 | **Discipline** | Compliance with scheduling, information security policies, and standard procedures | ✅ | ☐ | ☐ |
+| 6 | **Feedback Reception** | Actively seeking mentor feedback to improve architecture designs and implementation | ✅ | ☐ | ☐ |
+| 7 | **Communication Skills** | Clarity in presenting technical ideas, progress reporting, and slide presentations | ☐ | ✅ | ☐ |
+| 8 | **Collaboration** | Coordinating effectively with teammates, sharing knowledge, and assisting others | ✅ | ☐ | ☐ |
+| 9 | **Professional Conduct** | Adherence to corporate communication standards, work ethics, and partner respect | ✅ | ☐ | ☐ |
+| 10 | **Problem-Solving** | Analyzing root causes of configuration errors and proposing alternative optimizations | ☐ | ✅ | ☐ |
+| 11 | **Contribution to Team** | Quality of technical workshops contributed to the shared knowledge base | ✅ | ☐ | ☐ |
+| 12 | **Overall Evaluation** | Overall achievement of the learning and professional objectives set for the internship | ✅ | ☐ | ☐ |
 
-### Needs Improvement
+### Areas for Future Improvement
 
-* Enhance communication skills and present ideas more clearly in team meetings
-* Improve problem-solving thinking, especially in handling unexpected situations outside the plan
-* Continue developing self-learning abilities and researching new technologies in cloud computing
-* Strengthen time management skills to better balance multiple parallel tasks
-* Perfect technical documentation and reporting skills in a more detailed and understandable manner
-* Develop additional knowledge in security and cost optimization on AWS
+* **Mastering Infrastructure as Code (IaC):** Transitioning from manual console configurations to writing robust templates using AWS CDK or Terraform for automated infrastructure deployment.
+* **Deepening Cloud Security Knowledge:** Focusing on least-privilege IAM policies, KMS encryption management, and advanced network isolation using VPC PrivateLink.
+* **Enhancing Cost Optimization Strategies:** Learning to analyze cost drivers using AWS Cost Explorer and implementing automated budget alerts and resource clean-up scripts.
+* **Polishing Technical Presentation Skills:** Practicing how to communicate complex technical architectures in a simplified manner to non-technical stakeholders.
+* **Refining Technical Writing:** Improving the structure, clarity, and readability of technical documentations for seamless handovers.

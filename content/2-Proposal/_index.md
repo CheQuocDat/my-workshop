@@ -15,7 +15,7 @@ ITCoach is a web platform that helps IT students and entry-level professionals p
 
 The platform supports diverse practice formats: single or multiple-choice quizzes with Spaced Repetition (SM-2) mechanism, essay-style text or voice recording answers, and simulated real interview sessions where AI asks questions using voice. AI provides detailed evaluation for each answer, points out gaps, suggests improvements, and responds with voice feedback via Amazon Polly. A Gamification system with XP, levels, streaks, and leaderboards helps increase learning motivation.
 
-The system is built entirely on Amazon Web Services using Serverless Architecture. The frontend uses ReactJS distributed via Amazon CloudFront, backend processing by AWS Lambda, data storage on Amazon DynamoDB, and integrates OpenAI API for answer evaluation and Amazon Polly for voice generation.
+The system is built entirely on Amazon Web Services using Serverless Architecture. The frontend uses React + TypeScript distributed via Amazon CloudFront, backend processing by AWS Lambda, data storage on Amazon DynamoDB, and integrates OpenAI API for answer evaluation and Amazon Polly for voice generation.
 
 ## 2. Problem Statement
 
@@ -33,16 +33,15 @@ IT students and entry-level professionals often lack realistic interview practic
 
 ITCoach addresses these issues with core features:
 
-- **Multi-specialty Question Bank:** 11 IT specialties, each divided into multiple topics
+- **Multi-specialty Question Bank:** 10 IT specialties, each divided into multiple topics
 - **Smart Quizzes:** Single or multiple-choice quizzes applying Spaced Repetition SM-2 for optimal review timing
-- **Multi-format Essays:** Text input or voice recording, AI evaluates and provides detailed feedback
-- **Real Interview Simulation:** Select specialty, level, duration – AI conducts voice-guided interview
-- **Personal Dashboard:** Track progress, analyze weaknesses, recommend priority review content
-- **Gamification:** XP, level, badges, streaks, leaderboards to increase learning motivation
+- **Voice Essay Practice:** Voice recording, AI evaluates and provides sample answers with voice feedback
+- **Flexible Practice:** Choose 1 essay question OR 1 specialty (3-5 random questions), default duration per question
+- **Dashboard & Gamification:** Track progress, XP, level, badges, streaks, and real-time leaderboard to increase learning motivation
 
 ### AWS Infrastructure
 
-- **Amazon CloudFront + S3** distributes ReactJS globally at high speed
+- **Amazon CloudFront + S3** distributes React + TypeScript globally at high speed
 - **Amazon Cognito** secures user authentication
 - **Amazon API Gateway + AWS Lambda** processes all serverless business logic
 - **Amazon DynamoDB** stores all system data (8 tables)
@@ -71,7 +70,7 @@ User (Browser)
     ↓ HTTPS – itcoach24h.xyz
 Amazon Route 53 (DNS)
     ↓
-Amazon CloudFront (CDN) ←→ S3 Static (ReactJS)
+Amazon CloudFront (CDN) ←→ S3 Static (React + TypeScript)
     ↓
 Amazon API Gateway (8 endpoints, Throttling: 100 req/s)
     ↓ Cognito Authorizer
@@ -90,15 +89,15 @@ AWS Lambda (8 functions)
 
 | Service | Purpose |
 |---------|---------|
-| Amazon CloudFront | CDN distributes ReactJS globally via HTTPS |
-| Amazon S3 (Static) | Stores ReactJS build files |
+| Amazon CloudFront | CDN distributes React + TypeScript globally via HTTPS |
+| Amazon S3 (Static) | Stores React + TypeScript build files |
 | Amazon S3 (Audio) | Stores audio recordings and Polly audio files |
 | Amazon API Gateway | 8 endpoints, integrates Cognito Authorizer, Throttling (100 req/s) |
 | Amazon Cognito | Registration, login, user session management |
 | AWS Lambda | 8 functions process all backend business logic |
 | Amazon DynamoDB | 8 tables store all system data |
 | Amazon SQS | Queue for asynchronous AI and audio processing |
-| Amazon Polly | Reads questions and responds with voice feedback |
+| Amazon Polly | Responds with voice feedback for sample answers |
 | OpenAI API | Speech-to-Text + answer quality evaluation |
 | Amazon CloudWatch | Monitors logs, metrics, system performance |
 | Amazon SNS | Sends email alerts when system errors occur |
@@ -128,7 +127,6 @@ AWS Lambda (8 functions)
 | 8 | Data Analyst |
 | 9 | AI/Machine Learning Engineer |
 | 10 | Cyber Security |
-| 11 | General IT Foundation Knowledge |
 
 ### 4.3. Practice Formats
 
@@ -138,25 +136,24 @@ AWS Lambda (8 functions)
 - Earn XP after each correct answer
 
 **Essay:**
-- Text input or voice recording
+- Voice recording only
 - OpenAI STT converts voice to text
 - AI scores, points out missing ideas, suggests improvements, provides sample answers
-- Polly reads feedback with voice
+- Polly reads sample answers with voice
 
-### 4.4. Mock Interview Module
+### 4.4. Voice Practice Module
 
-- Select specialty, level (Intern/Fresher/Junior), duration (15/30/60 minutes)
-- AI reads questions with voice (Polly)
-- User responds with text or voice
-- Overall evaluation after session: score per skill, areas to improve, sample answers
+- Choose 1 essay question OR 1 specialty (3-5 random questions)
+- Default duration per question
+- User responds with voice
+- AI evaluates and reads sample answers with voice (Polly)
 
 ### 4.5. Dashboard & Gamification
 
 - Learning progress by topic, completion rate, average score
-- Weakness analysis, recommended priority review content
 - Daily study streak, daily history
 - XP, Level, Badge achievement system
-- Weekly/monthly leaderboard
+- Real-time leaderboard updates
 
 ## 5. Technical Implementation
 
@@ -205,20 +202,19 @@ AWS Lambda (8 functions)
 Build entire AWS infrastructure, write 8 Lambda functions, integrate OpenAI and Polly.
 
 ### Phase 2 – Frontend & Integration
-Build ReactJS interface: auth, quiz, essay, recording, Mock Interview, dashboard, gamification.
+Build React + TypeScript interface: auth, quiz, essay, recording, Mock Interview, dashboard, gamification.
 
 ### Phase 3 – Data & Finalization
 Import question bank (prioritize Frontend, Backend, Foundation Knowledge), test entire flow, fix bugs, official deployment.
 
 | Phase | Timeline | Content |
 |-------|----------|---------|
-| Preparation | Pre-internship | Design architecture, team assignment |
-| Month 1 – Week 1–2 | Internship | Build AWS infrastructure |
-| Month 1 – Week 3–4 | Internship | Backend dev: 8 Lambda + OpenAI + Polly |
-| Month 2 – Week 1–2 | Internship | Frontend dev: auth, quiz, essay, recording |
-| Month 2 – Week 3–4 | Internship | Frontend dev: Mock Interview, dashboard, gamification |
-| Month 3 – Week 1–2 | Internship | Integration, testing, bug fixes |
-| Month 3 – Week 3–4 | Internship | Import question data, deploy, demo |
+| Preparation | Pre-internship | Form team, assign roles |
+| Month 1 – Month 2 | Internship | Learn theory, master AWS, Serverless, React + TypeScript knowledge |
+| Month 3 – Week 1 | Internship | Build AWS infrastructure: S3, DynamoDB, API Gateway, Cognito |
+| Month 3 – Week 2 | Internship | Backend dev: 8 Lambda functions + OpenAI + Polly |
+| Month 3 – Week 3 | Internship | Frontend dev: auth, quiz, essay, Mock Interview, dashboard, gamification |
+| Month 3 – Week 4 | Internship | Integration, test entire flow, bug fixes, import question data, deploy, demo |
 
 ## 7. Budget Estimation
 
@@ -246,13 +242,13 @@ Import question bank (prioritize Frontend, Backend, Foundation Knowledge), test 
 | Item | Cost |
 |------|------|
 | Domain `itcoach24h.xyz` (Namecheap) | ~$2–3/year |
-| **First Year Total** | **~$22–70/year** |
+| **First Year Total** | **~$22–70/year** (domain $2-3/year + AWS $1.60-5.60/month × 12 months) |
 
 ### Cost Summary
 
 - **Startup cost:** ~$2–3 (domain)
 - **Monthly operational cost:** ~$1.60–$5.60
-- **First year total:** ~$22–70 (including domain + 12 months operation)
+- **First year total:** ~$22–70 (domain $2-3/year + AWS $1.60-5.60/month × 12 months)
 - **From 2nd year onwards:** ~$20–$70/year (domain renewal + operation)
 
 ## 8. Risk Assessment
@@ -285,4 +281,4 @@ Import question bank (prioritize Frontend, Backend, Foundation Knowledge), test 
 
 *ITCoach – AI-Powered IT Interview Practice Platform on AWS*
 
-*Serverless | ReactJS | 8 Lambda | 8 DynamoDB | 8 API Endpoints | OpenAI | Polly | Spaced Repetition SM-2*
+*Serverless | React + TypeScript | 8 Lambda | 8 DynamoDB | 8 API Endpoints | OpenAI | Polly | Spaced Repetition SM-2*

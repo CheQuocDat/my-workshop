@@ -7,78 +7,28 @@ pre: " <b> 1.5. </b> "
 ---
 ### Mục tiêu tuần 5:
 
-* Nghiên cứu và thành thạo AWS Command Line Interface (AWS CLI).
-* Triển khai AWS IAM Identity Center để quản lý danh tính tập trung.
-* Cấu hình AWS Backup để tự động sao lưu và chiến lược khôi phục thảm họa.
+* Triển khai hệ thống quản lý danh tính, đăng ký và xác thực người dùng sử dụng Amazon Cognito.
+* Tích hợp cơ chế xác thực JWT Token để bảo vệ an toàn các cổng kết nối API Gateway.
+* Xây dựng kiến trúc hướng sự kiện (Event-Driven Architecture) sử dụng Amazon SQS, Amazon SNS và Amazon EventBridge để tách rời (decouple) các thành phần hệ thống.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2 | - Nghiên cứu các khái niệm cơ bản AWS CLI<br>- Cài đặt và cấu hình AWS CLI<br>- Kiểm tra tài nguyên với CLI<br>- Sử dụng CLI với S3, SNS, IAM, VPC, EC2 | 18/05/2026 | 18/05/2026 | <https://000011.awsstudygroup.com/> |
-| 3 | - Khắc phục các lỗi và khắc phục sự cố CLI<br>- Thực tiễn tốt nhất cho AWS CLI<br>- CLI profiles và quản lý thông tin xác thực<br>- Tự động hóa scripts với AWS CLI | 19/05/2026 | 19/05/2026 | <https://000011.awsstudygroup.com/> |
-| 4 | - Thực hành sử dụng AWS IAM Identity Center<br>- Quản lý định danh mạnh mẽ chuẩn bị AWS Account trong Organizations<br>- Khám phá tính năng IAM Identity Center<br>- Tạo users và groups trong Identity Center | 20/05/2026 | 20/05/2026 | <https://000012.awsstudygroup.com/> |
-| 5 | - Tạo và cung cấp Permission Sets<br>- Truy cập và sử dụng kiểm soát truy cập theo thời gian<br>- Customer Managed Policies<br>- IAM Identity Center Identity Store APIs | 21/05/2026 | 21/05/2026 | <https://000012.awsstudygroup.com/> |
-| 6 | - Học tập và triển khai AWS Backup<br>- Tạo S3 Bucket và kế hoạch Backup<br>- Triển khai hạ tầng cho thiết lập thông báo<br>- Kiểm tra hoạt động<br>- Xuất EC2 instance và on-premises VM vào AWS | 22/05/2026 | 22/05/2026 | <https://000013.awsstudygroup.com/> |
+| 2 | - Tìm hiểu Amazon Cognito và các thành phần User Pools vs Identity Pools<br>- Tạo và cấu hình Cognito User Pool, thiết lập chính sách mật khẩu và xác thực MFA<br>- Tùy chỉnh giao diện đăng nhập mặc định và email xác nhận người dùng | 18/05/2026 | 18/05/2026 | <https://000081.awsstudygroup.com/vi/> |
+| 3 | - Tạo Cognito Identity Pool để cấp quyền truy cập tạm thời cho tài nguyên AWS (như S3, DynamoDB)<br>- Tích hợp SDK Cognito vào ứng dụng Frontend React để thực hiện đăng ký và đăng nhập<br>- Lấy và quản lý các JWT Tokens (ID Token, Access Token, Refresh Token) ở client | 19/05/2026 | 19/05/2026 | <https://000081.awsstudygroup.com/vi/> |
+| 4 | - Tích hợp Cognito Authorizer vào API Gateway để bảo mật HTTP/REST API endpoints<br>- Cấu hình Lambda Function giải mã và kiểm tra thông tin JWT Token trong request header<br>- Kiểm tra phân quyền truy cập API bằng Postman với Authorization header | 20/05/2026 | 20/05/2026 | <https://000081.awsstudygroup.com/vi/> |
+| 5 | - Tìm hiểu kiến trúc Event-Driven và hàng đợi tin nhắn Amazon SQS<br>- Khởi tạo Standard Queue và FIFO Queue (First-In-First-Out), hiểu về Visibility Timeout<br>- Viết ứng dụng Lambda gửi tin nhắn vào queue và cấu hình Lambda Trigger xử lý tin nhắn | 21/05/2026 | 21/05/2026 | <https://000077.awsstudygroup.com/vi/> |
+| 6 | - Tìm hiểu Amazon SNS và mô hình gửi nhận tin nhắn dạng Publish/Subscribe (Pub/Sub)<br>- Tạo SNS Topic, cấu hình SQS và Email nhận thông báo từ Topic<br>- Nghiên cứu Amazon EventBridge, thiết lập Scheduled Rule để tự động kích hoạt Lambda | 22/05/2026 | 22/05/2026 | <https://000077.awsstudygroup.com/vi/> |
 
 ### Kết quả đạt được tuần 5:
 
-* Thành thạo AWS Command Line Interface (AWS CLI):
-  * Cài đặt AWS CLI version 2
-  * Configure credentials với aws configure
-  * AWS CLI profiles cho multiple accounts
-  * Output formats (JSON, text, table, YAML)
-  * Tạo và quản lý IAM Groups, Users
-  * Generate Access Keys
-  * Attach policies cho users/groups
-  * List và describe IAM resources
-  * S3: Create buckets, upload/download files, sync folders
-  * SNS: Create topics, subscriptions, publish messages
-  * VPC: Describe VPCs, subnets, security groups
-  * EC2: Launch instances, stop/start, describe instances, create key pairs
-  * Query filters với --query parameter (JMESPath)
-  * Pagination với --max-items và --page-size
-  * Bash scripting cho automation
-  * Error handling và troubleshooting
+* **Quản lý định danh người dùng an toàn với Amazon Cognito:**
+  * Thiết lập thành công Cognito User Pool quản lý cơ sở dữ liệu người dùng tập trung, hỗ trợ đăng nhập qua MFA.
+  * Tích hợp thành công luồng Authentication vào Frontend, quản lý lưu trữ JWT Token an toàn dưới LocalStorage/SessionStorage.
+  * Bảo vệ tuyệt đối các endpoint API Gateway thông qua cơ chế Cognito Authorizer (chỉ có token hợp lệ mới được đi qua).
 
-* Triển khai AWS IAM Identity Center cho multi-account management:
-  * Enable IAM Identity Center trong AWS Organizations
-  * Configure Identity source (Identity Center directory hoặc external IdP)
-  * Multi-account access management
-  * Centralized user và group management
-  * Tạo users trong Identity Center directory
-  * Organize users into groups
-  * User attributes và profile information
-  * Password policies và MFA enforcement
-  * Tạo permission sets với AWS managed policies
-  * Custom permission sets với inline policies
-  * Session duration configuration
-  * Permission set assignments cho accounts
-  * Time-based access control với session limits
-  * Customer Managed Policies integration
-  * Identity Store APIs cho programmatic access
-  * AWS CLI configuration với SSO
-  * Federated access từ corporate directory
-  * Principle of least privilege
-  * Regular access reviews
-  * Audit logging với CloudTrail
-  * Attribute-based access control (ABAC)
-
-* Deploy AWS Backup solution cho disaster recovery:
-  * Backup cho S3 buckets
-  * EC2 instance backups
-  * RDS database snapshots
-  * Cross-region backup copies
-  * Tạo backup plans với schedules
-  * Retention policies
-  * Lifecycle rules
-  * Backup vault configuration
-  * SNS topics cho backup notifications
-  * CloudWatch Events cho monitoring
-  * IAM roles cho AWS Backup service
-  * Export EC2 instances as OVA/VHD
-  * Import on-premises VMs vào AWS
-  * VMware integration
-  * Tạo instance trên môi trường ảo hóa on-premises với Ubuntu cho VMware
-  * Backup testing và restore procedures
-
-
+* **Xây dựng hệ thống tin nhắn và sự kiện bất đồng bộ:**
+  * Làm chủ Amazon SQS để làm đệm trung gian cho các tác vụ xử lý mất nhiều thời gian, giúp tăng khả năng chịu tải của ứng dụng.
+  * Phân biệt rõ Standard Queue (xử lý nhanh, không đảm bảo thứ tự) và FIFO Queue (đảm bảo thứ tự tuyệt đối và không trùng lặp tin nhắn).
+  * Vận dụng SNS Pub/Sub để phát tán sự kiện từ một nguồn đến nhiều subscriber khác nhau (SQS, Lambda, Email) cùng một lúc.
+  * Tạo các quy tắc EventBridge tự động chạy các tác vụ định kỳ (như dọn dẹp log, backup hàng đêm) theo định dạng cron-job.

@@ -1,5 +1,5 @@
 ---
-title: "Event 1 - FCAJ Community Day"
+title: "Event 1 - FCAJ Community Day (May 23)"
 date: 2024-01-01
 weight: 1
 chapter: false
@@ -93,92 +93,53 @@ Trường hợp chấm điểm tín dụng khởi nghiệp:
 
 ### Những Gì Học Được
 
-#### Về AI và Ngữ Cảnh
+#### Tối Ưu Hóa Trải Nghiệm Người Dùng Với CloudFront
+Qua chia sẻ từ chuyên gia Thinh Nguyen, tôi nhận thức rõ hơn rằng CloudFront không đơn thuần là dịch vụ CDN lưu đệm tĩnh mà đóng vai trò như một lá chắn bảo mật biên mạnh mẽ. Việc kết hợp CloudFront OAC (Origin Access Control) với S3 và kích hoạt AWS WAF giúp giảm tải trực tiếp cho máy chủ gốc, tối ưu hóa chi phí đường truyền và tăng tốc độ tải trang trên toàn cầu một cách vượt trội.
 
-Phần trình bày của Tinh Truong đã mở mang tư duy về tầm quan trọng của ngữ cảnh trong AI. Không phải AI nào cũng hoạt động tốt mà cần có đủ ngữ cảnh để AI có thể đưa ra câu trả lời chính xác. Khái niệm "Bộ Não AI Thứ Hai" rất thú vị - việc xây dựng một hệ thống AI có khả năng ghi nhớ và học hỏi từ các tương tác trước đó giống như một bộ não thứ hai.
+#### Ứng Dụng Tác Nhân AI Và Giải Pháp No-Code Từ Amazon Q
+Phiên thảo luận của diễn giả Anh Pham về Amazon Q đã chỉ ra xu hướng mới trong tối ưu hóa năng suất doanh nghiệp:
+- **Xây dựng quy trình tự động (Quick Flows):** Giúp tích hợp luồng nghiệp vụ thông minh mà không yêu cầu viết code phức tạp.
+- **Tương tác dữ liệu tự nhiên (Quick Chat/Quick Sight):** Cho phép truy vấn dữ liệu thô và hiển thị dashboard phân tích tức thì chỉ thông qua ngôn ngữ tự nhiên.
+Điều này khẳng định AI đang ngày càng được dân chủ hóa, giúp cả lập trình viên lẫn người dùng phi kỹ thuật đều tiếp cận được hạ tầng đám mây một cách dễ dàng.
 
-#### Amazon Q - Giải Pháp AI Không Cần Viết Mã
+#### Giải Quyết Bài Toán Tính Không Xác Định (Non-determinism) Của LLMs
+Phiên trình bày chuyên sâu của anh Duc Dao về LLM đã làm sáng tỏ một hiểu lầm phổ biến: thiết lập `temperature = 0` không hoàn toàn đảm bảo kết quả đầu ra giống nhau 100% do các thuật toán tối ưu hóa phần cứng và suy luận song song ở tầng dưới. Bài học thực tế rút ra là cần xây dựng các bộ lọc Guardrails chặt chẽ và cơ chế kiểm thử tính nhất quán trước khi đưa mô hình ngôn ngữ vào môi trường sản xuất thực tế.
 
-Phiên về Amazon Q đã giới thiệu một bộ công cụ AI mạnh mẽ của AWS:
-- **Tác Nhân Trò Chuyện Nhanh** giúp khám phá và phân tích dữ liệu một cách trực quan
-- **Luồng Nhanh** cho phép tạo quy trình làm việc thông minh chỉ bằng ngôn ngữ tự nhiên, không cần viết mã
-- **Không Gian Nhanh** tạo không gian làm việc chung để chia sẻ thông tin chi tiết
-- **Tầm Nhìn Nhanh** xây dựng bảng điều khiển từ dữ liệu thô bằng ngôn ngữ tự nhiên
+#### Kiến Trúc Đa Tác Nhân (Multi-Agent System) Trong Thực Tế
+Nghiên cứu tình huống chấm điểm tín dụng khởi nghiệp từ chị Vy Lam đã đem lại góc nhìn thực tiễn: thay vì dựa vào một LLM đơn lẻ dễ bị quá tải ngữ cảnh, việc phân rã nhiệm vụ cho một mạng lưới tác nhân chuyên biệt (Virtual Credit Committee) hoạt động phối hợp mang lại độ chính xác cao hơn, kiểm soát rủi ro tốt hơn và dễ dàng mở rộng quy mô.
 
-Điều này mở ra khả năng dân chủ hóa AI - không chỉ nhà phát triển mà người dùng doanh nghiệp cũng có thể tận dụng sức mạnh của AI.
-
-#### CloudFront - Hơn Cả Một CDN
-
-Trước đây mình chỉ nghĩ CloudFront là một mạng phân phối nội dung đơn thuần, nhưng qua phiên của Thinh Nguyen mình nhận ra nó còn là:
-- **Lớp nền tảng** cho mọi khối công việc trên AWS
-- **Lá chắn bảo mật** với nhiều tính năng bảo mật tích hợp
-- **Bộ tối ưu chi phí** giúp giảm chi phí băng thông
-- **Bộ tăng tốc hiệu suất** cải thiện trải nghiệm người dùng toàn cầu
-- **Bộ tăng cường độ tin cậy** tăng độ tin cậy của hệ thống
-
-#### Kinh Nghiệm Cuộc Thi Phát Triển Phần Mềm
-
-Nhóm VIB đã chia sẻ hành trình 36 giờ căng thẳng tại LotusHacks. Những bài học từ họ:
-- **Áp lực thời gian** có thể là động lực tốt để đổi mới nhanh
-- **Xoay chiều** khi cần thiết - không cứng nhắc với ý tưởng ban đầu
-- **Cộng tác nhóm** quan trọng hơn kỹ năng cá nhân
-- **Tư duy sản phẩm khả thi tối thiểu** - tập trung vào tính năng cốt lõi trước
-
-#### Phân Tích Kỹ Thuật Sâu Về Mô Hình Ngôn Ngữ Lớn
-
-Phiên của Duc Dao về tính không xác định trong mô hình ngôn ngữ lớn là phần kỹ thuật nhất. Mặc dù thiết lập nhiệt độ=0 thường được cho là "xác định" nhưng thực tế các tối ưu hóa trong quá trình suy luận có thể dẫn đến đầu ra khác nhau. Điều này rất quan trọng khi xây dựng hệ thống sản xuất với mô hình ngôn ngữ lớn - cần có chiến lược giảm thiểu phù hợp.
-
-#### Hệ Thống Đa Tác Nhân
-
-Vy Lam đã trình bày một nghiên cứu tình huống thực tế về chấm điểm tín dụng cho khởi nghiệp. Thay vì dùng tác nhân đơn, họ xây dựng hệ thống đa tác nhân giống như một "Ủy Ban Tín Dụng Ảo" với:
-- Nhiều tác nhân chuyên biệt cho từng khía cạnh đánh giá
-- Rào cản và kiểm tra tuân thủ
-- Lợi tức đầu tư và lộ trình triển khai rõ ràng
-
-Đây là hướng tiếp cận rất thực tế cho các ứng dụng AI doanh nghiệp.
+---
 
 ### Trải Nghiệm Cá Nhân
 
-#### Giao Lưu và Cộng Đồng
+#### Tinh Thần Đổi Mới Từ Sân Chơi Hackathon
+Hành trình phát triển sản phẩm UTMorpho trong vòng 36 giờ liên tục của nhóm VIB tại LotusHacks đã truyền cảm hứng mạnh mẽ cho tôi. Bài học lớn nhất không chỉ là kỹ năng lập trình dưới áp lực thời gian, mà là tư duy sản phẩm khả thi tối thiểu (MVP) - biết tập trung giải quyết bài toán cốt lõi nhất trước khi nghĩ đến những tính năng phức tạp hơn.
 
-Sự kiện tạo cơ hội tuyệt vời để kết nối với cộng đồng AWS tại Việt Nam. Được gặp gỡ các chuyên gia, sinh viên và những người đam mê AI cùng niềm đam mê công nghệ. Không khí rất thân thiện và cởi mở - mọi người sẵn sàng chia sẻ kinh nghiệm và thông tin chi tiết.
-
-#### Kiến Thức Thực Tế
-
-Khác với các sự kiện thuần lý thuyết, FCAJ Community Day tập trung vào ứng dụng thực tế:
-- Nghiên cứu tình huống thực tế (UTMorpho, chấm điểm tín dụng khởi nghiệp)
-- Công cụ thực hành (bộ công cụ Amazon Q)
-- Phân tích kỹ thuật sâu (tính không xác định của mô hình ngôn ngữ lớn)
-- Mẫu kiến trúc (hệ thống đa tác nhân)
-
-Mỗi phiên đều có điểm chính cụ thể có thể áp dụng ngay vào công việc.
-
-#### Thông Tin Chi Tiết Về Nghề Nghiệp
-
-Phiên của Tinh Truong về nghề nghiệp trong AI rất truyền cảm hứng. Điểm chính:
-- Bắt đầu xây dựng với AI sớm - không cần đợi đến khi "đủ giỏi"
-- Tập trung vào hiểu ngữ cảnh và giải quyết vấn đề hơn là ghi nhớ thuật toán
-- Đóng góp cho cộng đồng - chia sẻ những gì bạn học được
-- AI là một công cụ - hiểu biết doanh nghiệp vẫn là nền tảng
+#### Kết Nối Cộng Đồng Công Nghệ Sôi Nổi
+FCAJ Community Day đã mang lại một không gian kết nối (networking) vô cùng năng động. Tôi có cơ hội gặp gỡ, trao đổi trực tiếp với nhiều chuyên gia AWS Hero, các kỹ sư hệ thống lâu năm và cả những bạn sinh viên có chung niềm đam mê. Sự cởi mở và nhiệt tình chia sẻ của cộng đồng AWS Vietnam chính là động lực lớn giúp tôi tự tin hơn trên con đường học tập và phát triển bản thân.
 
 ### Ứng Dụng Vào Công Việc
 
-- **Khám phá Amazon Q** cho các ứng dụng trong nhóm - đặc biệt Luồng Nhanh để tự động hóa quy trình làm việc
-- **Áp dụng lời nhắc nhận biết ngữ cảnh** khi làm việc với các mô hình AI - cung cấp ngữ cảnh tốt hơn cho kết quả tốt hơn
-- **Xem xét CloudFront** không chỉ cho bộ nhớ đệm mà còn cho bảo mật và tối ưu hóa chi phí
-- **Nghiên cứu các mẫu đa tác nhân** cho các vấn đề kinh doanh phức tạp thay vì ép buộc mô hình ngôn ngữ lớn đơn lẻ
-- **Ghi chép các hành vi không xác định** khi thử nghiệm ứng dụng mô hình ngôn ngữ lớn - có kế hoạch giảm thiểu
+- **Thử nghiệm Amazon Q** cho việc hỗ trợ code hàng ngày và tự động hóa quy trình nghiệp vụ.
+- **Tối ưu hóa Prompts** bằng cách truyền đầy đủ thông tin ngữ cảnh để đảm bảo LLM đưa ra câu trả lời chính xác nhất.
+- **Nghiên cứu kiến trúc Multi-Agent** khi đối mặt với các bài toán nghiệp vụ phức tạp đòi hỏi nhiều bước xử lý tuần tự.
+- **Triển khai CloudFront OAC** trong bài tập thực hành tiếp theo để bảo vệ S3 Bucket gốc.
 
 ### Một Số Hình Ảnh Khi Tham Gia Sự Kiện
 
-![Event FCAJ Community Day 1](/images/event11.jpg)
+![Event FCAJ Community Day 5](/images/event15.jpg)
+*Hình 1: Diễn giả đang trình bày về giải pháp Amazon CloudFront trước sự tập trung lắng nghe của các học viên.*
 
 ![Event FCAJ Community Day 2](/images/event12.jpg)
+*Hình 2: Diễn giả chia sẻ chuyên sâu về vai trò quan trọng của context trong các ứng dụng AI thực tế.*
 
 ![Event FCAJ Community Day 3](/images/event13.jpg)
+*Hình 3: Diễn giả giới thiệu slide chương trình Agenda và lộ trình xây dựng hệ thống đa tác nhân.*
 
 ![Event FCAJ Community Day 4](/images/event14.jpg)
+*Hình 4: Nhóm sinh viên VIB chia sẻ về hành trình 36 giờ phát triển dự án hackathon UTMorpho.*
 
-![Event FCAJ Community Day 5](/images/event15.jpg)
+![Event FCAJ Community Day 1](/images/event11.jpg)
+*Hình 5: Không khí check-out náo nhiệt của cộng đồng công nghệ tại tầng 26 tòa nhà Bitexco.*
 
 > Tổng thể, FCAJ Community Day là một sự kiện chất lượng cao với nội dung thực tế, diễn giả giàu kinh nghiệm và cộng đồng nhiệt tình. Sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn mở rộng mạng lưới và cơ hội nghề nghiệp trong lĩnh vực AI và Đám mây.

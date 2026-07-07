@@ -9,7 +9,7 @@ pre: " <b> 5.10. </b> "
 #### Giới thiệu về CloudFront
 
 Amazon CloudFront là Content Delivery Network (CDN) phân phối nội dung với độ trễ thấp. Trong ITCoach, CloudFront sẽ:
-- Phân phối ReactJS frontend toàn cầu
+- Phân phối React + TypeScript frontend toàn cầu
 - Cache static assets (HTML, CSS, JS)
 - Cung cấp HTTPS
 - Handle React Router (SPA routing)
@@ -98,7 +98,7 @@ Truy cập CloudFront domain trên browser:
 https://xxxxxxxxxxxx.cloudfront.net
 ```
 
-Hiện tại sẽ báo lỗi vì chưa upload ReactJS. Sau khi dev xong frontend và upload lên S3, trang web sẽ hoạt động.
+Hiện tại sẽ báo lỗi vì chưa upload React + TypeScript. Sau khi dev xong frontend và upload lên S3, trang web sẽ hoạt động.
 
 #### Tiếp theo
 

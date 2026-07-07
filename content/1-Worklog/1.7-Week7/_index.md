@@ -7,46 +7,29 @@ pre: " <b> 1.7. </b> "
 ---
 ### Week 7 Objectives:
 
-* Build CI/CD pipeline for container deployment with GitLab and AWS ECS.
-* Implement security monitoring with AWS Security Hub.
-* Deploy VPC Peering with CloudFormation for multi-VPC architecture connectivity.
+* Build a serverless Data Lake architecture on AWS using Amazon S3 as the primary storage layer.
+* Automate metadata cataloging and ETL (Extract, Transform, Load) jobs using AWS Glue.
+* Query S3 data directly using SQL with Amazon Athena and visualize insights using Amazon QuickSight dashboards.
 
 ### Tasks to be carried out this week:
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 2 | - Research CI/CD architecture on Amazon ECS<br>- Learn Docker containerization and ECS Task Definitions<br>- Environment preparation: create ECS Cluster, ECR repository<br>- Configure GitLab repository and create Dockerfile | 06/01/2026 | 06/01/2026 | <https://000017.awsstudygroup.com/> |
-| 3 | - Write GitLab CI/CD configuration file (.gitlab-ci.yml)<br>- Integrate GitHub Actions with AWS CodeBuild<br>- Configure automated build and push Docker image<br>- Deploy application to ECS through CI/CD | 06/02/2026 | 06/02/2026 | <https://000017.awsstudygroup.com/> |
-| 4 | - Learn AWS Security Hub and security standards<br>- Enable AWS Security Hub in account<br>- Configure security standards (CIS AWS Foundations, PCI DSS)<br>- Analyze security findings and create custom insights | 06/03/2026 | 06/03/2026 | <https://000018.awsstudygroup.com/> |
-| 5 | - Research VPC Peering architecture and use cases<br>- Create CloudFormation template for multi-VPC architecture<br>- Configure VPC Peering connection and update route tables<br>- Launch EC2 instances in both VPCs | 06/04/2026 | 06/04/2026 | <https://000019.awsstudygroup.com/> |
-| 6 | - Configure Security Groups for peered VPCs<br>- Test connectivity between instances via private IPs<br>- Implement security best practices for VPC Peering<br>- Configure Network ACLs and document architecture | 06/05/2026 | 06/05/2026 | <https://000019.awsstudygroup.com/> |
+| Mon | - Learn Data Lake architecture and the lifecycle stages of big data (Ingest, Store, Process, Analyze)<br>- Configure tiered S3 Buckets representing: Raw, Processed, and Curated Zones<br>- Set up IAM roles and access permissions for analytics services | 06/01/2026 | 06/01/2026 | <https://000035.awsstudygroup.com/> |
+| Tue | - Study AWS Glue components: Data Catalog, Crawlers, Connections, and Jobs<br>- Create and configure an AWS Glue Crawler to scan raw data stored in S3<br>- Verify crawl results and check generated schemas in the Glue Data Catalog | 06/02/2026 | 06/02/2026 | <https://000035.awsstudygroup.com/> |
+| Wed | - Build an ETL (Extract, Transform, Load) Job in AWS Glue<br>- Configure data format conversion from row-oriented formats (like CSV/JSON) to columnar formats (Parquet)<br>- Apply S3 data partitioning to accelerate queries and reduce operational costs | 06/03/2026 | 06/03/2026 | <https://000070.awsstudygroup.com/> |
+| Thu | - Learn Amazon Athena serverless query engine capabilities<br>- Configure S3 query output location requirements<br>- Write standard SQL queries to perform analysis directly on S3 data cataloged in Glue | 06/04/2026 | 06/04/2026 | <https://000106.awsstudygroup.com/> |
+| Fri | - Register and set up the Amazon QuickSight environment<br>- Configure data source connections to Amazon Athena and import datasets into SPICE storage<br>- Design interactive visualization charts and publish secure business dashboards | 06/05/2026 | 06/05/2026 | <https://000073.awsstudygroup.com/> |
 
 ### Week 7 Achievements:
 
-* Mastered CI/CD pipeline for container deployment:
-  * Understand CI/CD pipeline workflow on Amazon ECS
-  * Proficient in Docker containerization and ECS Task Definitions
-  * Successfully integrated GitLab CI/CD with AWS services
-  * Wrote GitLab CI/CD configuration file (.gitlab-ci.yml) and GitHub Actions workflow
-  * Successfully created ECS cluster, ECR repository for Docker image storage
-  * Set up IAM roles for ECS Task execution
-  * CI/CD pipeline working end-to-end, application deployed automatically on code changes
-  * Logs and monitoring fully configured
+* **Built a Serverless Data Lake:**
+  * Implemented a structured multi-tiered S3 storage design adhering to enterprise big data standards.
+  * Leveraged S3's low-cost, high-durability storage architecture to manage scalable analytical data pools.
 
-* Implemented AWS Security Hub for security monitoring:
-  * Understand AWS Security Hub and AWS Foundational Security Best Practices
-  * Enabled AWS Security Hub and configured security standards (CIS AWS Foundations, PCI DSS)
-  * Analyzed security findings and compliance status
-  * Set up automated remediation with AWS Config
-  * Created custom insights and security dashboards for security monitoring
-  * Security Hub helps detect and remediate security vulnerabilities
+* **Automated Data Processing with AWS Glue:**
+  * Successfully operated Glue Crawlers to discover heterogeneous schemas automatically and maintain a centralized Data Catalog.
+  * Executed ETL transformation jobs to compress raw logs into partitioned Parquet files, decreasing query scan data sizes by up to 80%.
 
-* Mastered VPC Peering with Infrastructure as Code:
-  * Researched VPC Peering architecture, use cases, and routing
-  * Created CloudFormation template for multi-VPC architecture
-  * Successfully deployed 2 VPCs via CloudFormation stack
-  * Established VPC Peering connection and updated route tables for peering traffic
-  * Launched EC2 instances in both VPCs
-  * Configured Security Groups for peered VPCs
-  * Tested and verified connectivity between instances via private IPs (ICMP ping, SSH connection)
-  * Implemented security best practices: Network ACLs, least privilege principle
-  * Cross-VPC connectivity working perfectly via private network
+* **Data Analysis & Visualization:**
+  * Executed SQL queries using Athena directly against S3 objects, obtaining analytical results quickly without maintaining database servers.
+  * Designed and published multi-dimensional QuickSight business intelligence dashboards to help make data-driven decisions.

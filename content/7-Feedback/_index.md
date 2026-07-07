@@ -6,47 +6,42 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
-### Overall Evaluation
+### Program Evaluation & Feedback
 
-**1. Working Environment**  
-The working environment at AWS is very professional and dynamic. The office is modern with full equipment and working tools. The work atmosphere is open, encouraging creativity and innovation.
+#### 1. Learning & Working Environment
+The working environment at AWS Vietnam is modern, dynamic, and highly inspiring. The availability of clean technical infrastructure, structured guidelines, and collaborative tools allowed us to transition smoothly into the Bootcamp and remain fully focused on learning.
 
-**2. Support from Mentor / Team Admin**  
-Mentors and AWS team are always enthusiastic in providing guidance and answering technical questions in detail. Particularly valuable are the workshop sessions and experience sharing about serverless architecture and AWS best practices. The admin team provides excellent support with documentation, AWS accounts, and administrative matters.
+#### 2. Mentor & Administrative Support
+The AWS mentors are exceptionally knowledgeable and dedicated. The live Q&A sessions and architecture review boards were crucial in resolving technical bottlenecks, especially regarding serverless best practices (AWS Well-Architected Framework). The admin team was highly responsive in provisioning practice environments and resolving administrative issues.
 
-**3. Relevance of Work to Academic Major**  
-The Bootcamp program is completely aligned with IT majors. Getting to learn and practice AWS services directly like Lambda, DynamoDB, API Gateway, CloudFront, Cognito - all are essential skills for Cloud Engineers and Full-stack Developers. The knowledge gained is immediately applicable in practice.
+#### 3. Academic Relevance & Career Alignment
+The Bootcamp curriculum aligns perfectly with modern Cloud/DevOps industry demands. Hands-on experience configuring S3, CloudFront, Lambda, API Gateway, DynamoDB, and AWS WAF equipped me with the critical skills required for my career progression. The knowledge acquired is highly applicable to both my academic projects and future professional roles.
 
-**4. Learning & Skill Development Opportunities**  
-Learned extensively about AWS Serverless Architecture, from system design, infrastructure building, to deployment and monitoring. Beyond technical skills, also developed soft skills like teamwork, time management, and presenting ideas. The opportunity to work with AI technology (OpenAI API, Amazon Polly) is a major plus.
+#### 4. Soft Skills & Architectural Thinking
+Beyond hard technical skills, the program forced us to approach complex problems systematically. Group projects, milestone planning, and presenting architecture designs greatly improved my communication and project management capabilities. Early exposure to Generative AI capabilities like Amazon Bedrock and Amazon Q also widened my perspective on product design.
 
-**5. Company Culture & Team Spirit**  
-AWS culture highly values customer obsession and innovation. Team spirit in the bootcamp is excellent - everyone works together to solve problems and shares knowledge openly. Brainstorming and code review sessions are very beneficial, learning from each other.
-
-**6. Internship Policies / Benefits**  
-AWS provides AWS accounts for practice, comprehensive documentation, and a good working environment. The program is well-organized with a clear roadmap and specific milestones. AWS credits are provided to experiment with services without cost concerns.
+#### 5. Corporate Culture & Team Spirit
+AWS culture encourages openness, respect, and learning from experimentation. The collaborative atmosphere among the bootcamp cohort was outstanding; peer programming and brainstorming sessions created a supportive community where knowledge was shared freely.
 
 ---
 
-### Feedback and Suggestions
+### Feedback and Recommendations
 
 **Program Strengths:**
-- Practical workshop content, immediately applicable
-- Experienced mentors providing enthusiastic support
-- Hands-on with real AWS services
-- Detailed and easy-to-follow documentation
+*   A well-balanced curriculum between theoretical knowledge and intensive, practical hands-on labs.
+*   Access to experienced mentors who share invaluable real-world project scenarios and architectures.
+*   Generous AWS credits provided, allowing students to experiment with complex services without cost barriers.
 
 **Areas for Improvement:**
-- Could add sessions on AWS Cost Optimization
-- Update practice exercises for services with new interface changes
-- Should include mock interviews or career guidance sessions
+*   *Syncing with Console Updates:* Since the AWS Console updates frequently, keeping lab guides synchronized with the latest UI changes will help prevent confusion for incoming students.
+*   *Dedicated Cost Management Sessions:* Introducing a focused session on monitoring spending, configuring budgets, and analyzing cost drivers with AWS Cost Explorer would be highly beneficial.
 
-**Suggestions for Future Programs:**
-- Organize more networking events with AWS engineers
-- Provide AWS certification vouchers for outstanding performers
+**Suggestions for Future Cohorts:**
+*   Organizing career guidance sessions or mock interviews with AWS Solutions Architects and Engineers to bridge the gap between learning and industry employment.
+*   Providing certification vouchers (e.g., AWS Cloud Practitioner or Solutions Architect Associate) to top-performing students to further incentivize professional development.
 
 ---
 
 ### Conclusion
 
-I highly appreciate the **Workforce Bootcamp - First Cloud AI Journey** program. This is an excellent opportunity for IT students to access real cloud and AI technology. I will recommend this program to other students and hope to participate in AWS programs in the future.
+The **Workforce Bootcamp - First Cloud AI Journey** is a premier program for IT students looking to enter the fields of Cloud Computing and AI. I am deeply grateful for this opportunity and will highly recommend this bootcamp to my peers.

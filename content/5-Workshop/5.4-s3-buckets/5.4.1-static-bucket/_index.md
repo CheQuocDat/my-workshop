@@ -8,7 +8,7 @@ pre: " <b> 5.4.1. </b> "
 
 #### Purpose
 
-This bucket will store the built ReactJS frontend (HTML, CSS, JavaScript) and be configured as Static Website Hosting for CloudFront distribution.
+This bucket will store the built React + TypeScript frontend (HTML, CSS, JavaScript) and be configured as Static Website Hosting for CloudFront distribution.
 
 #### Steps to Perform
 

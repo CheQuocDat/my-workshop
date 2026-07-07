@@ -7,52 +7,35 @@ pre: " <b> 1.2. </b> "
 ---
 ### Week 2 Objectives:
 
-* Start with Amazon VPC and AWS VPN Site-to-Site.
-* Learn and practice creating VPC, Security Groups, VPN Connection.
+* Understand AWS Hosting & Storage services including Amazon S3, Amazon CloudFront, and Amazon Route 53.
+* Deploy and host a secure static website on Amazon S3.
+* Configure Amazon CloudFront CDN to optimize performance and reduce global latency.
+* Manage DNS and custom domain routing using Amazon Route 53 with ACM SSL/TLS certificates.
 
 ### Tasks to be carried out this week:
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| Mon | - Learn VPC (Virtual Private Cloud) basics<br>- Understand CIDR blocks, Subnets (Public/Private)<br>- Learn about Internet Gateway and NAT Gateway<br>- Create VPC with multi-AZ architecture | 04/28/2026 | 04/28/2026 | <https://000003.awsstudygroup.com/> |
-| Tue | - Learn Security Groups and Network ACLs<br>- Differentiate Stateful vs Stateless firewall<br>- Configure inbound/outbound rules<br>- Practice creating Security Groups for EC2 | 04/29/2026 | 04/29/2026 | <https://000003.awsstudygroup.com/> |
-| Wed | - Learn Route Tables and routing<br>- Configure VPC Flow Logs<br>- Setup CloudWatch monitoring for VPC<br>- Use VPC Resource Map for visualization | 04/30/2026 | 04/30/2026 | <https://000003.awsstudygroup.com/> |
-| Thu | - Learn AWS Site-to-Site VPN<br>- Create Virtual Private Gateway and Customer Gateway<br>- Configure VPN Connection<br>- Test VPN connectivity | 05/01/2026 | 05/01/2026 | <https://000003.awsstudygroup.com/> |
-| Fri | - Learn AWS Transit Gateway<br>- Connect multiple VPCs via Transit Gateway<br>- Configure VPN with strongSwan<br>- Route traffic through Transit Gateway | 05/02/2026 | 05/02/2026 | <https://000003.awsstudygroup.com/> |
+| Mon | - Learn Amazon S3 (Simple Storage Service) basics<br>- Differentiate S3 Storage Classes (Standard, IA, Glacier)<br>- Study access control mechanisms: IAM Policies, Bucket Policies, and ACLs<br>- Set up default encryption configurations (SSE-S3, SSE-KMS) | 04/27/2026 | 04/27/2026 | <https://000057.awsstudygroup.com/> |
+| Tue | - Enable S3 Static Website Hosting<br>- Upload static website assets and configure index/error documents (index.html, error.html)<br>- Setup public-read Bucket Policy securely<br>- Learn and configure CORS (Cross-Origin Resource Sharing) | 04/28/2026 | 04/28/2026 | <https://000057.awsstudygroup.com/> |
+| Wed | - Learn Amazon CloudFront concepts including Edge Locations and Regional Edge Caches<br>- Create a CloudFront Distribution pointing to the S3 Bucket origin<br>- Configure Origin Access Control (OAC) to block direct public access to S3<br>- Set Cache Behaviors, TTLs, and auto-compression | 04/29/2026 | 04/29/2026 | <https://000094.awsstudygroup.com/> |
+| Thu | - Learn Amazon Route 53 and DNS routing methods<br>- Create a Hosted Zone for a custom domain<br>- Configure basic DNS records (A, AAAA, CNAME, MX, TXT)<br>- Set up Routing Alias records pointing to the CloudFront Distribution | 04/30/2026 | 04/30/2026 | <https://000010.awsstudygroup.com/> |
+| Fri | - Request free SSL/TLS certificates via AWS Certificate Manager (ACM)<br>- Perform domain ownership validation using DNS Validation<br>- Bind the ACM certificate to the CloudFront Distribution<br>- Configure HTTPS security policies and automatic HTTP-to-HTTPS redirect | 05/01/2026 | 05/01/2026 | <https://000094.awsstudygroup.com/> |
 
 ### Week 2 Achievements:
 
-* Understood Amazon VPC (Virtual Private Cloud) architecture and network resource isolation on AWS:
-  * CIDR notation and IP address planning
-  * Multi-AZ deployment for high availability
-  * Public Subnets with Internet Gateway (IGW) for Internet access
-  * Private Subnets with NAT Gateway for outbound traffic
-  * Route Tables and routing priority (longest prefix matching)
-  * VPC peering and VPC endpoints
+* **Mastered Amazon S3 Storage:**
+  * Gained a solid understanding of Object Storage and storage classes to optimize cost.
+  * Configured Lifecycle Policies to automatically transition or expire objects.
+  * Mastered Bucket Policies and OAC to restrict S3 access only via CloudFront.
 
-* Mastered Network Security with Security Groups and Network ACLs:
-  * Security Groups - stateful firewall at EC2 instance level
-  * Network ACLs - stateless firewall at subnet level
-  * Configured inbound rules (SSH, HTTP, HTTPS) and outbound rules
-  * Rule numbering and evaluation order
-  * Security group chaining and references
-  * Deny rules to blacklist IPs
+* **Successfully Deployed Static Website:**
+  * Configured S3 Static Website Hosting to serve pages quickly and reliably.
+  * Resolved CORS issues to allow safe cross-origin API calls.
 
-* Deployed VPC Monitoring and Troubleshooting:
-  * VPC Flow Logs to capture IP traffic information
-  * Published logs to CloudWatch Logs or S3
-  * Created CloudWatch dashboards to visualize VPC resources
-  * Set up alarms for traffic anomalies
-  * Analyzed traffic patterns and troubleshot connectivity
-  * Identified security threats and unusual traffic
-  * Used VPC Resource Map for visualization
+* **Optimized Application Performance via CloudFront CDN:**
+  * Established global content delivery network to serve static assets with low latency.
+  * Understood Cache Keys, TTL, and Cache Invalidation mechanisms for immediate updates.
 
-* Connected on-premises with AWS via VPN Solutions:
-  * Site-to-Site VPN with Virtual Private Gateway (VGW) and Customer Gateway (CGW)
-  * Established IPsec VPN tunnel between on-premises and AWS VPC
-  * Static routing vs Dynamic routing (BGP)
-  * AWS Transit Gateway - hub-and-spoke architecture for multi-VPC connectivity
-  * Transit Gateway attachments (VPC, VPN, Direct Connect)
-  * Transit Gateway route tables
-  * Configured strongSwan VPN (open-source IPsec) on Linux EC2 instance
-  * VPN monitoring and troubleshooting
-  * VPN high availability patterns
+* **Managed DNS & Domain Security:**
+  * Administered DNS Route 53 and mapped records accurately.
+  * Successfully integrated HTTPS using ACM SSL/TLS certificates, ensuring end-user security and SEO compliance.

@@ -6,34 +6,31 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-Trong suốt thời gian thực tập tại **Công ty TNHH Amazon Web Services Viet Nam** với vị trí **Workforce Bootcamp - First Cloud AI Journey** từ **17/04/2026** đến **10/07/2026**, tôi đã có cơ hội học hỏi, rèn luyện và áp dụng kiến thức đã được trang bị tại trường vào môi trường làm việc thực tế.  
-Tôi đã tham gia **xây dựng workshop và triển khai ứng dụng serverless trên nền tảng AWS**, qua đó cải thiện kỹ năng **quản lý và phân chia công việc nhóm, xây dựng hạ tầng đám mây**.  
+Trong suốt quá trình thực tập và tham gia chương trình **Workforce Bootcamp - First Cloud AI Journey** tại **Công ty TNHH Amazon Web Services Việt Nam** từ **17/04/2026** đến **10/07/2026**, tôi đã có cơ hội quý báu để nhúng mình vào môi trường làm việc thực tế, áp dụng các kiến thức nền tảng từ giảng đường vào các bài toán hạ tầng đám mây hiện đại.
 
-Về tác phong, tôi luôn cố gắng hoàn thành tốt nhiệm vụ, tuân thủ nội quy, và tích cực trao đổi với đồng nghiệp để nâng cao hiệu quả công việc.
+Tại đây, tôi đã trực tiếp tham gia **thiết kế tài liệu kỹ thuật, thiết kế sơ đồ kiến trúc và triển khai các hệ thống Serverless trên AWS**. Quá trình này giúp tôi củng cố sâu sắc năng lực tư duy kiến trúc hệ thống đám mây cũng như kỹ năng điều phối, quản trị công việc cá nhân và cộng tác nhóm.
 
-Để phản ánh một cách khách quan quá trình thực tập, tôi xin tự đánh giá bản thân dựa trên các tiêu chí dưới đây:
+Dưới đây là bảng tự đánh giá chi tiết quá trình học tập và làm việc của tôi:
 
+| STT | Tiêu chí đánh giá | Mô tả chi tiết | Tốt | Khá | Đạt |
+| --- | --- | --- | --- | --- | --- |
+| 1 | **Kiến thức chuyên môn** | Nắm vững kiến thức về dịch vụ AWS, thiết kế hệ thống serverless, chất lượng sản phẩm đầu ra | ✅ | ☐ | ☐ |
+| 2 | **Khả năng tiếp thu** | Tốc độ nắm bắt công nghệ mới (AI, các dịch vụ AWS nâng cao) và áp dụng vào bài tập | ☐ | ✅ | ☐ |
+| 3 | **Sự chủ động** | Tự tìm tòi tài liệu, chủ động nghiên cứu giải quyết lỗi phát sinh mà không chờ đợi hướng dẫn | ✅ | ☐ | ☐ |
+| 4 | **Trách nhiệm công việc** | Đảm bảo hoàn thành đúng thời hạn các milestone và chất lượng bài nộp | ✅ | ☐ | ☐ |
+| 5 | **Ý thức kỷ luật** | Tuân thủ tuyệt đối lịch trình hoạt động, quy định bảo mật thông tin và quy trình làm việc | ✅ | ☐ | ☐ |
+| 6 | **Tinh thần cầu tiến** | Chủ động xin ý kiến đóng góp của Mentor để cải thiện chất lượng thiết kế hệ thống | ✅ | ☐ | ☐ |
+| 7 | **Kỹ năng giao tiếp** | Khả năng truyền đạt ý tưởng kỹ thuật, báo cáo tiến độ và trình bày slide | ☐ | ✅ | ☐ |
+| 8 | **Làm việc nhóm** | Phối hợp nhịp nhàng với các thành viên khác, sẵn sàng chia sẻ tài liệu và giúp đỡ đồng đội | ✅ | ☐ | ☐ |
+| 9 | **Tác phong chuyên nghiệp** | Tôn trọng các quy chuẩn giao tiếp công nghệ, văn hóa làm việc và đối tác | ✅ | ☐ | ☐ |
+| 10 | **Tư duy giải quyết vấn đề** | Phân tích nguyên nhân lỗi cấu hình và đề xuất các giải pháp tối ưu hóa thay thế | ☐ | ✅ | ☐ |
+| 11 | **Đóng góp chung** | Chất lượng các bài viết hướng dẫn (workshops) đóng góp vào kho tài nguyên học tập | ✅ | ☐ | ☐ |
+| 12 | **Đánh giá tổng thể** | Mức độ hoàn thành mục tiêu ban đầu đề ra cho kỳ thực tập | ✅ | ☐ | ☐ |
 
-| STT | Tiêu chí                            | Mô tả                                                                                            | Tốt | Khá | Trung bình |
-| --- | ----------------------------------- | ------------------------------------------------------------------------------------------------ | --- | --- | ---------- |
-| 1   | **Kiến thức và kỹ năng chuyên môn** | Hiểu biết về ngành, áp dụng kiến thức vào thực tế, kỹ năng sử dụng công cụ, chất lượng công việc | ✅   | ☐   | ☐          |
-| 2   | **Khả năng học hỏi**                | Tiếp thu kiến thức mới, học hỏi nhanh                                                            | ☐   | ✅   | ☐          |
-| 3   | **Chủ động**                        | Tự tìm hiểu, nhận nhiệm vụ mà không chờ chỉ dẫn                                                  | ✅   | ☐   | ☐          |
-| 4   | **Tinh thần trách nhiệm**           | Hoàn thành công việc đúng hạn, đảm bảo chất lượng                                                | ✅   | ☐   | ☐          |
-| 5   | **Kỷ luật**                         | Tuân thủ giờ giấc, nội quy, quy trình làm việc                                                   | ✅   | ☐   | ☐          |
-| 6   | **Tính cầu tiến**                   | Sẵn sàng nhận feedback và cải thiện bản thân                                                     | ✅   | ☐   | ☐          |
-| 7   | **Giao tiếp**                       | Trình bày ý tưởng, báo cáo công việc rõ ràng                                                     | ☐   | ✅   | ☐          |
-| 8   | **Hợp tác nhóm**                    | Làm việc hiệu quả với đồng nghiệp, tham gia nhóm                                                 | ✅   | ☐   | ☐          |
-| 9   | **Ứng xử chuyên nghiệp**            | Tôn trọng đồng nghiệp, đối tác, môi trường làm việc                                              | ✅   | ☐   | ☐          |
-| 10  | **Tư duy giải quyết vấn đề**        | Nhận diện vấn đề, đề xuất giải pháp, sáng tạo                                                    | ☐   | ✅   | ☐          |
-| 11  | **Đóng góp vào dự án/tổ chức**      | Hiệu quả công việc, sáng kiến cải tiến, ghi nhận từ team                                         | ✅   | ☐   | ☐          |
-| 12  | **Tổng thể**                        | Đánh giá chung về toàn bộ quá trình thực tập                                                     | ✅   | ☐   | ☐          |
+### Định hướng cải thiện bản thân
 
-### Cần cải thiện
-
-* Nâng cao kỹ năng giao tiếp và trình bày ý tưởng rõ ràng hơn trong các buổi họp nhóm
-* Cải thiện tư duy giải quyết vấn đề, đặc biệt trong việc xử lý các tình huống phát sinh ngoài kế hoạch
-* Tiếp tục phát triển khả năng tự học và nghiên cứu các công nghệ mới trong lĩnh vực cloud computing
-* Tăng cường khả năng quản lý thời gian để cân bằng tốt hơn giữa các nhiệm vụ song song
-* Hoàn thiện kỹ năng viết tài liệu kỹ thuật và báo cáo một cách chi tiết, dễ hiểu hơn
-* Phát triển thêm kiến thức về bảo mật (security) và tối ưu hóa chi phí (cost optimization) trên AWS
+* **Nâng cao năng lực thiết kế hạ tầng bằng mã lệnh (IaC):** Chuyển dịch từ cấu hình thủ công trên Console sang làm chủ AWS CDK hoặc Terraform để quản lý tài nguyên một cách tự động và đồng bộ hơn.
+* **Trau dồi sâu hơn về bảo mật đám mây nâng cao:** Tập trung nghiên cứu cơ chế phân quyền hạt nhân (least-privileged IAM policies), quản lý khóa KMS và bảo mật mạng nâng cao (VPC endpoints, PrivateLink).
+* **Cải thiện khả năng tối ưu hóa chi phí (Cost Optimization):** Học cách đọc báo cáo AWS Cost Explorer, tối ưu hóa kích thước tài nguyên và thiết lập ngân sách cảnh báo tự động.
+* **Phát triển kỹ năng thuyết trình dự án:** Rèn luyện cách trình bày các kiến trúc kỹ thuật phức tạp một cách đơn giản, súc tích trước đám đông phi kỹ thuật.
+* **Hoàn thiện kỹ năng viết tài liệu kỹ thuật (Technical Writing):** Nâng cao tính cấu trúc và rõ ràng của các tài liệu hướng dẫn bàn giao hệ thống.

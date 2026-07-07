@@ -7,54 +7,26 @@ pre: " <b> 1.8. </b> "
 ---
 ### Mục tiêu tuần 8:
 
-* Triển khai AWS Transit Gateway để kết nối nhiều VPCs trong kiến trúc hub-and-spoke.
-* Tối ưu hóa chi phí EC2 với Lambda automation để bật/tắt instances theo lịch trình.
-* Triển khai chiến lược resource tagging và lập lịch với EventBridge.
+* Nghiên cứu quy trình xây dựng, huấn luyện và triển khai mô hình Trí tuệ nhân tạo/Học máy (AI/ML) sử dụng Amazon SageMaker.
+* Tìm hiểu và tích hợp các dịch vụ AI ứng dụng có sẵn trên AWS như Amazon Polly (chuyển văn bản thành giọng nói), Amazon Rekognition (phân tích thị giác máy tính) và Amazon Lex (xây dựng giao diện trò chuyện hội thoại).
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2 | - Nghiên cứu AWS Transit Gateway architecture và use cases<br>- So sánh Transit Gateway vs VPC Peering<br>- Tạo Transit Gateway và configure settings<br>- Attach VPCs vào Transit Gateway | 08/06/2026 | 08/06/2026 | <https://000020.awsstudygroup.com/> |
-| 3 | - Cấu hình Transit Gateway route tables<br>- Test connectivity giữa multiple VPCs<br>- Launch EC2 instances và test inter-VPC communication<br>- Monitor Transit Gateway metrics trên CloudWatch | 09/06/2026 | 09/06/2026 | <https://000020.awsstudygroup.com/> |
-| 4 | - Nghiên cứu EC2 cost optimization strategies<br>- Tìm hiểu về Lambda functions cho automation<br>- Tạo IAM roles cho Lambda execution<br>- Viết Lambda function để stop EC2 instances | 10/06/2026 | 10/06/2026 | <https://000022.awsstudygroup.com/> |
-| 5 | - Viết Lambda function để start EC2 instances<br>- Implement resource tagging strategy<br>- Configure EventBridge rules cho scheduled execution<br>- Test automated start/stop schedule | 11/06/2026 | 11/06/2026 | <https://000022.awsstudygroup.com/> |
-| 6 | - Implement SNS notifications cho Lambda executions<br>- Configure CloudWatch alarms cho cost monitoring<br>- Create CloudWatch dashboard cho cost tracking<br>- Document toàn bộ solution architecture | 12/06/2026 | 12/06/2026 | <https://000022.awsstudygroup.com/> |
+| 2 | - Tìm hiểu các khái niệm cơ bản về AI/ML trên AWS và quy trình xây dựng mô hình<br>- Khởi tạo môi trường Amazon SageMaker Notebook Instance<br>- Làm quen với giao diện Jupyter Notebook, cấu hình môi trường IAM Role cần thiết | 08/06/2026 | 08/06/2026 | <https://000200.awsstudygroup.com/vi/> |
+| 3 | - Chuẩn bị và tiền xử lý tập dữ liệu mẫu trong Jupyter Notebook<br>- Lựa chọn thuật toán tích hợp sẵn của SageMaker (như XGBoost hoặc Linear Learner)<br>- Thiết lập và chạy một SageMaker Training Job để huấn luyện mô hình | 09/06/2026 | 09/06/2026 | <https://000200.awsstudygroup.com/vi/> |
+| 4 | - Triển khai mô hình đã huấn luyện thành một SageMaker Real-Time Endpoint<br>- Thực hiện kiểm thử dự đoán dữ liệu (Inference) gửi tới Endpoint từ Jupyter Notebook<br>- Viết hàm Lambda gọi SageMaker Endpoint để trả về kết quả dự đoán cho ứng dụng | 10/06/2026 | 10/06/2026 | <https://000200.awsstudygroup.com/vi/> |
+| 5 | - Tìm hiểu Amazon Polly để chuyển đổi văn bản sang giọng nói nhân tạo tự nhiên<br>- Nghiên cứu Amazon Rekognition để phát hiện đối tượng, văn bản và phân tích khuôn mặt trong ảnh<br>- Viết code Python tích hợp Polly và Rekognition bằng thư viện Boto3 | 11/06/2026 | 11/06/2026 | <https://cloudjourney.awsstudygroup.com/vi/7-aimlservice/> |
+| 6 | - Nghiên cứu Amazon Lex để xây dựng các Chatbot thông minh sử dụng công nghệ NLU (Natural Language Understanding)<br>- Thiết kế các Intents, Utterances và Slots cho một ứng dụng Chatbot đơn giản<br>- Thực hiện test và deploy chatbot trực tiếp trên AWS Console | 12/06/2026 | 12/06/2026 | <https://cloudjourney.awsstudygroup.com/vi/7-aimlservice/> |
 
 ### Kết quả đạt được tuần 8:
 
-* Thành thạo AWS Transit Gateway cho multi-VPC networking:
-  * Hiểu rõ AWS Transit Gateway architecture và so sánh với VPC Peering
-  * Nắm vững route table propagation và associations
-  * Tạo Transit Gateway thành công và configure settings
-  * Attach 3 VPCs vào Transit Gateway
-  * Cấu hình Transit Gateway route tables cho inter-VPC routing
-  * Set up route propagation tự động
-  * Launch EC2 instances trong các VPCs và test connectivity
-  * Tất cả VPCs có thể communicate qua Transit Gateway
-  * Monitor Transit Gateway metrics và traffic trên CloudWatch
-  * Implement Transit Gateway Network Manager (optional)
-  * Nắm vững kiến trúc networking phức tạp với Transit Gateway
+* **Làm chủ quy trình ML trên Amazon SageMaker:**
+  * Hiểu rõ toàn bộ vòng đời xây dựng mô hình ML: Thu thập dữ liệu, Tiền xử lý, Huấn luyện, Đánh giá và Triển khai Endpoint.
+  * Cấu hình và chạy thành công các SageMaker Training Jobs, biết cách kiểm tra log huấn luyện qua CloudWatch.
+  * Thiết lập thành công Endpoint có khả năng co giãn tự động để phục vụ các yêu cầu dự đoán trực tiếp.
 
-* Tối ưu hóa chi phí EC2 với Lambda automation:
-  * Hiểu rõ các phương pháp tối ưu chi phí EC2 (right-sizing, scheduling, Savings Plans)
-  * Tìm hiểu về Lambda functions cho infrastructure automation
-  * Nắm vững resource tagging best practices (Environment, Schedule, CostCenter)
-  * Tạo IAM roles với permissions phù hợp cho Lambda execution
-  * Viết Lambda function để stop EC2 instances dựa trên tags
-  * Viết Lambda function để start EC2 instances theo schedule
-  * Implement resource tagging strategy cho EC2 instances
-  * Configure EventBridge (CloudWatch Events) rules cho scheduled execution
-  * Set up cron expressions cho business hours (weekdays only)
-  * Test automated start/stop schedule hoạt động đúng
-  * Lambda functions filtering instances based on tags
-  * Monitor Lambda execution logs và troubleshooting
-
-* Monitoring và Notifications cho cost optimization:
-  * Implement SNS notifications cho Lambda execution results
-  * Subscribe email endpoints cho alerts
-  * Configure CloudWatch alarms cho cost monitoring
-  * Create CloudWatch dashboard hiển thị cost metrics và instance states
-  * Email notifications hoạt động khi instances start/stop
-  * Calculate cost savings từ automation solution
-  * Document toàn bộ solution architecture và ROI
-  * Hoàn thành giải pháp tối ưu chi phí tự động và scalable
+* **Ứng dụng các dịch vụ AI thông minh của AWS:**
+  * Tích hợp thành công Amazon Polly để chuyển hóa văn bản thành file âm thanh chất lượng cao, phục vụ trực tiếp cho tính năng phát âm câu hỏi phỏng vấn giả lập.
+  * Ứng dụng Rekognition để trích xuất thông tin chữ viết và cảm xúc khuôn mặt từ hình ảnh đầu vào.
+  * Xây dựng thành công Chatbot tương tác tự động bằng Amazon Lex, hiểu cách xử lý hội thoại dựa trên ý định (Intents) của người dùng.

@@ -15,7 +15,7 @@ ITCoach là nền tảng web hỗ trợ sinh viên IT và người mới đi là
 
 Nền tảng hỗ trợ đa dạng hình thức luyện tập: trắc nghiệm một hoặc nhiều lựa chọn với cơ chế Spaced Repetition (SM-2), tự luận nhập tay hoặc ghi âm giọng nói, và mô phỏng buổi phỏng vấn thực tế có AI đặt câu hỏi bằng giọng nói. AI đánh giá chi tiết từng câu trả lời, chỉ ra điểm thiếu, gợi ý cải thiện và phản hồi bằng giọng nói qua Amazon Polly. Hệ thống Gamification với XP, level, streak và bảng xếp hạng giúp tăng động lực học tập.
 
-Hệ thống được xây dựng hoàn toàn trên Amazon Web Services theo mô hình Serverless Architecture. Frontend sử dụng ReactJS phân phối qua Amazon CloudFront, backend xử lý bởi AWS Lambda, dữ liệu lưu trữ trên Amazon DynamoDB, tích hợp OpenAI API để đánh giá câu trả lời và Amazon Polly để tạo giọng nói.
+Hệ thống được xây dựng hoàn toàn trên Amazon Web Services theo mô hình Serverless Architecture. Frontend sử dụng React + TypeScript phân phối qua Amazon CloudFront, backend xử lý bởi AWS Lambda, dữ liệu lưu trữ trên Amazon DynamoDB, tích hợp OpenAI API để đánh giá câu trả lời và Amazon Polly để tạo giọng nói.
 
 ## 2. Tuyên Bố Vấn Đề
 
@@ -33,30 +33,29 @@ Sinh viên IT và người mới đi làm thường thiếu môi trường thự
 
 ITCoach giải quyết các vấn đề trên với các tính năng cốt lõi:
 
-- **Ngân hàng câu hỏi đa chuyên ngành:** 11 chuyên ngành IT, mỗi chuyên ngành chia thành nhiều chủ đề
+- **Ngân hàng câu hỏi đa chuyên ngành:** 10 chuyên ngành IT, mỗi chuyên ngành chia thành nhiều chủ đề
 - **Trắc nghiệm thông minh:** Quiz 1 hoặc nhiều đáp án, áp dụng Spaced Repetition SM-2 nhắc lại đúng thời điểm
-- **Tự luận đa hình thức:** Nhập tay hoặc ghi âm giọng nói, AI đánh giá và phản hồi chi tiết
-- **Mô phỏng phỏng vấn thực tế:** Chọn chuyên ngành, cấp độ, thời lượng – AI dẫn dắt phỏng vấn bằng giọng nói
-- **Dashboard cá nhân:** Theo dõi tiến độ, phân tích điểm yếu, đề xuất nội dung ưu tiên ôn
-- **Gamification:** XP, level, badge, streak, bảng xếp hạng để tăng động lực học tập
+- **Tự luận bằng giọng nói:** Ghi âm giọng nói, AI đánh giá và phản hồi câu trả lời mẫu bằng giọng nói
+- **Luyện tập linh hoạt:** Chọn luyện 1 câu hỏi tự luận hoặc 1 chuyên ngành (3-5 câu hỏi ngẫu nhiên), thời lượng mỗi câu mặc định
+- **Dashboard & Gamification:** Theo dõi tiến độ, hệ thống XP, level, badge, streak và bảng xếp hạng cập nhật liên tục theo thời gian thực
 
 ### Hạ tầng AWS
 
-- **Amazon CloudFront + S3** phân phối ReactJS tốc độ cao toàn cầu
+- **Amazon CloudFront + S3** phân phối React + TypeScript tốc độ cao toàn cầu
 - **Amazon Cognito** xác thực người dùng an toàn
 - **Amazon API Gateway + AWS Lambda** xử lý toàn bộ nghiệp vụ serverless
 - **Amazon DynamoDB** lưu trữ toàn bộ dữ liệu hệ thống (8 bảng)
 - **Amazon S3 (Audio)** lưu trữ file ghi âm và audio Polly qua Presigned URL
 - **Amazon SQS** xử lý bất đồng bộ tác vụ AI nặng
 - **OpenAI API** Speech-to-Text + đánh giá chất lượng câu trả lời
-- **Amazon Polly** đọc câu hỏi và phản hồi kết quả bằng giọng nói
+- **Amazon Polly** phản hồi câu trả lời mẫu bằng giọng nói
 - **Amazon CloudWatch + SNS** giám sát hệ thống và cảnh báo tự động
 - **Amazon Route 53 + ACM** quản lý DNS và SSL certificate cho tên miền `itcoach24h.xyz`
 
 ### Lợi ích và ROI
 
 - Sinh viên có môi trường luyện phỏng vấn IT thực tế, phản hồi AI tức thời như một mentor
-- Spaced Repetition giúp ghi nhớ hiệu quả, hệ thống tự nhận diện điểm yếu từng người
+- Spaced Repetition giúp ghi nhớ hiệu quả, bảng xếp hạng theo thời gian thực tạo động lực học tập
 - Không cần quản lý server, tự động mở rộng theo nhu cầu nhờ kiến trúc Serverless
 - Chi phí vận hành thấp, dễ bổ sung chuyên ngành và câu hỏi mới trong tương lai
 
@@ -71,7 +70,7 @@ User (Browser)
     ↓ HTTPS – itcoach24h.xyz
 Amazon Route 53 (DNS)
     ↓
-Amazon CloudFront (CDN) ←→ S3 Static (ReactJS)
+Amazon CloudFront (CDN) ←→ S3 Static (React + TypeScript)
     ↓
 Amazon API Gateway (8 endpoints, Throttling: 100 req/s)
     ↓ Cognito Authorizer
@@ -90,15 +89,15 @@ AWS Lambda (8 functions)
 
 | Dịch vụ | Mục đích |
 |---------|---------|
-| Amazon CloudFront | CDN phân phối ReactJS toàn cầu qua HTTPS |
-| Amazon S3 (Static) | Lưu trữ file build ReactJS |
+| Amazon CloudFront | CDN phân phối React + TypeScript toàn cầu qua HTTPS |
+| Amazon S3 (Static) | Lưu trữ file build React + TypeScript |
 | Amazon S3 (Audio) | Lưu trữ file ghi âm và audio Polly |
 | Amazon API Gateway | 8 endpoints, tích hợp Cognito Authorizer, Throttling (100 req/s) |
 | Amazon Cognito | Đăng ký, đăng nhập, quản lý phiên người dùng |
 | AWS Lambda | 8 functions xử lý toàn bộ nghiệp vụ backend |
 | Amazon DynamoDB | 8 bảng lưu trữ toàn bộ dữ liệu hệ thống |
 | Amazon SQS | Hàng đợi xử lý bất đồng bộ AI và audio |
-| Amazon Polly | Đọc câu hỏi và phản hồi kết quả bằng giọng nói |
+| Amazon Polly | Phản hồi câu trả lời mẫu bằng giọng nói |
 | OpenAI API | Speech-to-Text + đánh giá chất lượng câu trả lời |
 | Amazon CloudWatch | Giám sát logs, metrics, hiệu năng hệ thống |
 | Amazon SNS | Gửi cảnh báo email khi hệ thống có lỗi |
@@ -128,7 +127,6 @@ AWS Lambda (8 functions)
 | 8 | Data Analyst |
 | 9 | AI/Machine Learning Engineer |
 | 10 | Cyber Security |
-| 11 | Kiến thức nền tảng chung IT |
 
 ### 4.3. Hình Thức Luyện Tập
 
@@ -138,25 +136,24 @@ AWS Lambda (8 functions)
 - Cộng XP sau mỗi câu trả lời đúng
 
 **Tự luận:**
-- Nhập văn bản hoặc ghi âm giọng nói
+- Ghi âm giọng nói
 - OpenAI STT chuyển giọng nói thành text
 - AI chấm điểm, chỉ ra ý thiếu, gợi ý cải thiện, đưa câu trả lời mẫu
-- Polly đọc phản hồi bằng giọng nói
+- Polly đọc câu trả lời mẫu bằng giọng nói
 
-### 4.4. Module Mô Phỏng Phỏng Vấn (Mock Interview)
+### 4.4. Module Luyện Tập Giọng Nói
 
-- Chọn chuyên ngành, cấp độ (Intern/Fresher/Junior), thời lượng (15/30/60 phút)
-- AI đọc câu hỏi bằng giọng nói (Polly)
-- Người dùng trả lời bằng văn bản hoặc giọng nói
-- Đánh giá tổng thể sau buổi: điểm từng kỹ năng, lỗi cần cải thiện, câu trả lời mẫu
+- Chọn 1 câu hỏi tự luận hoặc chọn 1 chuyên ngành (3-5 câu hỏi ngẫu nhiên)
+- Thời lượng mỗi câu hỏi mặc định
+- Người dùng trả lời bằng giọng nói
+- AI đánh giá và đọc câu trả lời mẫu bằng giọng nói (Polly)
 
 ### 4.5. Dashboard & Gamification
 
 - Tiến độ học theo từng chủ đề, tỷ lệ hoàn thành, điểm trung bình
-- Phân tích điểm yếu, đề xuất nội dung ưu tiên ôn
 - Chuỗi ngày học liên tiếp (streak), lịch sử hàng ngày
 - Hệ thống XP, Level, Badge thành tích
-- Bảng xếp hạng theo tuần/tháng
+- Bảng xếp hạng cập nhật liên tục theo thời gian thực
 
 ## 5. Triển Khai Kỹ Thuật
 
@@ -205,20 +202,19 @@ AWS Lambda (8 functions)
 Dựng toàn bộ hạ tầng AWS, viết 8 Lambda functions, tích hợp OpenAI và Polly.
 
 ### Giai đoạn 2 – Frontend & Tích hợp
-Xây dựng giao diện ReactJS: auth, quiz, tự luận, ghi âm, Mock Interview, dashboard, gamification.
+Xây dựng giao diện React + TypeScript: auth, quiz, tự luận, ghi âm, Mock Interview, dashboard, gamification.
 
 ### Giai đoạn 3 – Dữ liệu & Hoàn thiện
 Nhập ngân hàng câu hỏi (ưu tiên Frontend, Backend, Kiến thức nền), test toàn bộ luồng, sửa lỗi, deploy chính thức.
 
 | Giai đoạn | Thời gian | Nội dung |
 |-----------|-----------|---------|
-| Chuẩn bị | Trước thực tập | Thiết kế kiến trúc, phân công nhóm |
-| Tháng 1 – Tuần 1–2 | Thực tập | Dựng hạ tầng AWS |
-| Tháng 1 – Tuần 3–4 | Thực tập | Dev backend: 8 Lambda + OpenAI + Polly |
-| Tháng 2 – Tuần 1–2 | Thực tập | Dev frontend: auth, quiz, tự luận, ghi âm |
-| Tháng 2 – Tuần 3–4 | Thực tập | Dev frontend: Mock Interview, dashboard, gamification |
-| Tháng 3 – Tuần 1–2 | Thực tập | Tích hợp, test, sửa lỗi |
-| Tháng 3 – Tuần 3–4 | Thực tập | Nhập dữ liệu câu hỏi, deploy, demo |
+| Chuẩn bị | Trước thực tập | Thành lập nhóm, phân công vai trò |
+| Tháng 1 – Tháng 2 | Thực tập | Học lý thuyết, nắm vững kiến thức AWS, Serverless, React + TypeScript |
+| Tháng 3 – Tuần 1 | Thực tập | Dựng hạ tầng AWS: S3, DynamoDB, API Gateway, Cognito |
+| Tháng 3 – Tuần 2 | Thực tập | Dev backend: 8 Lambda functions + OpenAI + Polly |
+| Tháng 3 – Tuần 3 | Thực tập | Dev frontend: auth, quiz, tự luận, Mock Interview, dashboard, gamification |
+| Tháng 3 – Tuần 4 | Thực tập | Tích hợp, test toàn bộ luồng, sửa lỗi, nhập dữ liệu câu hỏi, deploy, demo |
 
 ## 7. Ước Tính Ngân Sách
 
@@ -246,13 +242,13 @@ Nhập ngân hàng câu hỏi (ưu tiên Frontend, Backend, Kiến thức nền)
 | Khoản | Chi phí |
 |-------|---------|
 | Domain `itcoach24h.xyz` (Namecheap) | ~$2–3/năm |
-| **Tổng năm đầu** | **~$22–70/năm** |
+| **Tổng năm đầu** | **~$22–70/năm** (domain $2-3/năm + AWS $1.60-5.60/tháng × 12 tháng) |
 
 ### Tổng kết chi phí
 
 - **Chi phí khởi động:** ~$2–3 (domain)
 - **Chi phí vận hành hàng tháng:** ~$1.60–$5.60
-- **Chi phí năm đầu tiên:** ~$22–$70 (bao gồm domain + vận hành 12 tháng)
+- **Chi phí năm đầu tiên:** ~$22–$70 (domain $2-3/năm + AWS $1.60-5.60/tháng × 12 tháng)
 - **Từ năm thứ 2 trở đi:** ~$20–$70/năm (gia hạn domain + vận hành)
 
 ## 8. Đánh Giá Rủi Ro
@@ -285,4 +281,4 @@ Nhập ngân hàng câu hỏi (ưu tiên Frontend, Backend, Kiến thức nền)
 
 *ITCoach – Nền Tảng Luyện Phỏng Vấn IT Thông Minh Ứng Dụng AI trên AWS*
 
-*Serverless | ReactJS | 8 Lambda | 8 DynamoDB | 8 API Endpoints | OpenAI | Polly | Spaced Repetition SM-2*
+*Serverless | React + TypeScript | 8 Lambda | 8 DynamoDB | 8 API Endpoints | OpenAI | Polly | Spaced Repetition SM-2*

@@ -10,7 +10,7 @@ pre: " <b> 5.4. </b> "
 
 Amazon S3 (Simple Storage Service) is an object storage service. In the ITCoach system, we need 2 S3 buckets:
 
-1. **itcoach-static-assets**: Store frontend ReactJS (HTML, CSS, JS) - Public access
+1. **itcoach-static-assets**: Store frontend React + TypeScript (HTML, CSS, JS) - Public access
 2. **itcoach-audio-upload**: Store audio recordings and Polly audio files - Private access
 
 #### Content

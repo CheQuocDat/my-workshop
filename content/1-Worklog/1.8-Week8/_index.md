@@ -7,54 +7,26 @@ pre: " <b> 1.8. </b> "
 ---
 ### Week 8 Objectives:
 
-* Deploy AWS Transit Gateway to connect multiple VPCs in hub-and-spoke architecture.
-* Optimize EC2 costs with Lambda automation for scheduled instance start/stop.
-* Implement resource tagging strategy and EventBridge scheduling.
+* Study the process of building, training, and deploying Artificial Intelligence and Machine Learning (AI/ML) models using Amazon SageMaker.
+* Explore and integrate pre-built AWS AI services including Amazon Polly (text-to-speech conversion), Amazon Rekognition (computer vision analysis), and Amazon Lex (conversational chatbot interfaces).
 
 ### Tasks to be carried out this week:
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 2 | - Research AWS Transit Gateway architecture and use cases<br>- Compare Transit Gateway vs VPC Peering<br>- Create Transit Gateway and configure settings<br>- Attach VPCs to Transit Gateway | 06/08/2026 | 06/08/2026 | <https://000020.awsstudygroup.com/> |
-| 3 | - Configure Transit Gateway route tables<br>- Test connectivity between multiple VPCs<br>- Launch EC2 instances and test inter-VPC communication<br>- Monitor Transit Gateway metrics on CloudWatch | 06/09/2026 | 06/09/2026 | <https://000020.awsstudygroup.com/> |
-| 4 | - Research EC2 cost optimization strategies<br>- Learn about Lambda functions for automation<br>- Create IAM roles for Lambda execution<br>- Write Lambda function to stop EC2 instances | 06/10/2026 | 06/10/2026 | <https://000022.awsstudygroup.com/> |
-| 5 | - Write Lambda function to start EC2 instances<br>- Implement resource tagging strategy<br>- Configure EventBridge rules for scheduled execution<br>- Test automated start/stop schedule | 06/11/2026 | 06/11/2026 | <https://000022.awsstudygroup.com/> |
-| 6 | - Implement SNS notifications for Lambda executions<br>- Configure CloudWatch alarms for cost monitoring<br>- Create CloudWatch dashboard for cost tracking<br>- Document complete solution architecture | 06/12/2026 | 06/12/2026 | <https://000022.awsstudygroup.com/> |
+| Mon | - Learn AI/ML core concepts on AWS and the machine learning model lifecycle<br>- Create an Amazon SageMaker Notebook Instance environment<br>- Familiarize with the Jupyter Notebook interface and set up required IAM execution roles | 06/08/2026 | 06/08/2026 | <https://000200.awsstudygroup.com/> |
+| Tue | - Prepare and preprocess sample datasets inside the Jupyter Notebook<br>- Select a built-in SageMaker algorithm (such as XGBoost or Linear Learner)<br>- Set up and launch a SageMaker Training Job to train the model | 06/09/2026 | 06/09/2026 | <https://000200.awsstudygroup.com/> |
+| Wed | - Deploy the trained model to a SageMaker Real-Time Endpoint<br>- Perform sample prediction requests (inference) to the Endpoint from the Jupyter Notebook<br>- Write a Lambda function calling the SageMaker Endpoint to fetch prediction results for application clients | 06/10/2026 | 06/10/2026 | <https://000200.awsstudygroup.com/> |
+| Thu | - Explore Amazon Polly for converting text into natural-sounding speech<br>- Study Amazon Rekognition for detecting objects, text, and facial features from images<br>- Write Python code integrating Polly and Rekognition using the Boto3 SDK | 06/11/2026 | 06/11/2026 | <https://cloudjourney.awsstudygroup.com/7-aimlservice/> |
+| Fri | - Learn Amazon Lex to build smart Chatbots powered by NLU (Natural Language Understanding)<br>- Design Intents, Utterances, and Slots for a simple chatbot application<br>- Test and deploy the chatbot directly inside the AWS Console | 06/12/2026 | 06/12/2026 | <https://cloudjourney.awsstudygroup.com/7-aimlservice/> |
 
 ### Week 8 Achievements:
 
-* Mastered AWS Transit Gateway for multi-VPC networking:
-  * Understand AWS Transit Gateway architecture and comparison with VPC Peering
-  * Master route table propagation and associations
-  * Successfully created Transit Gateway and configured settings
-  * Attached 3 VPCs to Transit Gateway
-  * Configured Transit Gateway route tables for inter-VPC routing
-  * Set up automatic route propagation
-  * Launched EC2 instances in VPCs and tested connectivity
-  * All VPCs can communicate via Transit Gateway
-  * Monitored Transit Gateway metrics and traffic on CloudWatch
-  * Implemented Transit Gateway Network Manager (optional)
-  * Mastered complex networking architecture with Transit Gateway
+* **Mastered ML Lifecycles on Amazon SageMaker:**
+  * Gained a solid understanding of the end-to-end ML pipeline: data preparation, preprocessing, training, evaluation, and endpoint hosting.
+  * Successfully executed SageMaker Training Jobs, monitoring logs through CloudWatch.
+  * Set up a highly-scalable inference endpoint for live application predictions.
 
-* Optimized EC2 costs with Lambda automation:
-  * Understand EC2 cost optimization methods (right-sizing, scheduling, Savings Plans)
-  * Learn about Lambda functions for infrastructure automation
-  * Master resource tagging best practices (Environment, Schedule, CostCenter)
-  * Created IAM roles with appropriate permissions for Lambda execution
-  * Wrote Lambda function to stop EC2 instances based on tags
-  * Wrote Lambda function to start EC2 instances on schedule
-  * Implemented resource tagging strategy for EC2 instances
-  * Configured EventBridge (CloudWatch Events) rules for scheduled execution
-  * Set up cron expressions for business hours (weekdays only)
-  * Tested automated start/stop schedule working correctly
-  * Lambda functions filtering instances based on tags
-  * Monitored Lambda execution logs and troubleshooting
-
-* Monitoring and Notifications for cost optimization:
-  * Implemented SNS notifications for Lambda execution results
-  * Subscribed email endpoints for alerts
-  * Configured CloudWatch alarms for cost monitoring
-  * Created CloudWatch dashboard displaying cost metrics and instance states
-  * Email notifications working when instances start/stop
-  * Calculated cost savings from automation solution
-  * Documented complete solution architecture and ROI
-  * Completed automated and scalable cost optimization solution
+* **Integrated Intelligent AWS AI Services:**
+  * Incorporated Amazon Polly to convert text inputs into natural-sounding voice files, serving as the basis for simulated mock interview systems.
+  * Applied Rekognition to parse image text and analyze facial sentiment markers.
+  * Designed and built interactive conversational flows inside Amazon Lex using intents and slots.

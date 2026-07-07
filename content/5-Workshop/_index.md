@@ -13,7 +13,7 @@ pre: " <b> 5. </b> "
 **ITCoach** is an intelligent IT interview practice platform powered by AI, built entirely on AWS Serverless architecture. In this workshop, you will learn how to set up each component of the system from scratch using AWS Console.
 
 The system includes:
-- **Frontend**: ReactJS distributed via CloudFront and S3
+- **Frontend**: React + TypeScript distributed via CloudFront and S3
 - **Backend**: 8 Lambda functions for business logic
 - **Database**: 8 DynamoDB tables for data storage
 - **Authentication**: Amazon Cognito for user management
@@ -35,4 +35,5 @@ The system includes:
 10. [Setting up CloudFront](5.10-cloudfront/)
 11. [Configuring Route 53 and SSL](5.11-route53-ssl/)
 12. [Monitoring with CloudWatch](5.12-monitoring/)
-13. [Cleaning up Resources](5.13-cleanup/)
+13. [Deploy Code](5.13-deploy-code/)
+14. [Cleaning up Resources](5.14-cleanup/)

@@ -15,6 +15,18 @@ ITCoach là nền tảng luyện phỏng vấn IT thông minh ứng dụng AI, g
 - **Hiệu năng cao**: CloudFront phân phối toàn cầu
 - **Bảo mật tốt**: Cognito và IAM quản lý truy cập
 
+#### Yêu cầu trước khi bắt đầu
+
+Để hoàn thành workshop này, bạn cần:
+
+1. **Tài khoản AWS** với quyền Administrator hoặc đủ quyền tạo các dịch vụ sau:
+   - IAM, S3, DynamoDB, Cognito, SQS, Lambda, API Gateway, CloudFront, Route 53, ACM, CloudWatch, SNS
+
+2. **OpenAI API Key**: Đăng ký tại [platform.openai.com](https://platform.openai.com) để sử dụng Speech-to-Text và GPT evaluation (**Quan trọng**: phải có ít nhất **$5** credit)
+
+3. **Region**: Workshop này sử dụng **ap-southeast-1 (Singapore)** cho hầu hết dịch vụ
+   - **Đặc biệt**: ACM SSL Certificate phải tạo ở **us-east-1** để dùng với CloudFront
+
 #### Tính năng chính
 
 **1. Đa dạng hình thức luyện tập:**
@@ -41,7 +53,7 @@ ITCoach là nền tảng luyện phỏng vấn IT thông minh ứng dụng AI, g
 
 Trong workshop này, bạn sẽ xây dựng hệ thống với các thành phần:
 
-- **Frontend**: ReactJS trên S3 + CloudFront
+- **Frontend**: React + TypeScript trên S3 + CloudFront
 - **Backend**: 8 Lambda functions
 - **Database**: 8 bảng DynamoDB
 - **Authentication**: Amazon Cognito
@@ -58,7 +70,7 @@ User (Browser)
     ↓ HTTPS – itcoach24h.xyz
 Amazon Route 53 (DNS)
     ↓
-Amazon CloudFront (CDN) ←→ S3 Static (ReactJS)
+Amazon CloudFront (CDN) ←→ S3 Static (React + TypeScript)
     ↓
 Amazon API Gateway (8 endpoints, Throttling: 100 req/s)
     ↓ Cognito Authorizer

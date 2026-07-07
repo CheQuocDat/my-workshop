@@ -9,7 +9,7 @@ pre: " <b> 5.10. </b> "
 #### Introduction to CloudFront
 
 Amazon CloudFront is a Content Delivery Network (CDN) that distributes content with low latency. In ITCoach, CloudFront will:
-- Distribute ReactJS frontend globally
+- Distribute React + TypeScript frontend globally
 - Cache static assets (HTML, CSS, JS)
 - Provide HTTPS
 - Handle React Router (SPA routing)
@@ -98,7 +98,7 @@ Access CloudFront domain in browser:
 https://xxxxxxxxxxxx.cloudfront.net
 ```
 
-Currently will show error because ReactJS hasn't been uploaded yet. After developing frontend and uploading to S3, the website will work.
+Currently will show error because React + TypeScript hasn't been uploaded yet. After developing frontend and uploading to S3, the website will work.
 
 #### Next Steps
 

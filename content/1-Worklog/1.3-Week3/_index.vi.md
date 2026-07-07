@@ -7,70 +7,33 @@ pre: " <b> 1.3. </b> "
 ---
 ### Mục tiêu tuần 3:
 
-* Giới thiệu về Amazon EC2 và các khái niệm cơ bản.
-* Tìm hiểu về các loại instance, AMI, EBS volumes và Elastic IP.
-* Thực hành khởi chạy, kết nối và quản lý các EC2 instances.
-* Tìm hiểu và thực hành triển khai ứng dụng Node.js trên EC2.
+* Tìm hiểu các dịch vụ Cơ sở dữ liệu (Database Services) trên AWS bao gồm Amazon RDS (Cơ sở dữ liệu quan hệ), Amazon DynamoDB (NoSQL) và Amazon ElastiCache (Bộ nhớ đệm trong bộ nhớ).
+* Triển khai, bảo mật và kết nối ứng dụng với Amazon RDS MySQL.
+* Thiết kế schema và tối ưu hóa hiệu năng truy vấn với Amazon DynamoDB.
+* Tích hợp bộ nhớ đệm ElastiCache (Redis) để tăng tốc độ phản hồi và giảm tải cho database chính.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2 | - Tìm hiểu các khái niệm cơ bản Amazon EC2<br>- Các loại Instance Types (T2, T3, M5, C5...)<br>- AMI (Amazon Machine Images)<br>- EBS volumes và các tùy chọn lưu trữ | 05/05/2026 | 05/05/2026 | <https://000004.awsstudygroup.com/> |
-| 3 | - Tạo Linux EC2 instance (Amazon Linux 2023)<br>- Kết nối SSH với key pair<br>- Cấu hình Security Groups<br>- Cài đặt và cấu hình Node.js trên Linux | 05/06/2026 | 05/06/2026 | <https://000004.awsstudygroup.com/> |
-| 4 | - Triển khai ứng dụng Node.js trên Linux<br>- Cài đặt cơ sở dữ liệu MySQL<br>- Thiết lập PM2 cho quản lý tiến trình<br>- Cấu hình Nginx làm reverse proxy | 05/07/2026 | 05/07/2026 | <https://000004.awsstudygroup.com/> |
-| 5 | - Tạo Windows Server 2025 EC2 instance<br>- Kết nối RDP (Remote Desktop)<br>- Cài đặt Git, VS Code, Node.js trên Windows<br>- Cấu hình Windows Firewall | 05/08/2026 | 05/08/2026 | <https://000004.awsstudygroup.com/> |
-| 6 | - Triển khai ứng dụng Node.js trên Windows<br>- Cài đặt MySQL trên Windows Server<br>- Kiểm tra các thao tác CRUD<br>- So sánh triển khai Linux vs Windows | 05/09/2026 | 05/09/2026 | <https://000004.awsstudygroup.com/> |
+| 2 | - Tìm hiểu các khái niệm cơ bản về Amazon RDS (Relational Database Service)<br>- Phân biệt Multi-AZ deployments (tính sẵn sàng cao) vs Read Replicas (tối ưu đọc)<br>- Thiết lập DB Subnet Groups để phân chia mạng an toàn cho Database | 04/05/2026 | 04/05/2026 | <https://000005.awsstudygroup.com/vi/> |
+| 3 | - Khởi tạo một DB Instance MySQL trên Amazon RDS<br>- Cấu hình Security Group chỉ cho phép kết nối từ ứng dụng/EC2 cụ thể<br>- Kết nối client/application và thực hành các câu lệnh DDL/DML<br>- Thiết lập cơ chế tự động sao lưu (Automated Backups) và DB Snapshots | 05/05/2026 | 05/05/2026 | <https://000005.awsstudygroup.com/vi/> |
+| 4 | - Tìm hiểu cơ sở dữ liệu NoSQL Amazon DynamoDB<br>- Thiết kế cấu trúc Primary Key: Partition Key vs Composite Key (Partition Key + Sort Key)<br>- Phân biệt Read/Write Capacity Modes: Provisioned (with Auto Scaling) vs On-Demand | 06/05/2026 | 06/05/2026 | <https://000060.awsstudygroup.com/vi/> |
+| 5 | - Khởi tạo bảng DynamoDB và thực hành các thao tác CRUD (PutItem, GetItem, UpdateItem, DeleteItem)<br>- Phân biệt các phương thức truy xuất: Query vs Scan và tác động đến chi phí<br>- Tạo và cấu hình Global Secondary Indexes (GSI) và Local Secondary Indexes (LSI) | 07/05/2026 | 07/05/2026 | <https://000060.awsstudygroup.com/vi/> |
+| 6 | - Tìm hiểu dịch vụ caching Amazon ElastiCache<br>- So sánh tính năng và use cases giữa Redis và Memcached<br>- Khởi tạo ElastiCache Redis cluster và cấu hình kết nối bảo mật<br>- Tích hợp caching vào ứng dụng để tối ưu hóa thời gian phản hồi | 08/05/2026 | 08/05/2026 | <https://000061.awsstudygroup.com/vi/> |
 
 ### Kết quả đạt được tuần 3:
 
-* Hiểu các khái niệm cơ bản Amazon EC2 và các loại instance types:
-  * General Purpose (T2, T3, M5) - cân bằng tính toán, bộ nhớ, mạng
-  * Compute Optimized (C5, C6) - bộ xử lý hiệu suất cao
-  * Memory Optimized (R5, X1) - hiệu suất nhanh cho tập dữ liệu lớn
-  * Storage Optimized (I3, D2) - I/O tuần tự cao
+* **Quản trị cơ sở dữ liệu quan hệ Amazon RDS:**
+  * Khởi tạo thành công database MySQL có kiến trúc Multi-AZ sẵn sàng cho môi trường Production.
+  * Thiết lập bảo mật DB Subnet Groups và Security Group cô lập database khỏi Internet công cộng.
+  * Hiểu rõ cơ chế tự động backup và khôi phục dữ liệu từ point-in-time snapshot.
 
-* Nắm được các mô hình định giá EC2 để tối ưu chi phí:
-  * On-Demand - trả theo giờ/giây, không cam kết
-  * Reserved Instances - cam kết 1 hoặc 3 năm, giảm giá tới 75%
-  * Spot Instances - giảm giá tới 90%, có thể bị gián đoạn
-  * Savings Plans - mô hình định giá linh hoạt
+* **Thực hành thiết kế và vận hành NoSQL với DynamoDB:**
+  * Thiết kế Schema hiệu quả cho DynamoDB, áp dụng Partition Key và Sort Key để phân bổ dữ liệu tối ưu.
+  * Hiểu rõ cơ chế tính phí thông qua WCU/RCU và biết cách cấu hình chế độ On-Demand để tiết kiệm chi phí cho tải không dự đoán trước.
+  * Nắm vững cách truy xuất dữ liệu bằng Query để tối ưu hiệu năng thay vì sử dụng Scan (quét toàn bộ bảng).
+  * Tạo thành công chỉ mục phụ (GSI) giúp linh hoạt hóa các điều kiện tìm kiếm.
 
-* Thành thạo AMI (Amazon Machine Images):
-  * Mẫu instance được cấu hình sẵn
-  * Tạo AMI tùy chỉnh để tái sử dụng
-  * Chia sẻ AMI và marketplace
-  * Quản lý vòng đời AMI
-
-* Triển khai thành công ứng dụng Node.js trên Linux EC2:
-  * Khởi chạy Amazon Linux 2023 instance
-  * Cấu hình Security Groups (cổng SSH 22, HTTP 80, cổng ứng dụng tùy chỉnh)
-  * Kết nối qua SSH sử dụng key pair PEM
-  * Thiết lập Elastic IP cho IP công khai tĩnh
-  * Cài đặt Node.js, npm, và Git
-  * Sao chép ứng dụng AWS FCJ User Management (Node.js + Express)
-  * Cấu hình kết nối cơ sở dữ liệu MySQL
-  * Thiết lập Express-Handlebars cho templating
-  * Thực hiện các thao tác CRUD (tạo, đọc, cập nhật, xóa người dùng)
-  * Cài đặt PM2 cho quản lý tiến trình và tự động khởi động lại
-  * Cấu hình PM2 startup script cho system boot
-  * Thiết lập Nginx làm reverse proxy
-  * Thực hiện logging và giám sát
-
-* Triển khai thành công ứng dụng Node.js trên Windows EC2:
-  * Khởi chạy Windows Server 2025 instance
-  * Kết nối qua RDP (Remote Desktop Protocol)
-  * Cấu hình Windows Firewall rules và Security Groups cho cổng RDP 3389
-  * Cài đặt Git for Windows, Visual Studio Code, Node.js runtime
-  * Cấu hình biến môi trường PATH
-  * Sao chép kho lưu trữ ứng dụng và cài đặt các gói npm
-  * Cấu hình cơ sở dữ liệu MySQL trên Windows
-  * Triển khai ứng dụng Node.js với PM2-Windows hoặc node-windows
-  * Kiểm tra chức năng ứng dụng
-
-* So sánh triển khai Linux vs Windows:
-  * Linux: Nhẹ, hiệu suất tốt hơn, chi phí thấp hơn, phù hợp cho khối công việc sản xuất
-  * Windows: Giao diện quen thuộc, tích hợp .NET, công cụ doanh nghiệp
-  * Cả hai: Hỗ trợ Node.js đầy đủ, sẵn sàng cho sản xuất
-  * Thực tiễn tốt nhất: Chọn dựa trên chuyên môn nhóm và yêu cầu khối công việc
-
-
+* **Tối ưu hóa hiệu năng ứng dụng với ElastiCache:**
+  * Cấu hình thành công ElastiCache Redis cluster làm lớp lưu trữ tạm thời cho dữ liệu ít thay đổi.
+  * Cải thiện thời gian phản hồi của ứng dụng đáng kể (dưới mức mili-giây) và giảm tải tài nguyên CPU cho cơ sở dữ liệu chính.

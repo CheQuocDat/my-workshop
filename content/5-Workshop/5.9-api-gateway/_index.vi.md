@@ -17,7 +17,7 @@ Amazon API Gateway là dịch vụ tạo, publish, maintain, monitor và bảo m
 #### Kiến trúc API
 
 ```
-ReactJS Frontend
+React + TypeScript Frontend
     ↓ HTTPS
 API Gateway (8 endpoints)
     ├──→ /auth (POST) → itcoach-auth-handler (no auth)

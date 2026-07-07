@@ -7,56 +7,35 @@ pre: " <b> 1.2. </b> "
 ---
 ### Mục tiêu tuần 2:
 
-* Bắt đầu với Amazon VPC và AWS VPN Site-to-Site.
-* Tìm hiểu về kiến trúc VPC, subnets, routing tables và security groups.
-* Thiết lập kết nối bảo mật giữa on-premises và AWS cloud với VPN.
-* Tìm hiểu và thực hành tạo VPC, Security Groups, VPN Connection.
+* Tìm hiểu các dịch vụ Hosting & Storage trên AWS bao gồm Amazon S3, Amazon CloudFront và Amazon Route 53.
+* Triển khai và lưu trữ website tĩnh (Static Website Hosting) trên Amazon S3 với độ bảo mật cao.
+* Cấu hình dịch vụ phân phối nội dung (CDN) Amazon CloudFront giúp tối ưu hóa hiệu năng, giảm độ trễ truy cập toàn cầu.
+* Quản lý DNS và cấu hình tên miền tùy chỉnh sử dụng Amazon Route 53 kết hợp với chứng chỉ SSL/TLS từ ACM.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2 | - Tìm hiểu VPC (Virtual Private Cloud) cơ bản<br>- Hiểu về CIDR blocks, Subnets (Public/Private)<br>- Học về Internet Gateway và NAT Gateway<br>- Tạo VPC với kiến trúc multi-AZ | 28/04/2026 | 28/04/2026 | <https://000003.awsstudygroup.com/> |
-| 3 | - Tìm hiểu Security Groups và Network ACLs<br>- Phân biệt tường lửa Stateful vs Stateless<br>- Cấu hình quy tắc inbound/outbound<br>- Thực hành tạo Security Groups cho EC2 | 29/04/2026 | 29/04/2026 | <https://000003.awsstudygroup.com/> |
-| 4 | - Tìm hiểu Route Tables và định tuyến<br>- Cấu hình VPC Flow Logs<br>- Thiết lập giám sát CloudWatch cho VPC<br>- Sử dụng VPC Resource Map để trực quan hóa | 30/04/2026 | 30/04/2026 | <https://000003.awsstudygroup.com/> |
-| 5 | - Tìm hiểu AWS Site-to-Site VPN<br>- Tạo Virtual Private Gateway và Customer Gateway<br>- Cấu hình VPN Connection<br>- Kiểm tra kết nối VPN | 01/05/2026 | 01/05/2026 | <https://000003.awsstudygroup.com/> |
-| 6 | - Tìm hiểu AWS Transit Gateway<br>- Kết nối nhiều VPC qua Transit Gateway<br>- Cấu hình VPN với strongSwan<br>- Định tuyến lưu lượng qua Transit Gateway | 02/05/2026 | 02/05/2026 | <https://000003.awsstudygroup.com/> |
+| 2 | - Tìm hiểu Amazon S3 (Simple Storage Service) cơ bản<br>- Phân biệt các loại Storage Classes (Standard, IA, Glacier)<br>- Nghiên cứu cơ chế phân quyền: IAM Policies, Bucket Policies và ACLs<br>- Thiết lập cấu hình mã hóa mặc định (SSE-S3, SSE-KMS) | 27/04/2026 | 27/04/2026 | <https://000057.awsstudygroup.com/vi/> |
+| 3 | - Kích hoạt tính năng Static Website Hosting trên S3<br>- Upload source code website tĩnh và cấu hình tài liệu chỉ mục (index.html, error.html)<br>- Thiết lập Bucket Policy cho phép truy cập công khai an toàn<br>- Tìm hiểu và cấu hình CORS (Cross-Origin Resource Sharing) | 28/04/2026 | 28/04/2026 | <https://000057.awsstudygroup.com/vi/> |
+| 4 | - Tìm hiểu Amazon CloudFront và các khái niệm Edge Locations, Regional Edge Caches<br>- Khởi tạo CloudFront Distribution với nguồn gốc (Origin) là S3 Bucket<br>- Cấu hình Origin Access Control (OAC) để chặn truy cập trực tiếp vào S3<br>- Thiết lập Cache Behaviors, TTL và nén nội dung tự động | 29/04/2026 | 29/04/2026 | <https://000094.awsstudygroup.com/vi/> |
+| 5 | - Tìm hiểu Amazon Route 53 và các phương thức định tuyến DNS<br>- Tạo Hosted Zone cho tên miền tùy chỉnh<br>- Cấu hình các bản ghi DNS cơ bản (A, AAAA, CNAME, MX, TXT)<br>- Thiết lập bản ghi Routing Alias trỏ về CloudFront Distribution | 30/04/2026 | 30/04/2026 | <https://000010.awsstudygroup.com/vi/> |
+| 6 | - Yêu cầu chứng chỉ SSL/TLS miễn phí qua AWS Certificate Manager (ACM)<br>- Thực hiện xác thực tên miền bằng phương pháp DNS Validation<br>- Liên kết ACM Certificate vào CloudFront Distribution<br>- Cấu hình quy tắc bảo mật HTTPS và chuyển hướng tự động HTTP sang HTTPS | 01/05/2026 | 01/05/2026 | <https://000094.awsstudygroup.com/vi/> |
 
 ### Kết quả đạt được tuần 2:
 
-* Hiểu kiến trúc Amazon VPC (Virtual Private Cloud) và cách cô lập tài nguyên mạng trên AWS:
-  * Ký hiệu CIDR và lập kế hoạch địa chỉ IP
-  * Triển khai multi-AZ cho tính khả dụng cao
-  * Public Subnets với Internet Gateway (IGW) cho truy cập Internet
-  * Private Subnets với NAT Gateway cho lưu lượng outbound
-  * Route Tables và ưu tiên định tuyến (khớp tiền tố dài nhất)
-  * VPC peering và VPC endpoints
+* **Nắm vững kiến thức lưu trữ Amazon S3:**
+  * Hiểu rõ cấu trúc lưu trữ dạng Object, phân biệt các Storage Classes để tối ưu hóa chi phí.
+  * Biết cách cấu hình Lifecycle Policies tự động chuyển đổi lớp lưu trữ hoặc xóa dữ liệu cũ.
+  * Làm chủ Bucket Policies và OAC để bảo vệ dữ liệu một cách an toàn, chỉ cho phép truy cập qua CloudFront.
 
-* Nắm vững bảo mật mạng với Security Groups và Network ACLs:
-  * Security Groups - tường lửa stateful ở cấp độ EC2 instance
-  * Network ACLs - tường lửa stateless ở cấp độ subnet
-  * Cấu hình quy tắc inbound (SSH, HTTP, HTTPS) và outbound
-  * Đánh số quy tắc và thứ tự đánh giá
-  * Chuỗi security group và tham chiếu
-  * Quy tắc từ chối để chặn IP
+* **Triển khai thành công Website tĩnh:**
+  * Cấu hình và deploy website tĩnh lên S3 chạy ổn định, nhanh chóng.
+  * Cấu hình CORS thành công cho phép website tương tác an toàn với các API ngoài.
 
-* Triển khai giám sát và khắc phục sự cố VPC:
-  * VPC Flow Logs để ghi lại thông tin lưu lượng IP
-  * Xuất logs sang CloudWatch Logs hoặc S3
-  * Tạo bảng điều khiển CloudWatch để trực quan hóa tài nguyên VPC
-  * Thiết lập cảnh báo cho bất thường lưu lượng
-  * Phân tích mẫu lưu lượng và khắc phục sự cố kết nối
-  * Xác định mối đe dọa bảo mật và lưu lượng bất thường
-  * Sử dụng VPC Resource Map để trực quan hóa
+* **Tối ưu hóa hiệu năng với Amazon CloudFront:**
+  * Thiết lập mạng lưới CDN phân phối nội dung tĩnh toàn cầu với độ trễ thấp nhất.
+  * Hiểu cách cấu hình Cache Key, TTL và cơ chế Invalidate Cache để cập nhật nội dung tức thời khi có thay đổi source code.
 
-* Kết nối hạ tầng tại chỗ với AWS qua các giải pháp VPN:
-  * Site-to-Site VPN với Virtual Private Gateway (VGW) và Customer Gateway (CGW)
-  * Thiết lập đường hầm VPN IPsec giữa hạ tầng tại chỗ và AWS VPC
-  * Định tuyến tĩnh vs Định tuyến động (BGP)
-  * AWS Transit Gateway - kiến trúc hub-and-spoke cho kết nối multi-VPC
-  * Transit Gateway attachments (VPC, VPN, Direct Connect)
-  * Transit Gateway route tables
-  * Cấu hình strongSwan VPN (IPsec mã nguồn mở) trên Linux EC2 instance
-  * Giám sát và khắc phục sự cố VPN
-  * Các mẫu tính khả dụng cao của VPN
-
-
+* **Quản trị DNS và bảo mật tên miền:**
+  * Làm chủ hệ thống DNS Route 53, thiết lập các bản ghi định tuyến chính xác.
+  * Tích hợp thành công HTTPS bằng chứng chỉ SSL/TLS từ ACM, bảo mật đường truyền người dùng cuối và đạt điểm tối ưu SEO.

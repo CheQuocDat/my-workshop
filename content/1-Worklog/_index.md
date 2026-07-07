@@ -1,14 +1,19 @@
 ---
 title: "Worklog"
-date: 2024-01-01
+date: 2026-07-06
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
 ---
 
-**On this page**, you will need to introduce your worklog. **How** did you complete it? How many weeks did you take to complete the program? **What** did you do in those weeks?
+The **Worklog** records the detailed process of learning, practicing, and working during my **12-week internship** at the unit, divided into two main stages:
 
-Typically, and as a standard, a worklog is carried out over about 3 months (throughout the internship period) with weekly contents as follows:
+*   **Stage 1 & 2 (Week 1 - Week 8):** Learning fundamental knowledge and practicing labs based on the training program of [AWS Study Group - Cloud Journey](https://cloudjourney.awsstudygroup.com/).
+*   **Stage 3 (Week 9 - Week 12):** Starting the graduate project with Serverless architecture (ITCoach Web Application). My teammate was responsible for constructing the AWS infrastructure, while I was in charge of developing the web application (including Frontend & Backend logic).
+
+---
+
+### Learning & Practice Stage (Cloud Journey)
 
 **Week 1:** [Managing Access Control with AWS IAM](1.1-week1/)
 
@@ -26,10 +31,14 @@ Typically, and as a standard, a worklog is carried out over about 3 months (thro
 
 **Week 8:** [AWS Transit Gateway & EC2 Cost Optimization with Lambda](1.8-week8/)
 
-**Week 9:** [CI/CD with CodePipeline & AWS Storage Gateway](1.9-week9/)
+---
 
-**Week 10:** [AWS WAF & Resource Management with Tags](1.10-week10/)
+### Graduate Project Development Stage (Web Serverless - ITCoach)
 
-**Week 11:** [Limit IAM Permissions with Permission Boundary & AWS Systems Manager](1.11-week11/)
+**Week 9:** [Project Kickoff, Architecture Design & Task Allocation](1.9-week9/)
 
-**Week 12:** [EC2 Right Sizing with CloudWatch & Data Encryption with AWS KMS](1.12-week12/)
+**Week 10:** [Backend Logic Development (OpenAI & Polly) & Basic Frontend UI](1.10-week10/)
+
+**Week 11:** [Advanced Frontend UI (Mock Interview, Dashboard) & API Integration](1.11-week11/)
+
+**Week 12:** [System Integration, E2E Testing, Bug Fixing, and Deploy/Demo](1.12-week12/)

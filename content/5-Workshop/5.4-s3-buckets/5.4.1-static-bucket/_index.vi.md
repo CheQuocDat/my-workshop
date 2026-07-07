@@ -8,7 +8,7 @@ pre: " <b> 5.4.1. </b> "
 
 #### Mục đích
 
-Bucket này sẽ lưu trữ frontend ReactJS đã build (HTML, CSS, JavaScript) và được cấu hình làm Static Website Hosting để CloudFront phân phối.
+Bucket này sẽ lưu trữ frontend React + TypeScript đã build (HTML, CSS, JavaScript) và được cấu hình làm Static Website Hosting để CloudFront phân phối.
 
 #### Các bước thực hiện
 

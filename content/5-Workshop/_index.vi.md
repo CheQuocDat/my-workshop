@@ -13,7 +13,7 @@ pre: " <b> 5. </b> "
 **ITCoach** là nền tảng luyện phỏng vấn IT thông minh ứng dụng AI, được xây dựng hoàn toàn trên kiến trúc AWS Serverless. Trong workshop này, bạn sẽ học cách thiết lập từng thành phần của hệ thống từ đầu đến cuối bằng AWS Console.
 
 Hệ thống bao gồm:
-- **Frontend**: ReactJS phân phối qua CloudFront và S3
+- **Frontend**: React + TypeScript phân phối qua CloudFront và S3
 - **Backend**: 8 Lambda functions xử lý nghiệp vụ
 - **Database**: 8 bảng DynamoDB lưu trữ dữ liệu
 - **Authentication**: Amazon Cognito quản lý người dùng
@@ -35,4 +35,5 @@ Hệ thống bao gồm:
 10. [Thiết lập CloudFront](5.10-cloudfront/)
 11. [Cấu hình Route 53 và SSL](5.11-route53-ssl/)
 12. [Monitoring với CloudWatch](5.12-monitoring/)
-13. [Dọn dẹp tài nguyên](5.13-cleanup/)
+13. [Deploy Code](5.13-deploy-code/)
+14. [Dọn dẹp tài nguyên](5.14-cleanup/)

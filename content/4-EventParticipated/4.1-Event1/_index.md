@@ -1,5 +1,5 @@
 ---
-title: "Event 1 - FCAJ Community Day"
+title: "Event 1 - FCAJ Community Day (May 23)"
 date: 2024-01-01
 weight: 1
 chapter: false
@@ -93,92 +93,53 @@ The Case of Startup Credit Scoring:
 
 ### Key Takeaways
 
-#### About AI and Context
+#### Elevating User Experience with CloudFront
+From Thinh Nguyen's expert session, I gained a deeper appreciation of Amazon CloudFront. It is not just a standard CDN for caching static assets; it serves as a robust edge security shield. Combining CloudFront OAC (Origin Access Control) with S3 and integrating AWS WAF effectively offloads traffic from origin servers, optimizes bandwidth consumption, and substantially accelerates global content delivery.
 
-Tinh Truong's presentation expanded thinking about the importance of context in AI. Not all AI works well - it needs sufficient context to provide accurate answers. The "Second AI Brain" concept is fascinating - building an AI system capable of remembering and learning from previous interactions like a second brain.
+#### Democratizing Operations with Amazon Q & No-Code AI
+The Amazon Q presentation by Anh Pham highlighted a new paradigm for organizational productivity:
+- **Intelligent Workflows (Quick Flows):** Enables the creation of automated business processes without complex code.
+- **Natural Language Data Access (Quick Chat/Quick Sight):** Empowers users to generate analytics dashboards instantly using simple language prompts.
+This demonstrates how generative AI is making cloud infrastructure accessible to both developers and non-technical business professionals.
 
-#### Amazon Q - No-Code AI Solutions
+#### Mitigating LLM Non-Determinism in Production
+Duc Dao's deep dive into LLM predictability clarified a common misconception: setting `temperature = 0` does not guarantee 100% deterministic outputs due to lower-level hardware parallelism and inference optimizations. For production-grade applications, developers must implement robust testing frameworks and alignment guardrails to handle output variance effectively.
 
-The Amazon Q session introduced a powerful suite of AWS AI tools:
-- **Quick Chat Agent** helps explore and analyze data intuitively
-- **Quick Flows** allows creating intelligent workflows using only natural language, no coding required
-- **Quick Spaces** creates shared workspaces for sharing insights
-- **Quick Sight** builds dashboards from raw data using natural language
+#### Decentralized Power of Multi-Agent Systems
+Vy Lam's startup credit scoring case study illustrated the power of agentic design. Instead of relying on a single, general LLM that suffers from context window limitations, orchestrating a network of specialized agents acting as a "Virtual Credit Committee" delivers higher accuracy, strict compliance, and easier system maintenance.
 
-This democratizes AI - not just developers but business users can leverage AI power.
-
-#### CloudFront - More Than Just CDN
-
-Previously, I only thought of CloudFront as a simple CDN, but through Thinh Nguyen's session, I realized it's also:
-- **Foundation layer** for every workload on AWS
-- **Security shield** with many integrated security features
-- **Cost optimizer** reducing bandwidth costs
-- **Performance booster** improving global user experience
-- **Reliability enhancer** increasing system reliability
-
-#### Hackathon Experience
-
-Team VIB shared their intense 36-hour journey at LotusHacks. Lessons from them:
-- **Time pressure** can be good motivation to innovate quickly
-- **Pivot** when necessary - don't be rigid with initial ideas
-- **Team collaboration** is more important than individual skills
-- **MVP mindset** - focus on core features first
-
-#### LLM Technical Deep Dive
-
-Duc Dao's session on non-determinism in LLMs was the most technical. Although temperature=0 is usually considered "deterministic," in reality, optimizations during inference can lead to different outputs. This is crucial when building production systems with LLMs - need appropriate mitigation strategies.
-
-#### Multi-Agent Systems
-
-Vy Lam presented a real case study on credit scoring for startups. Instead of using a single agent, they built a multi-agent system like a "Virtual Credit Committee" with:
-- Multiple specialized agents for each evaluation aspect
-- Guardrails and compliance checks
-- Clear ROI and implementation roadmap
-
-This is a very practical approach for enterprise AI applications.
+---
 
 ### Personal Experience
 
-#### Networking and Community
+#### The Hackathon Mindset: Speed and MVP
+The story of Team VIB developing their project UTMorpho in a high-pressure 36-hour sprint at LotusHacks was highly motivating. The critical takeaway was the Minimum Viable Product (MVP) mindset: learning to focus on solving the primary problem and shipping a functional version under tight deadlines rather than getting bogged down in secondary features.
 
-The event created an excellent opportunity to connect with the AWS community in Vietnam. Met professionals, students, and AI enthusiasts with a shared passion for technology. The atmosphere was very friendly and open - everyone willing to share experiences and insights.
-
-#### Practical Knowledge
-
-Unlike purely theoretical events, FCAJ Community Day focused on practical applications:
-- Real-world case studies (UTMorpho, Startup Credit Scoring)
-- Hands-on tools (Amazon Q suite)
-- Technical deep dives (LLM non-determinism)
-- Architecture patterns (Multi-agent systems)
-
-Each session had concrete takeaways applicable to work immediately.
-
-#### Career Insights
-
-Tinh Truong's session on AI careers was very inspiring. Key points:
-- Start building with AI early - no need to wait until "good enough"
-- Focus on understanding context and problem-solving rather than memorizing algorithms
-- Contribute to community - share what you learn
-- AI is a tool - business understanding remains the foundation
+#### Vibrant Tech Community & Networking
+FCAJ Community Day offered an incredible platform to engage with the local AWS community. Discussing cloud architecture with AWS Heroes, senior developers, and fellow students broadened my perspective. The welcoming environment and collaborative spirit of the AWS Vietnam community inspired me to accelerate my cloud learning journey.
 
 ### Applying to Work
 
-- **Explore Amazon Q** for team use cases - especially Quick Flows to automate workflows
-- **Apply context-aware prompting** when working with AI models - provide better context for better results
-- **Consider CloudFront** not just for caching but also for security and cost optimization
-- **Research multi-agent patterns** for complex business problems instead of forcing single LLM
-- **Document non-deterministic behaviors** when testing LLM applications - have mitigation plan
+- **Explore Amazon Q** to assist daily development and automate business flows.
+- **Optimize Prompting** by providing comprehensive context to ensure accurate LLM outputs.
+- **Investigate Multi-Agent architectures** for complex business problems requiring multi-step sequential reasoning.
+- **Deploy CloudFront OAC** in the next practical workshop to secure S3 storage origins.
 
 ### Some Event Photos
 
-![FCAJ Community Day Event 1](/images/event11.jpg)
+![FCAJ Community Day Event 5](/images/event15.jpg)
+*Figure 1: The speaker presenting Amazon CloudFront solutions to the highly focused audience.*
 
 ![FCAJ Community Day Event 2](/images/event12.jpg)
+*Figure 2: Speaker sharing in-depth insights on the critical role of context in real-world AI applications.*
 
 ![FCAJ Community Day Event 3](/images/event13.jpg)
+*Figure 3: The speaker presenting the event's Agenda slide and the multi-agent system roadmap.*
 
 ![FCAJ Community Day Event 4](/images/event14.jpg)
+*Figure 4: Student group VIB sharing their 36-hour journey developing their hackathon project UTMorpho.*
 
-![FCAJ Community Day Event 5](/images/event15.jpg)
+![FCAJ Community Day Event 1](/images/event11.jpg)
+*Figure 5: Large group commemorative photo of all speakers and participants attending the event.*
 
 > Overall, FCAJ Community Day was a high-quality event with practical content, experienced speakers, and an enthusiastic community. The event not only provided technical knowledge but also expanded networks and career opportunities in AI and Cloud fields.

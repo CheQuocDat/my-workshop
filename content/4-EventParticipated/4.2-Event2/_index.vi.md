@@ -156,49 +156,25 @@ Phiên kỹ thuật nhất về kết nối MCP bảo mật:
 
 ### Trải Nghiệm Cá Nhân
 
-#### Tư Duy Tự Động Hóa Vận Hành
+#### Thay Đổi Tư Duy Về Vận Hành Hệ Thống (Operations Automation)
+Sự kiện đã thay đổi hoàn toàn cách tôi tiếp cận bài toán quản trị hệ thống. Thay vì chỉ phản ứng thụ động khi có sự cố xảy ra, tôi nhận ra tương lai thuộc về "vận hành tự phục hồi chủ động" - thiết lập các cơ chế tự động phân tích và khắc phục lỗi trước khi người dùng cuối bị ảnh hưởng.
 
-Sự kiện này thay đổi cách nhìn về vận hành. Thay vì nghĩ "làm thế nào để phản ứng nhanh hơn với sự cố", nên nghĩ "làm thế nào để ngăn chặn sự cố và tự động hóa phản ứng". 
+#### Ấn Tượng Với Khái Niệm "Đồng Đội AI" (AWS DevOps Agent)
+Khái niệm tích hợp AI làm trợ lý đắc lực cho DevOps không còn xa vời mà đã được chứng minh rõ nét qua các bản demo ECS thực tế. Việc để AI tự động thực hiện các bước kiểm tra, phân tích log phức tạp và đề xuất hướng giải quyết giúp các kỹ sư rảnh tay hơn để tập trung vào các quyết định thiết kế kiến trúc mang tính chiến lược.
 
-Hệ Thống Phản Ứng Sâu và AWS DevOps Agent cho thấy tương lai của vận hành:
-- **Chủ động thay vì bị động**
-- **Tự động thay vì thủ công**
-- **Điều khiển bởi AI thay vì dựa trên quy tắc**
-
-#### Tiềm Năng AI Giọng Nói
-
-Trình diễn về trợ lý giọng nói rất ấn tượng. AI giọng nói không còn là khoa học viễn tưởng mà đã sẵn sàng cho sản xuất. Các ứng dụng cho dịch vụ khách hàng và công cụ nội bộ rất thực tế.
-
-Các thách thức về độ trễ và độ chính xác đã được giải quyết tốt với Amazon Nova Sonic. Chìa khóa là mô hình giọng nói sang giọng nói giúp giảm độ trễ đáng kể.
-
-#### AI Là Đồng Đội Vận Hành
-
-Khái niệm "đồng đội AI" trong DevOps rất thú vị. Không phải thay thế con người mà tăng cường khả năng:
-- AI xử lý khắc phục sự cố lặp đi lặp lại
-- Con người tập trung vào các vấn đề phức tạp và lập kế hoạch chiến lược
-- AI học từ quyết định của con người
-- Chu trình cải tiến liên tục
-
-#### Bảo Mật AI Doanh Nghiệp
-
-Phiên về bảo mật MCP nhắc nhở tầm quan trọng của phương pháp ưu tiên bảo mật khi triển khai AI:
-- Không chỉ về chức năng
-- Quyền riêng tư dữ liệu và tuân thủ
-- Cách ly mạng
-- Kiểm soát truy cập
-
-Kết nối riêng tư trong VPC rất quan trọng cho việc áp dụng doanh nghiệp.
+#### Ý Thức Về Bảo Mật AI Cho Doanh Nghiệp
+Qua phiên chuyên sâu về bảo mật MCP (Model Context Protocol), tôi nhận thức được rằng một hệ thống AI dù thông minh đến đâu cũng sẽ vô giá trị nếu để rò rỉ dữ liệu nhạy cảm của doanh nghiệp. Thiết lập VPC Private Endpoint và quản lý chặt chẽ ranh giới bảo mật thông tin là ưu tiên hàng đầu trước khi triển khai bất kỳ mô hình AI nào.
 
 ### Ứng Dụng Vào Công Việc
 
-- **Khám phá các mẫu Hệ Thống Phản Ứng Sâu** - Nghiên cứu phản ứng sự cố tự động cho hạ tầng
-- **Tạo nguyên mẫu trợ lý giọng nói** - Thử nghiệm Amazon Nova Sonic cho ứng dụng bàn trợ giúp nội bộ
-- **Đánh giá AWS DevOps Agent** - Thí điểm cho giám sát và khắc phục sự cố môi trường đa đám mây
-- **Xem xét Amazon Quick cho nhân sự** - Đề xuất tự động hóa cho quy trình nhân sự lặp đi lặp lại
-- **Triển khai thực tiễn tốt nhất bảo mật MCP** - Khi triển khai trợ lý AI, ưu tiên kết nối riêng tư
+- **Tìm hiểu cơ chế tự động sửa lỗi** của Deep Response Engine để tích hợp vào các kịch bản giám sát hạ tầng cá nhân.
+- **Thử nghiệm Amazon Nova Sonic** cho các tác vụ xử lý giọng nói thời gian thực và xây dựng chatbot đàm thoại cơ bản.
+- **Nghiên cứu ứng dụng AWS DevOps Agent** nhằm tối ưu hóa việc phân tích logs và cấu hình container trong các dự án học tập tiếp theo.
+- **Áp dụng các tiêu chuẩn bảo mật của MCP** khi kết nối ứng dụng AI với cơ sở dữ liệu nội bộ.
 
 ### Một Số Hình Ảnh Khi Tham Gia Sự Kiện
 
 ![FCAJ Community Day Event 2](/images/event21.jpg)
+*Hình 1: Bức ảnh chụp lưu niệm tập thể của ban tổ chức, diễn giả và các học viên tại sự kiện FCAJ Community Day lần thứ 2.*
 
 > Tổng thể, FCAJ Community Day lần 2 tiếp tục duy trì chất lượng cao với trọng tâm vào AI vận hành và ứng dụng doanh nghiệp. Các phiên rất thực tế với nhiều trình diễn trực tiếp và ứng dụng thực tế. Sự kiện không chỉ về công nghệ mà còn về thay đổi tư duy trong cách tiếp cận vận hành và áp dụng AI.
