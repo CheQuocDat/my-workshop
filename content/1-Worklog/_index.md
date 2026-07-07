@@ -9,7 +9,7 @@ pre: " <b> 1. </b> "
 The **Worklog** records the detailed process of learning, practicing, and working during my **12-week internship** at the unit, divided into two main stages:
 
 *   **Stage 1 & 2 (Week 1 - Week 8):** Learning fundamental knowledge and practicing labs based on the training program of [AWS Study Group - Cloud Journey](https://cloudjourney.awsstudygroup.com/).
-*   **Stage 3 (Week 9 - Week 12):** Starting the graduate project with Serverless architecture (ITCoach Web Application). My teammate was responsible for constructing the AWS infrastructure, while I was in charge of developing the web application (including Frontend & Backend logic).
+*   **Stage 3 (Week 9 - Week 12):** Starting the project with Serverless architecture (ITCoach Web Application). My teammate was responsible for constructing the AWS infrastructure, while I was in charge of developing the web application (including Frontend & Backend logic).
 
 ---
 
@@ -33,7 +33,7 @@ The **Worklog** records the detailed process of learning, practicing, and workin
 
 ---
 
-### Graduate Project Development Stage (Web Serverless - ITCoach)
+### Project Development Stage (Web Serverless - ITCoach)
 
 **Week 9:** [Project Kickoff, Architecture Design & Task Allocation](1.9-week9/)
 

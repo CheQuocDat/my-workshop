@@ -9,7 +9,7 @@ pre: " <b> 1. </b> "
 **Nhật ký công việc (Worklog)** ghi lại chi tiết quá trình học tập, thực hành và làm việc trong suốt **12 tuần thực tập** của tôi tại đơn vị thực tập, được chia làm 2 giai đoạn chính:
 
 *   **Giai đoạn 1 & 2 (Tuần 1 - Tuần 8):** Học tập kiến thức nền tảng và thực hành lab dựa trên chương trình đào tạo của [AWS Study Group - Cloud Journey](https://cloudjourney.awsstudygroup.com/vi/).
-*   **Giai đoạn 3 (Tuần 9 - Tuần 12):** Bắt tay vào làm đồ án tốt nghiệp với kiến trúc Serverless (Ứng dụng Web ITCoach). Trong đó, thành viên cùng nhóm phụ trách xây dựng hạ tầng AWS, còn tôi phụ trách phát triển phần web (bao gồm Frontend & Backend logic).
+*   **Giai đoạn 3 (Tuần 9 - Tuần 12):** Bắt tay vào làm đồ án với kiến trúc Serverless (Ứng dụng Web ITCoach). Trong đó, thành viên cùng nhóm phụ trách xây dựng hạ tầng AWS, còn tôi phụ trách phát triển phần web (bao gồm Frontend & Backend logic).
 
 ---
 
@@ -33,7 +33,7 @@ pre: " <b> 1. </b> "
 
 ---
 
-### Giai đoạn Phát triển Đồ án Tốt nghiệp (Web Serverless - ITCoach)
+### Giai đoạn Phát triển Đồ án (Web Serverless - ITCoach)
 
 **Tuần 9:** [Khởi động đồ án, Thiết kế kiến trúc & Phân công công việc](1.9-week9/)
 
