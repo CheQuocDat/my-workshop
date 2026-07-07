@@ -13,7 +13,7 @@ pre: " <b> 2. </b> "
 
 ITCoach là nền tảng web hỗ trợ sinh viên IT và người mới đi làm ôn luyện kiến thức chuyên môn, rèn luyện kỹ năng trả lời phỏng vấn và mô phỏng môi trường phỏng vấn thực tế với sự hỗ trợ của AI. Mục tiêu là giúp sinh viên tăng khả năng vượt qua các vòng tuyển dụng Internship, Fresher và Junior tại các công ty công nghệ.
 
-Nền tảng hỗ trợ đa dạng hình thức luyện tập: trắc nghiệm một hoặc nhiều lựa chọn với cơ chế Spaced Repetition (SM-2), tự luận nhập tay hoặc ghi âm giọng nói, và mô phỏng buổi phỏng vấn thực tế có AI đặt câu hỏi bằng giọng nói. AI đánh giá chi tiết từng câu trả lời, chỉ ra điểm thiếu, gợi ý cải thiện và phản hồi bằng giọng nói qua Amazon Polly. Hệ thống Gamification với XP, level, streak và bảng xếp hạng giúp tăng động lực học tập.
+Nền tảng hỗ trợ đa dạng hình thức luyện tập: trắc nghiệm một hoặc nhiều lựa chọn với cơ chế Spaced Repetition (SM-2), tự luận ghi âm giọng nói, và mô phỏng buổi phỏng vấn thực tế. AI đánh giá chi tiết từng câu trả lời, chỉ ra điểm thiếu, gợi ý cải thiện và phản hồi bằng giọng nói qua Amazon Polly. Hệ thống Gamification với XP, level, streak và bảng xếp hạng giúp tăng động lực học tập.
 
 Hệ thống được xây dựng hoàn toàn trên Amazon Web Services theo mô hình Serverless Architecture. Frontend sử dụng React + TypeScript phân phối qua Amazon CloudFront, backend xử lý bởi AWS Lambda, dữ liệu lưu trữ trên Amazon DynamoDB, tích hợp OpenAI API để đánh giá câu trả lời và Amazon Polly để tạo giọng nói.
 
@@ -25,7 +25,7 @@ Sinh viên IT và người mới đi làm thường thiếu môi trường thự
 
 - Các website trắc nghiệm thông thường chỉ kiểm tra lý thuyết, không đánh giá khả năng diễn đạt
 - Không có công cụ đánh giá câu trả lời tự luận hoặc giọng nói với phản hồi AI chi tiết
-- Không có môi trường mô phỏng phỏng vấn thực tế theo từng chuyên ngành và cấp độ
+- Không có môi trường mô phỏng phỏng vấn thực tế theo từng chuyên ngành
 - Khó nhận biết điểm yếu cá nhân để tập trung ôn luyện đúng chỗ
 - Nền tảng nước ngoài có rào cản ngôn ngữ, chi phí cao, không phù hợp thị trường IT Việt Nam
 
@@ -49,10 +49,11 @@ ITCoach giải quyết các vấn đề trên với các tính năng cốt lõi:
 - **Amazon SQS** xử lý bất đồng bộ tác vụ AI nặng
 - **OpenAI API** Speech-to-Text + đánh giá chất lượng câu trả lời
 - **Amazon Polly** phản hồi câu trả lời mẫu bằng giọng nói
+- **AWS WAF** bảo vệ CloudFront và API Gateway khỏi tấn công web (SQLi, XSS, DDoS)
 - **Amazon CloudWatch + SNS** giám sát hệ thống và cảnh báo tự động
 - **Amazon Route 53 + ACM** quản lý DNS và SSL certificate cho tên miền `itcoach24h.xyz`
 
-### Lợi ích và ROI
+### Lợi ích
 
 - Sinh viên có môi trường luyện phỏng vấn IT thực tế, phản hồi AI tức thời như một mentor
 - Spaced Repetition giúp ghi nhớ hiệu quả, bảng xếp hạng theo thời gian thực tạo động lực học tập
@@ -62,6 +63,13 @@ ITCoach giải quyết các vấn đề trên với các tính năng cốt lõi:
 ## 3. Kiến Trúc Giải Pháp
 
 Nền tảng áp dụng kiến trúc AWS Serverless với AWS Lambda là trung tâm xử lý nghiệp vụ.
+
+![ITCoach Architecture](/images/ITCoachArchitecture.png)
+
+*Lưu ý: Sơ đồ trên đã gộp các Lambda functions theo nhóm logic để dễ nhìn:*
+- *"**AWS Lambda (8 functions)**" trong sơ đồ đại diện cho 7 Lambda sync: `auth-handler`, `question-handler`, `session-handler`, `answer-handler`, `quiz-handler`, `gamification-handler`, `leaderboard-handler`*
+- *"**itcoach-ai-processor**" là Lambda async thứ 8, xử lý tác vụ AI nặng qua SQS*
+- *Trong thực tế triển khai, mỗi function được tạo riêng biệt (best practice: least privilege, cold start optimization, dễ debug)*
 
 ### Luồng xử lý chính
 
@@ -99,6 +107,7 @@ AWS Lambda (8 functions)
 | Amazon SQS | Hàng đợi xử lý bất đồng bộ AI và audio |
 | Amazon Polly | Phản hồi câu trả lời mẫu bằng giọng nói |
 | OpenAI API | Speech-to-Text + đánh giá chất lượng câu trả lời |
+| AWS WAF | Bảo vệ CloudFront và API Gateway khỏi tấn công web |
 | Amazon CloudWatch | Giám sát logs, metrics, hiệu năng hệ thống |
 | Amazon SNS | Gửi cảnh báo email khi hệ thống có lỗi |
 | Amazon Route 53 | Quản lý DNS cho tên miền `itcoach24h.xyz` |
@@ -222,34 +231,47 @@ Nhập ngân hàng câu hỏi (ưu tiên Frontend, Backend, Kiến thức nền)
 
 | Dịch vụ | Ước tính | Ghi chú |
 |---------|---------|---------|
-| AWS Lambda | ~$0.00 | Free tier 1M requests |
-| Amazon DynamoDB | ~$0.00 | On-demand, free tier 25GB |
-| Amazon S3 | ~$0.05 | Static + audio files |
-| Amazon API Gateway | ~$0.01 | ~1,000 requests |
-| Amazon CloudFront | $0.00 | Free plan |
-| Amazon Cognito | $0.00 | Free tier 50,000 MAU |
+| AWS Lambda | ~$0.00 | Free tier 1M requests + 400.000 GB-s/tháng (vĩnh viễn) |
+| Amazon DynamoDB | ~$0.00–1 | On-demand, free tier 25GB |
+| Amazon S3 | ~$0.05–1 | Static + audio files, tăng dần theo dung lượng audio tích lũy |
+| Amazon API Gateway | ~$0.01–2 | $3.5/triệu request |
+| Amazon CloudFront | $0.00 | Free plan (1TB + 10 triệu request/tháng) |
+| AWS WAF – CloudFront | $0.00 | Nằm trong 5 rule miễn phí kèm CloudFront Free plan |
+| AWS WAF – API Gateway | ~$10–15 | ⚠️ Web ACL Regional (bảo vệ endpoint /auth public) — không nằm trong gói miễn phí nào |
+| Amazon Cognito | $0.00 | Free tier 50.000 MAU |
 | Amazon SQS | ~$0.00 | Free tier 1M requests |
-| Amazon Polly | ~$0.04 | ~100,000 ký tự |
+| Amazon Polly | ~$0.04–5 | ~100.000 ký tự, free tier 5 triệu ký tự Standard/tháng (năm đầu) |
 | Amazon SNS | ~$0.00 | Free tier |
+| Amazon CloudWatch | ~$1–5 | Logs + Alarms — dịch vụ quan trọng để monitoring hệ thống |
 | Amazon Route 53 | ~$0.50 | Hosted Zone $0.50/tháng |
 | AWS ACM | $0.00 | Miễn phí hoàn toàn |
-| OpenAI API | ~$1–$5 | Tùy số lượng đánh giá |
-| **Tổng AWS** | **~$0.60/tháng** | |
-| **Tổng cả OpenAI** | **~$1.60–$5.60/tháng** | |
+| **Tổng AWS** | **~$12–30/tháng** | |
+| **OpenAI API** | **~$5–50+** | Biến động theo lượng đánh giá thật, chi phí ngoài AWS |
+| **Tổng cả OpenAI** | **~$17–80/tháng** | |
 
 ### Chi phí một lần
 
 | Khoản | Chi phí |
 |-------|---------|
 | Domain `itcoach24h.xyz` (Namecheap) | ~$2–3/năm |
-| **Tổng năm đầu** | **~$22–70/năm** (domain $2-3/năm + AWS $1.60-5.60/tháng × 12 tháng) |
 
 ### Tổng kết chi phí
 
 - **Chi phí khởi động:** ~$2–3 (domain)
-- **Chi phí vận hành hàng tháng:** ~$1.60–$5.60
-- **Chi phí năm đầu tiên:** ~$22–$70 (domain $2-3/năm + AWS $1.60-5.60/tháng × 12 tháng)
-- **Từ năm thứ 2 trở đi:** ~$20–$70/năm (gia hạn domain + vận hành)
+- **Chi phí vận hành hàng tháng:** ~$17–80 (AWS $12–30 + OpenAI $5–50+, tuỳ traffic thật)
+- **Chi phí năm đầu tiên:** ~$200–1.000 (domain + AWS × 12 tháng + OpenAI × 12 tháng)
+- **Từ năm thứ 2 trở đi:** tương đương chi phí vận hành hàng năm, cộng thêm gia hạn domain (~$2–3/năm)
+
+### Lưu ý kiểm soát chi phí
+
+💡 **Các yếu tố biến động lớn:**
+- **OpenAI API**: Chi phí chính, phụ thuộc vào số lượng đánh giá thật. Cần đặt **Usage Limits** trên OpenAI dashboard
+- **AWS WAF (API Gateway)**: Chi phí cố định ~$10–15/tháng, cần thiết để bảo vệ endpoint `/auth` công khai khỏi brute-force attacks
+
+**Khuyến nghị:**
+- Đặt **AWS Budget Alert** cảnh báo khi chi phí vượt $50/tháng
+- Giới hạn **OpenAI Usage Cap** để tránh chi phí vượt ngân sách
+- Theo dõi **CloudWatch Metrics** để tối ưu số lượng request
 
 ## 8. Đánh Giá Rủi Ro
 

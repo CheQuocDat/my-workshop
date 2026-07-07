@@ -15,21 +15,21 @@ The **Worklog** records the detailed process of learning, practicing, and workin
 
 ### Learning & Practice Stage (Cloud Journey)
 
-**Week 1:** [Managing Access Control with AWS IAM](1.1-week1/)
+**Week 1:** [Access Control Management with AWS IAM](1.1-week1/)
 
-**Week 2:** [Start with Amazon VPC and AWS VPN Site-to-Site](1.2-week2/)
+**Week 2:** [Hosting & Storage with S3, CloudFront, and Route 53](1.2-week2/)
 
-**Week 3:** [Introduction to Amazon EC2](1.3-week3/)
+**Week 3:** [Database Services with RDS, DynamoDB, and ElastiCache](1.3-week3/)
 
-**Week 4:** [Get Started with Amazon RDS, Auto Scaling & CloudWatch](1.4-week4/)
+**Week 4:** [Serverless Computing with Lambda, API Gateway, and AWS SAM](1.4-week4/)
 
-**Week 5:** [AWS CLI, IAM Identity Center & AWS Backup](1.5-week5/)
+**Week 5:** [Identity Management (Cognito) & Event-Driven Architecture (SQS, SNS, EventBridge)](1.5-week5/)
 
-**Week 6:** [Deploy Applications on Docker with AWS & Amazon ECS](1.6-week6/)
+**Week 6:** [Cloud Security Solutions (WAF, KMS, Secrets Manager, GuardDuty, SSM)](1.6-week6/)
 
-**Week 7:** [CI/CD with Containers, Security Hub & VPC Peering](1.7-week7/)
+**Week 7:** [Building Serverless Data Lake with S3, Glue, Athena, and QuickSight](1.7-week7/)
 
-**Week 8:** [AWS Transit Gateway & EC2 Cost Optimization with Lambda](1.8-week8/)
+**Week 8:** [AI/ML with SageMaker and Applied AI Services (Polly, Rekognition, Lex)](1.8-week8/)
 
 ---
 

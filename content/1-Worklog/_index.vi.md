@@ -17,19 +17,19 @@ pre: " <b> 1. </b> "
 
 **Tuần 1:** [Quản lý kiểm soát truy cập với AWS IAM](1.1-week1/)
 
-**Tuần 2:** [Bắt đầu với Amazon VPC và AWS VPN Site-to-Site](1.2-week2/)
+**Tuần 2:** [Hosting & Storage với S3, CloudFront và Route 53](1.2-week2/)
 
-**Tuần 3:** [Giới thiệu Amazon EC2](1.3-week3/)
+**Tuần 3:** [Cơ sở dữ liệu đám mây với RDS, DynamoDB và ElastiCache](1.3-week3/)
 
-**Tuần 4:** [Bắt đầu với Amazon RDS, Auto Scaling & CloudWatch](1.4-week4/)
+**Tuần 4:** [Điện toán Serverless với Lambda, API Gateway và AWS SAM](1.4-week4/)
 
-**Tuần 5:** [AWS CLI, IAM Identity Center & AWS Backup](1.5-week5/)
+**Tuần 5:** [Quản lý danh tính (Cognito) & Kiến trúc hướng sự kiện (SQS, SNS, EventBridge)](1.5-week5/)
 
-**Tuần 6:** [Triển khai ứng dụng trên Docker với AWS & Amazon ECS](1.6-week6/)
+**Tuần 6:** [Giải pháp bảo mật đám mây (WAF, KMS, Secrets Manager, GuardDuty, SSM)](1.6-week6/)
 
-**Tuần 7:** [CI/CD với Container, Security Hub & VPC Peering](1.7-week7/)
+**Tuần 7:** [Xây dựng Serverless Data Lake với S3, Glue, Athena và QuickSight](1.7-week7/)
 
-**Tuần 8:** [AWS Transit Gateway & Tối ưu chi phí EC2 với Lambda](1.8-week8/)
+**Tuần 8:** [Ứng dụng AI/ML với SageMaker và các dịch vụ AI tích hợp (Polly, Rekognition, Lex)](1.8-week8/)
 
 ---
 

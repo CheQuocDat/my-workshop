@@ -21,7 +21,7 @@ chapter: false
 
 &emsp; **MSSV:** 2280600566
 
-&emsp; **Lớp:** AWS082025
+&emsp; **Lớp:** 22DTHD8
 
 &emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viet Nam
 

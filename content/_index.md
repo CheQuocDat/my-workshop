@@ -23,7 +23,7 @@ chapter: false
 
 &emsp; **Student ID:** 2280600566
 
-&emsp; **Class:** AWS082025
+&emsp; **Class:** 22DTHD8
 
 &emsp; **Internship Company:** Amazon Web Services Viet Nam Company Limited
 
