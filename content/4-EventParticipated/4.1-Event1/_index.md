@@ -65,7 +65,7 @@ Sharing the hackathon product development journey:
 - UTMorpho – Product Overview & Demo
 - Key Learnings & What's Next
 
-#### 10:55 - 11:00 AM: Coffee Break ☕
+#### 10:55 - 11:00 AM: Coffee Break
 Break and networking time.
 
 #### 11:00 - 11:30 AM: Non-Determinism of "Deterministic" LLM Settings

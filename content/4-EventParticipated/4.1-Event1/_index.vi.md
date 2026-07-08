@@ -65,7 +65,7 @@ Chia sẻ hành trình phát triển sản phẩm trong cuộc thi phát triển
 - UTMorpho - Tổng quan sản phẩm và trình diễn
 - Bài học chính và bước tiếp theo
 
-#### 10:55 - 11:00 Sáng: Giải Lao Cà Phê ☕
+#### 10:55 - 11:00 Sáng: Giải Lao Cà Phê
 Nghỉ giải lao và giao lưu.
 
 #### 11:00 - 11:30 Sáng: Tính Không Xác Định Của Cài Đặt LLM "Xác Định"
