@@ -98,7 +98,7 @@ Tôi rất ấn tượng với sự cởi mở của các diễn giả. Sau mỗ
 *Hình 1: Sân khấu chính của trận Chung kết Cloud Architect diễn ra đầy kịch tính giữa hai đội KLKAT và Ngũ Đại Hiệp.*
 
 ![Mini quiz tương tác](/images/event32.jpg)
-*Hình 2: Các bạn sinh viên tham gia làm bài trắc nghiệm mini quiz kiến thức AWS tương tác trực tiếp qua màn hình chính.*
+*Hình 2: Các bạn sinh viên đang theo dõi 2 đội đang trả lời những câu hỏi của trận chung kết.*
 
 ![Aws security agent](/images/event33.jpg)
 *Hình 3: Diễn giả Thịnh Nguyễn chia sẻ về các giải pháp và thực tiễn tốt nhất để bảo mật ứng dụng web.*

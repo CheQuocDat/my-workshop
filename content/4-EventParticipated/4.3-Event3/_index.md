@@ -98,7 +98,7 @@ I was inspired by the accessibility of the speakers. They generously stayed afte
 *Figure 1: Sân khấu chính (The main stage of the Cloud Architect Finale between KLKAT and Ngu Dai Hiep).*
 
 ![Interactive Mini Quiz](/images/event32.jpg)
-*Figure 2: Mini quiz (Students participating in the interactive AWS quiz on the main screen).*
+*Figure 2: Mini quiz (Students watching the two teams answer the questions of the grand finale).*
 
 ![Aws Security Agent](/images/event33.jpg)
 *Figure 3: Aws security agent (Speaker Thinh Nguyen sharing web application security best practices).*
