@@ -28,3 +28,15 @@ Trong quá trình thực tập, em đã tham gia các events đáng nhớ với 
 
 &emsp;**Vai trò trong sự kiện:** Người tham dự 
 
+
+
+### [Event 3](4.3-Event3/)
+&emsp;**Tên sự kiện:** FCAJ Community Day (Lần 3)
+
+&emsp;**Thời gian:** Thứ 7, ngày 11 tháng 7 năm 2026 - 09:00 sáng đến 12:00 trưa
+
+&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco Financial Tower, thành phố Hồ Chí Minh
+
+&emsp;**Vai trò trong sự kiện:** Người tham dự
+
+

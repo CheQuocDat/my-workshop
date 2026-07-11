@@ -26,5 +26,19 @@ During my internship, I participated in memorable events that provided valuable 
 
 &emsp;**Location:** 26th Floor, Bitexco Financial Tower, Ho Chi Minh City  
 
-&emsp;**Role:** Attendee  
+&emsp;**Role:** Attendee
+
+
+
+---
+
+### [Event 3](4.3-Event3/)  
+&emsp;**Event Name:** FCAJ Community Day (Third Edition)
+
+&emsp;**Date & Time:** Saturday, July 11, 2026 - 09:00 AM to 12:00 PM  
+
+&emsp;**Location:** 26th Floor, Bitexco Financial Tower, Ho Chi Minh City  
+
+&emsp;**Role:** Attendee
+  
 
